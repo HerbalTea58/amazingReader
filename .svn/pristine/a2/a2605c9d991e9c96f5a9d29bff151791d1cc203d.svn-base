@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.ChapterMapper">
+    <!--  public int getMaxIndex()
+    public int getFirstChapterIdOf(int bookID);
+    public boolean add(Chapter chapter);
+    public boolean alter(Chapter chapter);
+    public boolean remove(Chapter chapter);
+    public boolean removeByChapterId(int chapterId);
+    public boolean removeByBookId(int bookId);
+    public Chapter getChapterById(int chapterId)
+    public String  getChapterContent(String content);
+    	public List<Chapter> getChapterByBookId(Book book);-->
+    <select id="getFirstChapterIdOf" parameterType="int" resultType="int">
+        SELECT COALESCE(chapter_id,0) FROM chapter WHERE chapter_book_id=#{_parameter}
+        AND chapter_num=1
+
+    </select>
+    <!--<insert id="add" parameterType="Chapter">
+        INSERT into chapter(chapter_num,chapter_book_id,chapter_name,chapter_word_num,chapter_click_num,chapter_price,chapter_refresh_time,chapter_statu,chapter_content,chapter_addition)
+         VALUES(#{chapterNum},#{chapterBookId},#{chapterName},#{chapterWordNum},#{chapterClickNum},#{chapterPrice},#{chapterRefreshTime},#{chapterStatu},#{chapterContent},#{chapterAddition})
+    </insert>-->
+
+    <insert id="add" parameterType="Chapter">
+        INSERT into chapter(chapter_num,chapter_book_id,chapter_name,chapter_word_num,chapter_price,chapter_refresh_time,chapter_statu,chapter_content,chapter_addition)
+         VALUES(#{chapterNum},#{chapterBookId},#{chapterName},#{chapterWordNum},#{chapterPrice},#{chapterRefreshTime},#{chapterStatu},#{chapterContent},#{chapterAddition})
+    </insert>
+    <update id="alter" parameterType="Chapter">
+        UPDATE chapter SET chapter_num=#{chapterNum},chapter_book_id=#{chapterBookId},chapter_name=#{chapterName},chapter_word_num=#{chapterWordNum},chapter_click_num=#{chapterClickNum},chapter_price=#{chapterPrice},chapter_refresh_time=#{chapterRefreshTime},chapter_statu=#{chapterStatu},chapter_content=#{chapterContent},chapter_addition=#{chapterAddition}
+        WHERE chapter_id=#{chapterId}
+    </update>
+    <delete id="remove" parameterType="Chapter">
+        UPDATE chapter SET chapter_down_shelf = 0 WHERE chapter_id=#{chapterId}
+    </delete>
+    <delete id="removeByChapterId">
+        UPDATE chapter SET chapter_down_shelf = 0 WHERE chapter_id=#{param}
+    </delete>
+    <delete id="removeByBookId" parameterType="int">
+        DELETE from chapter WHERE chapter_book_id=#{_parameter}
+    </delete>
+
+    <select id="getChapterById" resultType="Chapter" >
+        SELECT * FROM chapter WHERE chapter_id= #{param1}
+    </select>
+
+    <select id="getChapterContent" parameterType="String" resultType="String">
+        SELECT chapter_content FROM chapter WHERE chapter_content LIKE "%" "#{_parameter}" "%" and chapter_statu=1
+    </select>
+    <select id="getChaptersByBookId" resultType="Chapter">
+        SELECT chapter_id ,chapter_num, chapter_name,chapter_refresh_time,chapter_statu,chapter_word_num  from chapter WHERE  chapter_book_id=#{param}
+    </select>
+
+
+     <!-- void click(int chapterId); -->
+    <update id="click" parameterType="int">
+    	UPDATE chapter SET chapter_click_num = chapter_click_num + 1 WHERE chapter_id = #{_parameter}
+    </update>
+   <!-- int getClickNum(int chapterId); -->
+   <select id="getClickNum" parameterType="int" resultType="int">
+   		select chapter_click_num from chapter where chapter_id = #{_parameter}
+   </select>
+   
+    <!--int getChapterIdBy(int bookId,int chapterNum)  -->
+    <select id ="getChapterIdBy" resultType="int" parameterType="Integer">
+    	select IFNULL(chapter_id,0) from chapter where chapter_book_id = #{param1} and chapter_num = #{param2}
+    </select>
+
+    <!--public boolean alterDowmShelf(int chapterId, boolean chapterDownShelf);-->
+    <update id="alterDownShelf" parameterType="boolean">
+        update chapter set chapter_down_shelf = #{_parameter2} where chapter_id = #{_parameter1}
+    </update>
+
+    <!--int getChapterWordsNum(int chapterId);-->
+    <select id="getChapterWordsNum" resultType="int">
+        SELECT chapter_word_num FROM chapter WHERE chapter_id = #{param}
+    </select>
+    <!--int getMaxChapterNumOfBook(int bookId);-->
+    <select id="getMaxChapterNumOfBook" resultType="int" parameterType="Integer">
+        SELECT  IFNULL(max(chapter_num),0) FROM chapter WHERE chapter_book_id =#{_parameter}
+    </select>
+
+    <select id="updateOrNot" resultType="Chapter" >
+        SELECT * FROM chapter WHERE chapter_refresh_time BETWEEN #{param1} AND #{param2} AND chapter_book_id=#{param3}
+    </select>
+</mapper>

@@ -1,0 +1,545 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 18-6-2
+  Time: 21:22
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><%@ page language="java" contentType="text/html; charset=UTF-8"
+                pageEncoding="UTF-8"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>bootstrap/js/bootstrap.min.js">
+    <link rel="stylesheet" href="<%=basePath%>Css/normalize.css">
+    <link rel="stylesheet" href="<%=basePath%>Css/login.css">
+    <link rel="stylesheet" href="<%=basePath%>Css/sign-up-login.css">
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>Css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%=basePath%>Css/inputeffect.css" />
+    <link rel="stylesheet" href="<%=basePath%>Css/tooltips.css" />
+    <link rel="stylesheet" href="<%=basePath%>Css/spop.min.css" />
+
+    <script src="<%=basePath%>Scripts/jquery.min.js"></script>
+    <script src="<%=basePath%>Scripts/snow.js"></script>
+    <script src="<%=basePath%>Scripts/jquery.pure.tooltips.js"></script>
+    <script src="<%=basePath%>Scripts/spop.min.js"></script>
+    <script>
+        (function() {
+            // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+            if (!String.prototype.trim) {
+                (function() {
+                    // Make sure we trim BOM and NBSP
+                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                    String.prototype.trim = function() {
+                        return this.replace(rtrim, '');
+                    };
+                })();
+            }
+
+            [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+                // in case the input is already filled..
+                if( inputEl.value.trim() !== '' ) {
+                    classie.add( inputEl.parentNode, 'input--filled' );
+                }
+
+                // events:添加事件
+                inputEl.addEventListener( 'focus', onInputFocus );
+                inputEl.addEventListener( 'blur', onInputBlur );
+            } );
+
+            function onInputFocus( ev ) {
+                classie.add( ev.target.parentNode, 'input--filled' );
+            }
+
+            function onInputBlur( ev ) {
+                if( ev.target.value.trim() === '' ) {
+                    classie.remove( ev.target.parentNode, 'input--filled' );
+                }
+            }
+        })();
+
+        $(function() {
+            $('#login #login-password').focus(function() {
+                $('.login-owl').addClass('password');
+            }).blur(function() {
+                $('.login-owl').removeClass('password');
+            });
+            $('#login #register-password').focus(function() {
+                $('.register-owl').addClass('password');
+            }).blur(function() {
+                $('.register-owl').removeClass('password');
+            });
+            $('#login #register-repassword').focus(function() {
+                $('.register-owl').addClass('password');
+            }).blur(function() {
+                $('.register-owl').removeClass('password');
+            });
+            $('#login #forget-password').focus(function() {
+                $('.forget-owl').addClass('password');
+            }).blur(function() {
+                $('.forget-owl').removeClass('password');
+            });
+        });
+
+        function goto_register(){
+            $("#register-username").val("");
+            $("#register-password").val("");
+            $("#register-repassword").val("");
+            $("#register-code").val("");
+            $("#tab-2").prop("checked",true);
+        }
+
+        function goto_login(){
+            $("#login-username").val("");
+            $("#login-password").val("");
+            $("#tab-1").prop("checked",true);
+        }
+
+        function goto_forget(){
+            $("#forget-username").val("");
+            $("#forget-password").val("");
+            $("#forget-code").val("");
+            $("#tab-3").prop("checked",true);
+        }
+
+        /*  当失去焦点 时,做出提示信息  */
+        $(function(){
+            $("#login-username").blur(function(){
+                var username=$("#login-username").val();
+                if(username == ""){
+                    $.pt({
+                        target: $("#login-username"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',
+                        height: 'auto',
+                        content:"用户名不能为空"
+                    });
+                }
+            });
+
+        });
+        $(function(){
+            $("#login-password").blur(function(){
+                var password=$("#login-password").val();
+                if(password == ""){
+                    $.pt({
+                        target: $("#login-password"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',
+                        height: 'auto',
+                        content:"密码不能为空"
+                    });
+
+                }
+            });
+        });
+        /*忘记密码  */
+        $(function(){
+            $("[name='phone']").blur(function(){
+                var username=$("[name='phone']").val();
+                if(username == ""){
+                    $.pt({
+                        target: $("[name='phone']"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',
+                        height: 'auto',
+                        content:"手机号不能为空"
+                    });
+                }
+            });
+
+        });
+        $(function(){
+            $("[name='code']").blur(function(){
+                var code=$("[name='code']").val();
+                if(code == ""){
+                    $.pt({
+                        target: $("[name='code']"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',
+                        height: 'auto',
+                        content:"验证码不能为空"
+                    });
+
+                }
+            });
+        });
+        $(function(){
+            $("#forget-password").blur(function(){
+                var password=$("#forget-password").val();
+                if(password == ""){
+                    $.pt({
+                        target: $("#forget-password"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',
+                        height: 'auto',
+                        content:"密码不能为空"
+                    });
+
+                }
+            });
+        });
+
+        /*注册  */
+        $(function(){
+            $("#register-username").blur(function(){
+                var username=$("#register-username").val();
+                var ret=/^\d+$/;
+                if(username == ""){
+                    $.pt({
+                        target: $("#register-username"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',
+                        height: 'auto',
+                        content:"用户名不能为空"
+                    });
+
+                }else if(ret.test(username)){
+                    $.pt({
+                        target: $("#register-username"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',
+                        height: 'auto',
+                        content:"用户名必须含有字母"
+                    });
+                }
+            });
+        });
+
+
+        $(function(){
+
+            $("#register-password").blur(function(){
+                var password=$("#register-password").val();
+                if(password == ""){
+                    $.pt({
+                        target: $("#register-password"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',
+                        height: 'auto',
+                        content:"密码不能为空"
+                    });
+
+                }
+            });
+        });
+
+        $(function(){
+            $("#register-repassword").blur(function(){
+                var password = $("#register-password").val();
+                /* alert(password); */
+                var repassword = $("#register-repassword").val();
+                /* alert(repassword); */
+                if(repassword == ""){
+                    $.pt({
+                        target: $("#register-repassword"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',
+                        height: 'auto',
+                        content:"请确认密码"
+                    });
+
+                }else if(password != repassword){
+                    $.pt({
+                        target: $("#register-repassword"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',
+                        height: 'auto',
+                        content:"两次密码不一致"
+                    });
+                    $("#register-repassword").val("");
+                }
+            });
+        });
+
+
+        $(function(){
+            $("#register-code").blur(function(){
+                var tel=$("#register-code").val();
+                //var regex = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$/;
+                if(tel == ""){
+                    $.pt({
+                        target: $("#register-code"),
+                        position: 'r',
+                        align: 't',
+                        width: 'auto',-
+                        height: 'auto',
+                        content:"手机号不能为空"
+                    });
+
+                }/* else if(regex.test(tel){
+						$.pt({
+			        		target: $("#register-code"),
+			        		position: 'r',
+			        		align: 't',
+			        		width: 'auto',
+			        		height: 'auto',
+			        		content:"手机号格式错误"
+			        	});
+					} */
+            });
+        });
+
+
+
+    </script>
+    <style type="text/css">
+        html{width: 100%; height: 100%;}
+
+        body{
+
+            background-repeat: no-repeat;
+
+            background-position: center center #2D0F0F;
+
+            background-color:white;
+
+            background-image: url(<%=basePath%>Images/loginPic.jpg);
+
+            background-size: 100% 100%;
+
+        }
+
+        .snow-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100001; }
+
+    </style>
+    <script type="text/javascript">
+        var InterValObj; //timer变量，控制时间
+        var count = 30; //间隔函数，1秒执行
+        var curCount;//当前剩余秒数
+        function sendMessage(){curCount = count;
+            $("#btn").attr("disabled", "true");
+            $("#btn").val(curCount + "秒后可重新发送");
+            InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次请求后台发送验证码 TODO
+        }
+        //timer处理函数
+        function SetRemainTime() {
+            if (curCount == 0) {
+                window.clearInterval(InterValObj);//停止计时器
+                $("#btn").removeAttr("disabled");//启用按钮
+                $("#btn").val("重新发送验证码");
+            }
+            else {
+                curCount--;
+                $("#btn").val(curCount + "秒后可重新发送");
+            }
+        }
+    </script>
+</head>
+<body>
+<!-- 雪花背景 -->
+<div class="snow-container"></div>
+
+<!-- 登录控件 -->
+<div id="login">
+    <input id="tab-1" type="radio" name="tab" class="sign-in hidden" checked />
+    <input id="tab-2" type="radio" name="tab" class="sign-up hidden" />
+    <input id="tab-3" type="radio" name="tab" class="sign-out hidden" />
+    <div class="wrapper" style="margin-top: 30px;">
+        <!-- 登录页面 -->
+        <div class="login sign-in-htm">
+            <form action="/manager/login.action" method="post" class="container offset1 loginform">
+                <!-- 猫头鹰控件 -->
+                <div id="owl-login" class="login-owl">
+                    <div class="hand"></div>
+                    <div class="hand hand-r"></div>
+                    <div class="arms">
+                        <div class="arm"></div>
+                        <div class="arm arm-r"></div>
+                    </div>
+                </div>
+                <div class="pad input-container">
+                    <section class="content">
+							<span class="input input--hideo">
+								<input name="managerId" class="input__field input__field--hideo" type="text" id="login-username"
+                                       autocomplete="off" placeholder="请输入管理员账号" tabindex="1" maxlength="15" />
+								<label class="input__label input__label--hideo" for="login-username">
+									<%--<i class="fa fa-fw fa-user icon icon--hideo"></i>--%>
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+									<span class="input__label-content input__label-content--hideo"></span>
+								</label>
+							</span>
+                        <span class="input input--hideo">
+								<input name="managerPassword" class="input__field input__field--hideo" type="password" id="login-password" placeholder="请输入密码" tabindex="2" maxlength="15"/>
+								<label class="input__label input__label--hideo" for="login-password">
+								<%--	<i class="fa fa-fw fa-lock icon icon--hideo"></i>--%>
+                                    <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+									<span class="input__label-content input__label-content--hideo"></span>
+								</label>
+							</span>
+                    </section>
+                </div>
+                <div class="form-actions">
+                    <a tabindex="4" class="btn pull-left btn-link text-muted" onClick="goto_forget()">忘记密码?</a>
+                    <a tabindex="5" class="btn btn-link text-muted" onClick="goto_register()">注册</a>
+                    <input class="btn btn-primary" type="button" tabindex="3" onClick="login()" value="登录"
+                           style="color:white;"/>
+                </div>
+            </form>
+        </div>
+        <!-- 忘记密码页面 -->
+        <div class="login sign-out-htm">
+            <form action="login.jsp" method="post" class="container offset1 loginform">
+                <!-- 猫头鹰控件 -->
+                <div id="owl-login" class="forget-owl">
+                    <div class="hand"></div>
+                    <div class="hand hand-r"></div>
+                    <div class="arms">
+                        <div class="arm"></div>
+                        <div class="arm arm-r"></div>
+                    </div>
+                </div>
+                <div class="pad input-container">
+                    <section class="content">
+							<span class="input input--hideo">
+								<input class="input__field input__field--hideo" type="text" id="forget-username phone" name = "phone" autocomplete="off" placeholder="请输入手机号"/>
+								<label class="input__label input__label--hideo" for="forget-username">
+									<i class="fa fa-fw fa-user icon icon--hideo"></i>
+									<span class="input__label-content input__label-content--hideo"></span>
+								</label>
+							</span>
+                        <span class="input input--hideo">
+								<input class="input__field input__field--hideo" type="code" id="forget-code code" name="code" autocomplete="off" placeholder="请输入验证码"/>
+                            <!-- <input class="input__field input__field--hideo"  id="forget-code btn" autocomplete="off" name="btn" value="发送验证码" onclick="sendMessage()"/> -->
+
+								<label class="input__label input__label--hideo" for="forget-code">
+									<i class="fa fa-fw fa-wifi icon icon--hideo"></i>
+									<span class="input__label-content input__label-content--hideo"></span>
+								</label>
+
+							</span>
+                        <!-- <span id="check" style="color: red"></span> -->
+                        <span> <input class="btn btn-default" id="btn" name="btn" value="发送验证码" onclick="sendMessage()" /></span>
+                        <span class="input input--hideo">
+								<input class="input__field input__field--hideo" type="password" id="forget-password" placeholder="请重置密码" />
+								<label class="input__label input__label--hideo" for="forget-password">
+									<i class="fa fa-fw fa-lock icon icon--hideo"></i>
+									<span class="input__label-content input__label-content--hideo"></span>
+								</label>
+							</span>
+                    </section>
+                </div>
+                <div class="form-actions">
+                    <a class="btn pull-left btn-link text-muted" onClick="goto_login()">返回登录</a>
+                    <input class="btn btn-primary" id="lo" type="button" onClick="forget()" value="重置密码"
+                           style="color:white;"/>
+                </div>
+            </form>
+        </div>
+        <!-- 注册页面 -->
+        <div class="login sign-up-htm">
+            <form action="login.jsp" method="post" class="container offset1 loginform">
+                <!-- 猫头鹰控件 -->
+                <div id="owl-login" class="register-owl">
+                    <div class="hand"></div>
+                    <div class="hand hand-r"></div>
+                    <div class="arms">
+                        <div class="arm"></div>
+                        <div class="arm arm-r"></div>
+                    </div>
+                </div>
+                <div class="pad input-container">
+                    <section class="content">
+							<span class="input input--hideo">
+								<input class="input__field input__field--hideo" type="text" id="register-username"
+                                       autocomplete="off" placeholder="请输入用户名" maxlength="15"/>
+								<label class="input__label input__label--hideo" for="register-username">
+									<i class="fa fa-fw fa-user icon icon--hideo"></i>
+									<span class="input__label-content input__label-content--hideo"></span>
+								</label>
+							</span>
+                        <span class="input input--hideo">
+								<input class="input__field input__field--hideo" type="password" id="register-password" placeholder="请输入密码" maxlength="15"/>
+								<label class="input__label input__label--hideo" for="register-password">
+									<i class="fa fa-fw fa-lock icon icon--hideo"></i>
+									<span class="input__label-content input__label-content--hideo"></span>
+								</label>
+							</span>
+                        <span class="input input--hideo">
+								<input class="input__field input__field--hideo" type="password" id="register-repassword" placeholder="请确认密码" maxlength="15"/>
+								<label class="input__label input__label--hideo" for="register-repassword">
+									<i class="fa fa-fw fa-lock icon icon--hideo"></i>
+									<span class="input__label-content input__label-content--hideo"></span>
+								</label>
+							</span>
+                        <span class="input input--hideo">
+								<input class="input__field input__field--hideo" type="text" id="register-code" autocomplete="off" placeholder="请输入手机号"/>
+								<label class="input__label input__label--hideo" for="register-code">
+									<i class="fa fa-fw fa-wifi icon icon--hideo"></i>
+									<span class="input__label-content input__label-content--hideo"></span>
+								</label>
+							</span>
+                    </section>
+                </div>
+                <div class="form-actions">
+                    <a class="btn pull-left btn-link text-muted" onClick="goto_login()">返回登录</a>
+                    <input class="btn btn-primary" type="button" onClick="register()" value="注册"
+                           style="color:white;"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var sms="";
+    $("#btn").click(function(){
+        var phone=$("[name='phone']").val();
+        if(phone!="")
+        {
+            $.ajax({
+                url:"sendSMS",
+                type:"post",
+                data:{"phone":phone},
+                success:function(result){
+                    sms=result;
+                }
+            });
+        }else{
+            alert("请输入手机号");
+            return false;
+        }
+
+    });
+    $("#lo").click(function(){
+        var code=$("#code").val();
+        if(code==""){
+            alert("请输入验证码");
+        }else{
+            if(sms==code){
+                window.location.href="index.jsp";
+            }else{
+                $("#check").html("验证码错误");
+
+
+            };
+        };
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.BookStyleMapper">
+    <!--public boolean add(BookStyle bookStyle);
+    public boolean alter(BookStyle bookStyle);
+    public boolean remove(BookStyle bookStyle);
+    public boolean removeById(int styleId);
+    public BookStyle getBookStyle(int styleId);-->
+    <insert id="add" parameterType="BookStyle">
+        INSERT into book_style VALUES (#{bookStyleId},"#{bookStyleName}")
+    </insert>
+    <update id="alter" parameterType="BookStyle">
+        UPDATE book_style SET book_style_name="#{bookStyleName}"
+        WHERE book_style_id=#{bookStyleId}
+    </update>
+    <delete id="remove" parameterType="BookStyle">
+        DELETE FROM book_style WHERE book_style_id=#{bookStyleId}
+    </delete>
+    <delete id="removeById" parameterType="int">
+         DELETE FROM book_style WHERE book_style_id=#{_parameter}
+    </delete>
+    <select id="getBookStyle" parameterType="int" resultType="BookStyle">
+        SELECT * from book_style WHERE book_style_id=#{_parameter}
+    </select>
+    <!--public List<BookStyle> getAllBookStyle();-->
+    <select id="getAllBookStyle" resultType="BookStyle">
+        SELECT * from book_style
+    </select>
+</mapper>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.PlatformProfitMapper">
+    <!--public boolean add(PlatformProfit platformProfit);-->
+    <insert  id="add" parameterType="PlatformProfit">
+        insert into platform_profit VALUES(#{orderId},#{profitTypeId},#{profitTime},#{profitPrice})
+    </insert >
+    <!--public double countProfit();-->
+    <select id="countProfit" resultType="double">
+        select SUM(profit_price) from platform_profit
+    </select>
+    <!--public double countProfitBetween(Date dateBottom, Date dateTop);-->
+    <select id="countProfitBetween" resultType="double">
+        select SUM(profit_price) from platform_profit
+                where profit_time BETWEEN #{param1} and #{param2}
+    </select>
+    <!--public double countProfitBetweenTimeByType(Date dateBottom, Date dateTop, int Type_id);-->
+    <select id="countProfitBetweenTimeByType" resultType="double">
+        select SUM(profit_price) from platform_profit
+                where profit_time BETWEEN #{param1} and #{param2} and profit_type_id = #{param3}
+    </select>
+    <!--public List<PlatformServiceImpl> totalIncomeByMounthOfyear(int year);//统计某一年份的总收入-->
+    <select id="totalIncomeByMounthOfyear" resultType="PlatformIncome" parameterType="int">
+        select YEAR(profit_time) as this_year,MONTH(profit_time) as this_month,ifnull(sum(profit_price) ,0) as total_income
+        from platform_profit
+        where YEAR(profit_time)=#{_parameter}
+        GROUP BY YEAR(profit_time),MONTH(profit_time)
+    </select>
+    <!--public List<PlatformIncome> incomeOfMonthSortInWoman(int yeart)//分男频女频统计某一年每个月份的收入
+-->
+    <select id="incomeOfMonthSortInWoman" parameterType="int" resultType="PlatformIncome">
+      select YEAR(profit_time) as this_year,MONTH(profit_time) as this_month,ifnull(sum(profit_price) ,0) as total_income
+      FROM platform_profit pp LEFT JOIN reader_order ro ON pp.order_id=ro.reader_order_id LEFT JOIN writer w ON ro.reader_order_object_id =w.writer_id
+      LEFT JOIN book b ON w.writer_id=b.book_writer_id where YEAR(profit_time)=#{_parameter} and b.book_style_id BETWEEN 10000 and 10999
+      GROUP BY YEAR(profit_time),MONTH(profit_time)
+    </select>
+    <!--public List<PlatformIncome> incomeOfMonthSortInMan(int yeart);-->
+    <select id="incomeOfMonthSortInMan" resultType="PlatformIncome" parameterType="int">
+         select YEAR(profit_time) as this_year,MONTH(profit_time) as this_month,ifnull(sum(profit_price) ,0) as total_income
+ FROM platform_profit pp LEFT JOIN reader_order ro ON pp.order_id=ro.reader_order_id LEFT JOIN writer w ON ro.reader_order_object_id =w.writer_id
+LEFT JOIN book b ON w.writer_id=b.book_writer_id where YEAR(profit_time)=#{_parameter} and b.book_style_id BETWEEN 11000 and 11999
+GROUP BY YEAR(profit_time),MONTH(profit_time)
+    </select>
+</mapper>

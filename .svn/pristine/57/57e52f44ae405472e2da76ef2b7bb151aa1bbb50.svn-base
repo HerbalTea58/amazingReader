@@ -1,0 +1,34 @@
+package com.amazingReader.control;
+
+import com.amazingReader.entity.Book;
+import com.amazingReader.service.Interface.ReaderService;
+import com.amazingReader.service.Interface.WriterService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
+@RequestMapping("/book")
+public class BookShelfControl {
+    @Autowired
+    private ReaderService readerService;
+    @Autowired
+    private WriterService writerService;
+    @RequestMapping("/bookshelf.action")
+    public void getBookShelf(HttpServletRequest request, HttpServletResponse response,String name) throws ServletException, IOException {
+      //  Reader reader= (Reader) request.getSession().getAttribute("reader");
+        int readerId=6;
+        List<Book> bookList=null;
+        if(writerService.isWriterNameExist(name)){
+            bookList=readerService.getBookShelfBooksByWriterName(name,readerId);
+        }else if(readerService.isNameExist(name)){
+           bookList=readerService.getBookShelfBooksByBookName(name,readerId);
+        }
+         request.setAttribute("bookList",bookList);
+        request.getRequestDispatcher("/JSP/book.jsp").forward(request,response);
+    }
+}

@@ -1,0 +1,1135 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<head>
+    
+    <meta charset="UTF-8">
+    <title>《${book.bookName}》_${writer.writerName}著_${book.styleName}_惊鸿书院网</title>
+    <link rel="shortcut icon" href="<%=basePath%>Picture/惊鸿图标.jpg"/>
+
+<link rel="stylesheet" data-ignore="true" href="//qidian.gtimg.com/c/=/qd/css/lbfUI/css/icon.a578d.css,/qd/css/lbfUI/css/Drag.41d31.css,/qd/css/reset.ddecf.css,/qd/css/global.d41d8.css,/qd/css/font.089a4.css,/qd/css/footer.feb73.css,/qd/css/qd_popup.7e65f.css,/qd/css/book_popup.18f47.css,/qd/css/vote_popup.3844d.css,/qd/icon/forum/sprite.445f4.css,/qd/css/forum/emoji.c4e81.css" />
+<link rel="stylesheet" data-ignore="true" href="../Css/icon.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/Drag.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/rset.ddecf.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/book_popuar.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/ejoyec4.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/vote_popuar.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/spirit44.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/qd_popuar.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/font089a4.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/footerfeb73.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/global.css"/>
+    <link data-ignore="true" rel="stylesheet" href="../Css/moudle.css"/>
+    <link data-ignore="true" rel="stylesheet" href="../Css/layout5deof.css"/>
+    <link data-ignore="true" rel="stylesheet" href="../Css/bookdetail.css"/>
+
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>layui/css/layui.css"/>
+    <script src="<%=basePath%>layui/layui.js"></script>
+</head>
+<body>
+<div class="share-img">
+    <img src="../Images/log.png" width='300' height="300">
+</div>
+<div class="wrap" style="background-color: #ffffff">
+<div id="pin-nav" class="pin-nav-wrap need-search" data-l1="40">
+    <div class="box-center cf">
+        <div class="nav-list site-nav fl">
+            <ul>
+                <li class="site"><a class="pin-logo" href="" data-eid="qd_A43"><span></span></a>
+                    <div class="dropdown">
+                        <a href="" target="" data-eid="qd_A44">惊鸿女生网</a>
+                    </div>
+                </li>
+                <li><a href="" target="" data-eid="qd_A47">玄幻</a></li>
+                <li><a href="" target="" data-eid="qd_A48">都市</a></li>
+                <li><a href="" target="" data-eid="qd_A49">仙侠</a></li>
+                <li><a href="" target="" data-eid="qd_A50">科幻</a></li>
+                <li><a href="" target="" data-eid="qd_A52">历史</a></li>
+                <li><a href="" target="_blank" data-eid="qd_A53">排行</a></li>
+                <li class="more"><a href="javascript:" id="top-nav-more" target="" data-eid="qd_A54">更多<span></span></a>
+                    <div class="dropdown">
+                        <a href="" target="_blank" data-eid="qd_A169">全部作品</a>
+                        <a href="" target="" data-eid="qd_A51">奇幻</a>
+                        <a href="" target="" data-eid="qd_A57">武侠</a>
+                        <a href="" target="" data-eid="qd_A58">灵异</a>
+                        <a href="" target="" data-eid="qd_A59">军事</a>
+                        <a href="" target="" data-eid="qd_A60">现实</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-list min-user fr">
+            <ul>
+                <li id="min-search">
+                    <form id="formUrl" action="//www.qidian.com/search" method="get" target="_blank">
+                        <label id="pin-search" for="topSearchSubmit" data-eid="qd_A62"><em class=""></em>
+                        </label>
+                        <input id="pin-input" class="pin-input hide" type="text" name="kw" placeholder="反套路快穿">
+                        <input class="submit-input" type="submit" id="topSearchSubmit" data-eid="qd_A62">
+                    </form>
+                </li>
+                <li class="line"></li>
+
+                <li class="sign-in hidden">
+                    <a href="x" target="_blank" data-eid="qd_A65"><i id="nav-user-name"></i><span></span></a>
+                    <div class="dropdown">
+                        <a href="message.jsp" target="_blank" data-eid="qd_A66">消息(<i id="top-msg">0</i>)</a>
+                        <a href="recharge.jsp" target="_blank" data-eid="qd_A67">充值</a>
+                        <a href="personal.jsp" target="_blank" data-eid="qd_A68">个人中心</a>
+                        <a id="exit" href="javascript:" data-eid="qd_A70">退出</a>
+                    </div>
+                </li>
+                <li class="line"></li>
+                <li class="book-shelf" id="top-book-shelf">
+                    <a href="book.jsp" target="_blank" data-eid="qd_A63"><em class=""></em><i>我的书架
+                    </i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div id="j-topHeadBox" class="top-bg-op-box hidden" data-cookie="0" style="background-image:url('//qidian.qpic.cn/qidian_common/349573/c613c5cd398749ccc18c4dbde831b3fb/0')" data-l1="1">
+        <a class="jumpWrap" href="" target="_blank" data-eid="qd_G100" data-qd_dd_p1="1">
+            <span class="op-tag"></span>
+        </a>
+    </div>
+    <div class="top-bg-box " id="j-topBgBox" style="background-image: url(../Images/back.jpg)">
+
+    </div>
+
+
+<div class="border-shadow ">
+    <span></span>
+    <span></span>
+</div>
+
+    <div class="book-detail-wrap center990">
+        <div class="book-information cf" data-l1="2">
+
+    
+    <div class="book-img">
+        <a class="J-getJumpUrl" id="bookImg" href="2" data-eid="qd_G09" data-bid="1011817068" data-firstchapterjumpurl="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/i2EvUJ_HeQ9p4rPq4Fd4KQ2"><img src="../Images/1.jpg"/>
+"></a>
+    </div>
+    <script>
+        function recomment() {
+            layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.open({
+                    offset: ['30%', '40%'],
+                    title:'投推荐票',
+                    content:'<input class="recommentTieckts" type="number" placeholder="选择要投的票数">',
+                    btn:['确认','取消'],
+                    yes:function () {
+                        $.ajax({
+                            url:'<%=basePath%>reader/recommentTieckts.action?num='+$(".recommentTieckts").val(),
+                            async:true,
+                            success:function (flag) {
+                                if(flag){
+                                    layui.use('layer', function(){
+                                        var layer = layui.layer;
+                                        layer.msg('感谢您的推荐')
+                                    })
+                                }else{
+                                    layui.use('layer', function(){
+                                        var layer = layui.layer;
+                                        layer.msg('不好意思，投推荐票失败了')
+                                    })
+                                }
+                            }
+                        })
+                    }
+                });
+            })
+        }
+
+    </script>
+    <script>
+        function addToShelf(){
+            $.ajax({
+                url:"<%=basePath%>reader/addToShelf.action?bookId=${book.bookId}"
+                ,async:true
+                ,success:function(info){
+                    if(info){
+                        layui.use('layer',function () {
+                            var layer = layui.layer;
+                            layer.msg('加入书架成功')
+                        })
+                    }else{
+                        layui.use('layer',function () {
+                        var layer = layui.layer;
+                            layer.msg('<p><strong>加入书架失败</p><p>请查看书架中是否已经存在该书籍</strong></p>')
+                        })
+                    }
+                }
+            })
+        }
+
+    </script>
+    <script>
+        function sendToFirstChapter(){
+            $.ajax({
+                url:
+            })
+        }
+    </script>
+    <div class="book-info ">
+        <h1>
+            
+            <em>${book.bookName}</em>
+            <span><a class="writer" href="" target="_blank" data-eid="qd_G08">${writer.writerName}</a> 著</span>
+            
+        </h1>
+        <p class="tag"><span class="blue">${book.statuName}</span>
+
+            <span class="blue">
+                <c:if test="${book.bookActivityStatu == 1}">免费</c:if>
+                <c:if test="${book.bookActivityStatu != 1}">付费</c:if>
+            </span>
+            
+            <a href="<%=basePath%>search/seachByLabelId.action?labelId=${book.styleId}" class="red" target="_blank" data-eid="qd_G10">${book.styleName}</a>
+            
+            <a href="" class="red" target="_blank" data-eid="qd_G11">都市生活</a>
+        </p>
+        
+        <p class="intro">${book.bookShortDescribe}</p>
+        <p><em><style>@font-face { font-family: JwoSyImk; src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.eot?') format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.woff') format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.ttf') format('truetype'); } .JwoSyImk { font-family: 'JwoSyImk' !important;     display: initial !important; color: inherit !important; vertical-align: initial !important; }</style><span class="JwoSyImk">&#100385;&#100383;&#100381;&#100380;&#100384;</span></em><cite>万字</cite><i>|</i><em><style>@font-face { font-family: JwoSyImk; src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.eot?') format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.woff') format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.ttf') format('truetype'); } .JwoSyImk { font-family: 'JwoSyImk' !important;     display: initial !important; color: inherit !important; vertical-align: initial !important; }</style><span class="JwoSyImk">&#100388;&#100386;&#100381;&#100378;&#100384;</span></em><cite>万总点击<span>&#183;</span>会员周点击<style>@font-face { font-family: JwoSyImk; src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.eot?') format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.woff') format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.ttf') format('truetype'); } .JwoSyImk { font-family: 'JwoSyImk' !important;     display: initial !important; color: inherit !important; vertical-align: initial !important; }</style><span class="JwoSyImk">&#100386;&#100381;&#100380;&#100380;</span>万</cite><i>|</i><em><style>@font-face { font-family: JwoSyImk; src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.eot?') format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.woff') format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.ttf') format('truetype'); } .JwoSyImk { font-family: 'JwoSyImk' !important;     display: initial !important; color: inherit !important; vertical-align: initial !important; }</style><span class="JwoSyImk">&#100385;&#100381;&#100388;&#100387;</span></em><cite>万总推荐<span>&#183;</span>周<style>@font-face { font-family: JwoSyImk; src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.eot?') format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.woff') format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.ttf') format('truetype'); } .JwoSyImk { font-family: 'JwoSyImk' !important;     display: initial !important; color: inherit !important; vertical-align: initial !important; }</style><span class="JwoSyImk">&#100387;&#100384;&#100387;&#100384;</span></cite></p>
+        
+        <p>
+            <c:if test="${firstChapterId == -1}">
+                <a class="red-btn J-getJumpUrl " onclick="sendToFirstChapter()" href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/i2EvUJ_HeQ9p4rPq4Fd4KQ2" id="readBtn" data-eid="qd_G03" data-bid="1011817068" data-firstchapterjumpurl="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/i2EvUJ_HeQ9p4rPq4Fd4KQ2">免费试读</a>
+            </c:if>
+            <c:if test="${firstChapterId != -1}">
+                <a class="red-btn J-getJumpUrl " href="<%=basePath%>reader/readChapter.action?chapterId=${firstChapterId}" id="readBtn" data-eid="qd_G03" data-bid="1011817068" data-firstchapterjumpurl="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/i2EvUJ_HeQ9p4rPq4Fd4KQ2">继续阅读</a>
+            </c:if>
+
+            <a class="blue-btn add-book" id="addBookBtn" href="javascript:" data-eid="qd_G05" onclick="addToShelf()" data-bookId="1011817068" data-bid="1011817068">加入书架</a>
+            
+            <a class="blue-btn" id="topRewardBtn" href="javascript:" data-showtype="2" data-eid="qd_G07" onclick="recomment()">投推荐票
+            </a>
+            
+        </p>
+        
+    </div>
+    
+
+    <div class="take-wrap">
+        
+    </div>
+    
+
+</div>
+        <div class="content-nav-wrap cf" data-l1="3">
+            <div class="nav-wrap fl">
+                <ul>
+                    <li class="act"><a class="lang" id="j-bookInfoPage" href="bookdetail1.jsp" data-eid="qd_G15">作品信息</a></li>
+                    <li class="j_catalog_block"><a class="lang" href="chapter.jsp" id="j_catalogPage" data-eid="qd_G16">目录<i><span id="J-catalogCount">(101章)</span></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="catalog-content-wrap hidden" id="j-catalogWrap" data-l1="14">
+            <div class="go-top">
+                <div class="go-top-wrap">
+                    <a href="#" class="icon-go-top"><em class="iconfont" data-eid="qd_G72">&#xe66b;</em></a>
+                </div>
+            </div>
+            
+            <div class="volume-wrap">
+                
+                <div class="volume">
+                    <div class="cover"></div>
+                    <h3>
+                        <a class="subscri" href="" target="_blank"><em class="btn"><b class="iconfont">&#xe636;</b>分卷阅读</em></a>
+                        
+                        正文卷<i>&#183;</i>共101章<span class=free> 免费</span><em class="count">本卷共<cite>259890</cite>字</em></h3>
+                    <ul class="cf">
+                        
+                        <li data-rid="1"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/i2EvUJ_HeQ9p4rPq4Fd4KQ2" title="首发时间：2018-04-16 19:21:26 章节字数：2890">第1章 重生了</a>
+                        </li>
+                        <li data-rid="2"><a href="2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/LniSk7iF9922uJcMpdsVgA2" title="首发时间：2018-04-17 15:39:57 章节字数：2988">第2章 唐学文的麻烦</a>
+                            
+                        </li>
+                        
+                        <li data-rid="3"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/SFG9NgK41A_gn4SMoDUcDQ2" title="首发时间：2018-04-18 10:00:00 章节字数：2108">第3章 我来试一试</a>
+                            
+                        </li>
+                        
+                        <li data-rid="4"><a href="2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/lcwV040EUq36ItTi_ILQ7A2" title="首发时间：2018-04-18 18:00:00 章节字数：2655">第4章 问题解决</a>
+                            
+                        </li>
+                        
+                        <li data-rid="5"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/6NGCvkalHErwrjbX3WA1AA2" title="首发时间：2018-04-19 10:00:00 章节字数：3054">第5章 昔日女友</a>
+                            
+                        </li>
+                        
+                        <li data-rid="6"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/v_lZggmaODPgn4SMoDUcDQ2" title="首发时间：2018-04-19 18:00:00 章节字数：2806">第6章 产能有一点跟不上</a>
+                            
+                        </li>
+                        
+                        <li data-rid="7"><a href="2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/I4H_1-6xKcdp4rPq4Fd4KQ2" title="首发时间：2018-04-20 10:00:00 章节字数：2537">第7章 唐飞的神秘</a>
+                            
+                        </li>
+                        
+                        <li data-rid="8"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/sQZhinnY52H6ItTi_ILQ7A2" title="首发时间：2018-04-20 18:00:00 章节字数：2545">第8章 先进的生产理念</a>
+                            
+                        </li>
+                        
+                        <li data-rid="9"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/zRiEH43fEMJMs5iq0oQwLQ2" title="首发时间：2018-04-21 10:00:00 章节字数：2518">第9章 效率提高</a>
+                            
+                        </li>
+                        
+                        <li data-rid="10"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Lb7OLt9iV6bM5j8_3RRvhw2" title="首发时间：2018-04-21 18:00:00 章节字数：2512">第10章 父子长谈</a>
+                            
+                        </li>
+                        
+                        <li data-rid="11"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ObRgdkbpA5P4p8iEw--PPw2" title="首发时间：2018-04-22 10:00:00 章节字数：2495">第11章 神级工业主系统</a>
+                            
+                        </li>
+                        
+                        <li data-rid="12"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/3rIgqRki5G3M5j8_3RRvhw2" title="首发时间：2018-04-22 18:00:00 章节字数：2997">第12章 关键是人在哪里</a>
+                            
+                        </li>
+                        
+                        <li data-rid="13"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/1Odzi1Amz9hMs5iq0oQwLQ2" title="首发时间：2018-04-23 10:00:00 章节字数：2423">第13章 我们有啊</a>
+                            
+                        </li>
+                        
+                        <li data-rid="14"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/B1I-duiS8Rxp4rPq4Fd4KQ2" title="首发时间：2018-04-23 18:00:00 章节字数：2523">第14章 帮了大忙</a>
+                            
+                        </li>
+                        
+                        <li data-rid="15"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/wI0l-V58wNyaGfXRMrUjdw2" title="首发时间：2018-04-24 10:00:00 章节字数：2196">第15章 独家供应商</a>
+                            
+                        </li>
+                        
+                        <li data-rid="16"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/h5nLNRetB9hMs5iq0oQwLQ2" title="首发时间：2018-04-24 18:00:00 章节字数：2623">第16章 我帮你翻译</a>
+                            
+                        </li>
+                        
+                        <li data-rid="17"><a href="" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/tEQhT2oEDMS2uJcMpdsVgA2" title="首发时间：2018-04-25 10:00:00 章节字数：2676">第17章 我是王海龙</a>
+                            
+                        </li>
+                        
+                        <li data-rid="18"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/hFY0s9gXtfxOBDFlr9quQA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/hFY0s9gXtfxOBDFlr9quQA2" title="首发时间：2018-04-25 18:00:00 章节字数：2988">第18章 看好戏</a>
+                            
+                        </li>
+                        
+                        <li data-rid="19"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/yuoIeYnmQFVOBDFlr9quQA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/yuoIeYnmQFVOBDFlr9quQA2" title="首发时间：2018-04-26 10:00:00 章节字数：2440">第19章 对比检查</a>
+                            
+                        </li>
+                        
+                        <li data-rid="20"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/P4uY0Pci30GaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/P4uY0Pci30GaGfXRMrUjdw2" title="首发时间：2018-04-26 18:00:00 章节字数：2403">第20章 彻底服了</a>
+                            
+                        </li>
+                        
+                        <li data-rid="21"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Gj0CWH-Xcorgn4SMoDUcDQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Gj0CWH-Xcorgn4SMoDUcDQ2" title="首发时间：2018-04-27 10:00:00 章节字数：2869">第21章 翻译完成</a>
+                            
+                        </li>
+                        
+                        <li data-rid="22"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ytzrOFSjUEzM5j8_3RRvhw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ytzrOFSjUEzM5j8_3RRvhw2" title="首发时间：2018-04-27 18:00:00 章节字数：2825">第22章 想做接线头</a>
+                            
+                        </li>
+                        
+                        <li data-rid="23"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/voUZMCDDfIaaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/voUZMCDDfIaaGfXRMrUjdw2" title="首发时间：2018-04-28 10:00:00 章节字数：2784">第23章 第一次约会</a>
+                            
+                        </li>
+                        
+                        <li data-rid="24"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/2vY1ygWIUriaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/2vY1ygWIUriaGfXRMrUjdw2" title="首发时间：2018-04-28 18:00:00 章节字数：2718">第24章 得来全不费功夫</a>
+                            
+                        </li>
+                        
+                        <li data-rid="25"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/dAhtOGOfk19p4rPq4Fd4KQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/dAhtOGOfk19p4rPq4Fd4KQ2" title="首发时间：2018-04-29 09:49:45 章节字数：2363">第25章 真空退火炉</a>
+                            
+                        </li>
+                        
+                        <li data-rid="26"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/jQ2_bfNzvSH6ItTi_ILQ7A2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/jQ2_bfNzvSH6ItTi_ILQ7A2" title="首发时间：2018-04-29 18:00:00 章节字数：2394">第26章 迈出第一步</a>
+                            
+                        </li>
+                        
+                        <li data-rid="27"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/UhyNrRquA9hOBDFlr9quQA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/UhyNrRquA9hOBDFlr9quQA2" title="首发时间：2018-04-30 10:00:00 章节字数：2916">第27章 亲自设计</a>
+                            
+                        </li>
+                        
+                        <li data-rid="28"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/uW31pLvd_tBOBDFlr9quQA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/uW31pLvd_tBOBDFlr9quQA2" title="首发时间：2018-04-30 18:00:00 章节字数：2943">第28章 倒没有吹牛</a>
+                            
+                        </li>
+                        
+                        <li data-rid="29"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/eQDXs7yi1wqaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/eQDXs7yi1wqaGfXRMrUjdw2" title="首发时间：2018-05-01 10:00:00 章节字数：2659">第29章 资金上的压力</a>
+                            
+                        </li>
+                        
+                        <li data-rid="30"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/IvJCdBGTKx3wrjbX3WA1AA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/IvJCdBGTKx3wrjbX3WA1AA2" title="首发时间：2018-05-01 18:26:13 章节字数：2729">第30章 遇见老同学</a>
+                            
+                        </li>
+                        
+                        <li data-rid="31"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/fd5yXOayacNMs5iq0oQwLQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/fd5yXOayacNMs5iq0oQwLQ2" title="首发时间：2018-05-02 10:00:00 章节字数：2483">第31章 水不是一般的深</a>
+                            
+                        </li>
+                        
+                        <li data-rid="32"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/u3g7J8V7lf62uJcMpdsVgA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/u3g7J8V7lf62uJcMpdsVgA2" title="首发时间：2018-05-02 18:00:00 章节字数：2328">第32章 黎辉的担忧</a>
+                            
+                        </li>
+                        
+                        <li data-rid="33"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/c0XwPAsAmvqaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/c0XwPAsAmvqaGfXRMrUjdw2" title="首发时间：2018-05-03 09:53:57 章节字数：2700">第33章 翻译得很好</a>
+                            
+                        </li>
+                        
+                        <li data-rid="34"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/CdI5p-Tvze2aGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/CdI5p-Tvze2aGfXRMrUjdw2" title="首发时间：2018-05-03 18:00:00 章节字数：2717">第34章 我的钱就是你的钱</a>
+                            
+                        </li>
+                        
+                        <li data-rid="35"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/RuC7VEzBu2LwrjbX3WA1AA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/RuC7VEzBu2LwrjbX3WA1AA2" title="首发时间：2018-05-04 10:00:00 章节字数：2418">第35章 资金搞定！</a>
+                            
+                        </li>
+                        
+                        <li data-rid="36"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/E817gFhhvF7M5j8_3RRvhw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/E817gFhhvF7M5j8_3RRvhw2" title="首发时间：2018-05-04 18:00:00 章节字数：2459">第36章 万事俱备</a>
+                            
+                        </li>
+                        
+                        <li data-rid="37"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/tMYQ8-ILcdLM5j8_3RRvhw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/tMYQ8-ILcdLM5j8_3RRvhw2" title="首发时间：2018-05-05 10:00:00 章节字数：2989">第37章 红星厂出事了</a>
+                            
+                        </li>
+                        
+                        <li data-rid="38"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Jr6PRneYTF_4p8iEw--PPw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Jr6PRneYTF_4p8iEw--PPw2" title="首发时间：2018-05-05 18:00:00 章节字数：2875">第38章 颠覆传统工艺</a>
+                            
+                        </li>
+                        
+                        <li data-rid="39"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/qaHbj_w1Z6q2uJcMpdsVgA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/qaHbj_w1Z6q2uJcMpdsVgA2" title="首发时间：2018-05-06 10:00:00 章节字数：2578">第39章 我可以去试一试</a>
+                            
+                        </li>
+                        
+                        <li data-rid="40"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/xUj-I0Pkr8OaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/xUj-I0Pkr8OaGfXRMrUjdw2" title="首发时间：2018-05-06 18:00:00 章节字数：2689">第40章 开会讨论</a>
+                            
+                        </li>
+                        
+                        <li data-rid="41"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/MFy7oXUcaGC2uJcMpdsVgA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/MFy7oXUcaGC2uJcMpdsVgA2" title="首发时间：2018-05-07 10:01:39 章节字数：3119">第41章 征服大家</a>
+                            
+                        </li>
+                        
+                        <li data-rid="42"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/5MwdlIQHXgu2uJcMpdsVgA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/5MwdlIQHXgu2uJcMpdsVgA2" title="首发时间：2018-05-07 18:00:00 章节字数：2591">第42章 谢振华亲自来了</a>
+                            
+                        </li>
+                        
+                        <li data-rid="43"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/-zZjIZCzNxqaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/-zZjIZCzNxqaGfXRMrUjdw2" title="首发时间：2018-05-08 10:00:00 章节字数：2882">第43章 现场验收</a>
+                            
+                        </li>
+                        
+                        <li data-rid="44"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/vraYk6B8LonwrjbX3WA1AA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/vraYk6B8LonwrjbX3WA1AA2" title="首发时间：2018-05-08 18:00:00 章节字数：2750">第44章 顺利交货</a>
+                            
+                        </li>
+                        
+                        <li data-rid="45"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/JaLvJfOskmtMs5iq0oQwLQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/JaLvJfOskmtMs5iq0oQwLQ2" title="首发时间：2018-05-09 09:13:19 章节字数：2395">第45章 一百万的订单</a>
+                            
+                        </li>
+                        
+                        <li data-rid="46"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/kEgT0TN-NZ3wrjbX3WA1AA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/kEgT0TN-NZ3wrjbX3WA1AA2" title="首发时间：2018-05-09 18:00:00 章节字数：2202">第46章 有人告刁状</a>
+                            
+                        </li>
+                        
+                        <li data-rid="47"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/uu3BUKOmaU3gn4SMoDUcDQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/uu3BUKOmaU3gn4SMoDUcDQ2" title="首发时间：2018-05-10 10:00:00 章节字数：2395">第47章 土豪一回</a>
+                            
+                        </li>
+                        
+                        <li data-rid="48"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/1d7YEjpdX35OBDFlr9quQA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/1d7YEjpdX35OBDFlr9quQA2" title="首发时间：2018-05-10 18:00:00 章节字数：2524">第48章 加餐庆祝</a>
+                            
+                        </li>
+                        
+                        <li data-rid="49"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/IABZXtwfB9SaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/IABZXtwfB9SaGfXRMrUjdw2" title="首发时间：2018-05-11 10:00:00 章节字数：2630">第49章 再次召唤</a>
+                            
+                        </li>
+                        
+                        <li data-rid="50"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/pQHH0OFuOen6ItTi_ILQ7A2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/pQHH0OFuOen6ItTi_ILQ7A2" title="首发时间：2018-05-11 18:00:00 章节字数：2179">第50章 自动化冲压</a>
+                            
+                        </li>
+                        
+                        <li data-rid="51"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/b091IfUeWYPM5j8_3RRvhw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/b091IfUeWYPM5j8_3RRvhw2" title="首发时间：2018-05-12 10:00:00 章节字数：2385">第51章 招标</a>
+                            
+                        </li>
+                        
+                        <li data-rid="52"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/FRHJTDPMBprM5j8_3RRvhw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/FRHJTDPMBprM5j8_3RRvhw2" title="首发时间：2018-05-12 18:00:00 章节字数：2693">第52章 告急</a>
+                            
+                        </li>
+                        
+                        <li data-rid="53"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ywFr6P2exc34p8iEw--PPw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ywFr6P2exc34p8iEw--PPw2" title="首发时间：2018-05-13 10:00:00 章节字数：2613">第53章 先做十万个</a>
+                            
+                        </li>
+                        
+                        <li data-rid="54"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/0Yn6yJbVw0bM5j8_3RRvhw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/0Yn6yJbVw0bM5j8_3RRvhw2" title="首发时间：2018-05-13 18:00:00 章节字数：2432">第54章 招标前夕</a>
+                            
+                        </li>
+                        
+                        <li data-rid="55"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/KoW5iU54oejwrjbX3WA1AA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/KoW5iU54oejwrjbX3WA1AA2" title="首发时间：2018-05-14 10:00:00 章节字数：2322">第55章 胜出</a>
+                            
+                        </li>
+                        
+                        <li data-rid="56"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/N6JqZXgGI95Ms5iq0oQwLQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/N6JqZXgGI95Ms5iq0oQwLQ2" title="首发时间：2018-05-14 18:00:00 章节字数：2391">第56章 系统升级</a>
+                            
+                        </li>
+                        
+                        <li data-rid="57"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/y0thv9fPuDBp4rPq4Fd4KQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/y0thv9fPuDBp4rPq4Fd4KQ2" title="首发时间：2018-05-15 10:00:00 章节字数：2505">第57章 不一样的奖金</a>
+                            
+                        </li>
+                        
+                        <li data-rid="58"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ASjZR9wTRBT6ItTi_ILQ7A2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ASjZR9wTRBT6ItTi_ILQ7A2" title="首发时间：2018-05-15 18:00:00 章节字数：2183">第58章 机会出现了</a>
+                            
+                        </li>
+                        
+                        <li data-rid="59"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/YKmeL5nO0jP6ItTi_ILQ7A2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/YKmeL5nO0jP6ItTi_ILQ7A2" title="首发时间：2018-05-16 10:00:00 章节字数：2712">第59章 好事成双</a>
+                            
+                        </li>
+                        
+                        <li data-rid="60"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/HclZJIgUr2Jp4rPq4Fd4KQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/HclZJIgUr2Jp4rPq4Fd4KQ2" title="首发时间：2018-05-16 18:00:00 章节字数：2813">第60章 新的任务</a>
+                            
+                        </li>
+                        
+                        <li data-rid="61"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ryJIf8EbvsK2uJcMpdsVgA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ryJIf8EbvsK2uJcMpdsVgA2" title="首发时间：2018-05-16 18:10:00 章节字数：2528">第61章 劳服公司（加更）</a>
+                            
+                        </li>
+                        
+                        <li data-rid="62"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/TT4LilB1Pdb4p8iEw--PPw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/TT4LilB1Pdb4p8iEw--PPw2" title="首发时间：2018-05-17 10:00:00 章节字数：2602">第62章 劳服公司的老钳工</a>
+                            
+                        </li>
+                        
+                        <li data-rid="63"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/JOUFkscFL1Xgn4SMoDUcDQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/JOUFkscFL1Xgn4SMoDUcDQ2" title="首发时间：2018-05-17 18:00:00 章节字数：2524">第63章 劳服公司的大学生</a>
+                            
+                        </li>
+                        
+                        <li data-rid="64"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Butv43__yZr4p8iEw--PPw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Butv43__yZr4p8iEw--PPw2" title="首发时间：2018-05-18 10:00:00 章节字数：2663">第64章 爸爸支持你</a>
+                            
+                        </li>
+                        
+                        <li data-rid="65"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/bFmz-qpq1Zj4p8iEw--PPw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/bFmz-qpq1Zj4p8iEw--PPw2" title="首发时间：2018-05-18 18:00:00 章节字数：2522">第65章 承包方案</a>
+                            
+                        </li>
+                        
+                        <li data-rid="66"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/eO9C5GqvIKBp4rPq4Fd4KQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/eO9C5GqvIKBp4rPq4Fd4KQ2" title="首发时间：2018-05-19 10:00:00 章节字数：2499">第66章 李卫斌的反应有点大</a>
+                            
+                        </li>
+                        
+                        <li data-rid="67"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/o0RrldfAMB5Ms5iq0oQwLQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/o0RrldfAMB5Ms5iq0oQwLQ2" title="首发时间：2018-05-19 18:00:00 章节字数：2491">第67章 要不要毙掉</a>
+                            
+                        </li>
+                        
+                        <li data-rid="68"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/aguENi40cPiaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/aguENi40cPiaGfXRMrUjdw2" title="首发时间：2018-05-20 10:00:00 章节字数：2217">第68章 二选一</a>
+                            
+                        </li>
+                        
+                        <li data-rid="69"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/J_0ekfLdzxr6ItTi_ILQ7A2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/J_0ekfLdzxr6ItTi_ILQ7A2" title="首发时间：2018-05-20 18:00:00 章节字数：2660">第69章 我叫你飞哥</a>
+                            
+                        </li>
+                        
+                        <li data-rid="70"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/PZG5LOeqmgOaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/PZG5LOeqmgOaGfXRMrUjdw2" title="首发时间：2018-05-21 10:00:00 章节字数：2525">第70章 常劲林的询问</a>
+                            
+                        </li>
+                        
+                        <li data-rid="71"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/6I5VwXZVo9Xgn4SMoDUcDQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/6I5VwXZVo9Xgn4SMoDUcDQ2" title="首发时间：2018-05-21 18:00:00 章节字数：2556">第71章 长远打算</a>
+                            
+                        </li>
+                        
+                        <li data-rid="72"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Opw9HW6kGCFMs5iq0oQwLQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Opw9HW6kGCFMs5iq0oQwLQ2" title="首发时间：2018-05-22 10:00:00 章节字数：2560">第72章 入主劳服公司</a>
+                            
+                        </li>
+                        
+                        <li data-rid="73"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ZFa48_micYVMs5iq0oQwLQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ZFa48_micYVMs5iq0oQwLQ2" title="首发时间：2018-05-22 18:00:00 章节字数：2769">第73章 营销人才</a>
+                            
+                        </li>
+                        
+                        <li data-rid="74"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ABDsk3kOMRP6ItTi_ILQ7A2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ABDsk3kOMRP6ItTi_ILQ7A2" title="首发时间：2018-05-22 18:10:00 章节字数：2500">第74章 成立公司（加更）</a>
+                            
+                        </li>
+                        
+                        <li data-rid="75"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/l7wUI6n1DJTgn4SMoDUcDQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/l7wUI6n1DJTgn4SMoDUcDQ2" title="首发时间：2018-05-23 10:00:00 章节字数：2667">第75章 一份大礼</a>
+                            
+                        </li>
+                        
+                        <li data-rid="76"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ulhYwiXsPgK2uJcMpdsVgA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ulhYwiXsPgK2uJcMpdsVgA2" title="首发时间：2018-05-23 18:00:00 章节字数：2831">第76章 不愧是进口货</a>
+                            
+                        </li>
+                        
+                        <li data-rid="77"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/z-nQxliJeO_gn4SMoDUcDQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/z-nQxliJeO_gn4SMoDUcDQ2" title="首发时间：2018-05-24 10:00:00 章节字数：2324">第77章 毛遂自荐</a>
+                            
+                        </li>
+                        
+                        <li data-rid="78"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ONQL_GCUH_W2uJcMpdsVgA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/ONQL_GCUH_W2uJcMpdsVgA2" title="首发时间：2018-05-24 18:00:00 章节字数：2381">第78章 工号一千以内</a>
+                            
+                        </li>
+                        
+                        <li data-rid="79"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/eFnZ3gf3K674p8iEw--PPw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/eFnZ3gf3K674p8iEw--PPw2" title="首发时间：2018-05-25 10:00:00 章节字数：2459">第79章 海外来客</a>
+                            
+                        </li>
+                        
+                        <li data-rid="80"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/JJ9o-LXm8eX6ItTi_ILQ7A2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/JJ9o-LXm8eX6ItTi_ILQ7A2" title="首发时间：2018-05-25 18:00:00 章节字数：2477">第80章 质量很好</a>
+                            
+                        </li>
+                        
+                        <li data-rid="81"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/wT422TatoeWaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/wT422TatoeWaGfXRMrUjdw2" title="首发时间：2018-05-26 10:00:00 章节字数：2626">第81章 五十万美元</a>
+                            
+                        </li>
+                        
+                        <li data-rid="82"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/oGLwzaIFQ4WaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/oGLwzaIFQ4WaGfXRMrUjdw2" title="首发时间：2018-05-26 18:00:00 章节字数：2711">第82章 赚取美元</a>
+                            
+                        </li>
+                        
+                        <li data-rid="83"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/DrAOOxSacPLM5j8_3RRvhw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/DrAOOxSacPLM5j8_3RRvhw2" title="首发时间：2018-05-27 10:00:00 章节字数：2358">第83章 该来的还是来了</a>
+                            
+                        </li>
+                        
+                        <li data-rid="84"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Z39SFtXJWye2uJcMpdsVgA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/Z39SFtXJWye2uJcMpdsVgA2" title="首发时间：2018-05-27 18:00:00 章节字数：2072">第84章 超级潜力股</a>
+                            
+                        </li>
+                        
+                        <li data-rid="85"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/zJ62QlH9GNzM5j8_3RRvhw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/zJ62QlH9GNzM5j8_3RRvhw2" title="首发时间：2018-05-28 10:00:00 章节字数：2568">第85章 第一批货发出</a>
+                            
+                        </li>
+                        
+                        <li data-rid="86"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/m6UDk949c7HwrjbX3WA1AA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/m6UDk949c7HwrjbX3WA1AA2" title="首发时间：2018-05-28 18:00:00 章节字数：2628">第86章 四两拨千斤</a>
+                            
+                        </li>
+                        
+                        <li data-rid="87"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/8PFnpOPUrjZp4rPq4Fd4KQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/8PFnpOPUrjZp4rPq4Fd4KQ2" title="首发时间：2018-05-29 10:00:00 章节字数：2136">第87章 一年的时间</a>
+                            
+                        </li>
+                        
+                        <li data-rid="88"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/6f0eQtykUOz4p8iEw--PPw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/6f0eQtykUOz4p8iEw--PPw2" title="首发时间：2018-05-29 18:04:00 章节字数：2633">第88章 技术顾问</a>
+                            
+                        </li>
+                        
+                        <li data-rid="89"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/S6Jn6_66Sof6ItTi_ILQ7A2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/S6Jn6_66Sof6ItTi_ILQ7A2" title="首发时间：2018-05-30 10:00:00 章节字数：2704">第89章 欠我一个道歉</a>
+                            
+                        </li>
+                        
+                        <li data-rid="90"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/iXQh2qE0sRP4p8iEw--PPw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/iXQh2qE0sRP4p8iEw--PPw2" title="首发时间：2018-05-30 18:00:00 章节字数：2123">第90章 吃了一块肥肉</a>
+                            
+                        </li>
+                        
+                        <li data-rid="91"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/t6Mo_tX3tL_wrjbX3WA1AA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/t6Mo_tX3tL_wrjbX3WA1AA2" title="首发时间：2018-05-31 09:50:00 章节字数：2378">第91章 我要做电机</a>
+                            
+                        </li>
+                        
+                        <li data-rid="92"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/P3oilB0u6CBp4rPq4Fd4KQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/P3oilB0u6CBp4rPq4Fd4KQ2" title="首发时间：2018-05-31 18:00:00 章节字数：2533">第92章 严重质量问题</a>
+                            
+                        </li>
+                        
+                        <li data-rid="93"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/EpfJ3gJ3XVROBDFlr9quQA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/EpfJ3gJ3XVROBDFlr9quQA2" title="首发时间：2018-06-01 10:00:00 章节字数：2496">第93章 来的不是时候</a>
+                            
+                        </li>
+                        
+                        <li data-rid="94"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/OrI5T257YZSaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/OrI5T257YZSaGfXRMrUjdw2" title="首发时间：2018-06-01 18:00:00 章节字数：2566">第94章 决定做电机！</a>
+                            
+                        </li>
+                        
+                        <li data-rid="95"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/2TyErFSKwgXgn4SMoDUcDQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/2TyErFSKwgXgn4SMoDUcDQ2" title="首发时间：2018-06-02 10:00:00 章节字数：2464">第95章 主冷电机</a>
+                            
+                        </li>
+                        
+                        <li data-rid="96"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/-k4vwrcFXzn6ItTi_ILQ7A2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/-k4vwrcFXzn6ItTi_ILQ7A2" title="首发时间：2018-06-02 18:00:00 章节字数：2493">第96章 谢振华的压力很大</a>
+                            
+                        </li>
+                        
+                        <li data-rid="97"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/r9-relFEzdNMs5iq0oQwLQ2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/r9-relFEzdNMs5iq0oQwLQ2" title="首发时间：2018-06-03 10:00:00 章节字数：2837">第97章 再次拜访谢振华</a>
+                            
+                        </li>
+                        
+                        <li data-rid="98"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/MvGk-eltJIGaGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/MvGk-eltJIGaGfXRMrUjdw2" title="首发时间：2018-06-03 17:36:05 章节字数：2272">第98章 做一笔交易</a>
+                            
+                        </li>
+                        
+                        <li data-rid="99"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/4mCb0MeYywbwrjbX3WA1AA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/4mCb0MeYywbwrjbX3WA1AA2" title="首发时间：2018-06-04 10:00:00 章节字数：2787">第99章 罗东出马</a>
+                            
+                        </li>
+                        
+                        <li data-rid="100"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/_8_IQsbLPp6aGfXRMrUjdw2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/_8_IQsbLPp6aGfXRMrUjdw2" title="首发时间：2018-06-04 18:00:00 章节字数：2145">第100章 查找故障原因</a>
+                            
+                        </li>
+                        
+                        <li data-rid="101"><a href="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/swnTq302iMW2uJcMpdsVgA2" target="_blank" data-eid="qd_G55" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/swnTq302iMW2uJcMpdsVgA2" title="首发时间：2018-06-05 10:00:00 章节字数：3076">第101章 第一台电机</a>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="book-content-wrap cf">
+            
+            <div class="left-wrap fl">
+                <div class="book-info-detail">
+                    <cite class="icon-pin"></cite>
+                    <div class="book-intro">
+                        <p>
+                            
+                                　　重生了，回到20多年前的唐飞重新开始，抓住共和国制造业发展的黄金时期，从小到大，从无到有，涉及轨道交通，新能源，重工业装备，甚至芯片。一家庞大的制造集团渐渐的出现在了国际舞台上，让国人无比自豪的是，它掌握着制造业的很多核心科技。
+                            
+                        </p>
+                    </div>
+                    <div class="book-state" data-l1="4">
+                        <ul>
+                            
+                            
+                            <li>
+                                <b>作者自定义标签</b>
+                                <div class="detail">
+                                    <p class="tag-wrap" data-l1="4">
+                                        
+                                        
+                                        <a class="tags" href="" target="_blank" data-eid="qd_G70">坚毅</a>
+                                        
+                                        
+                                        
+                                        <a class="tags" href="" target="_blank" data-eid="qd_G70">宅男</a>
+                                        
+                                        
+                                        
+                                        <a class="tags" href="" target="_blank" data-eid="qd_G70">系统流</a>
+                                        
+                                        
+                                        
+                                        <a class="tags" href="" target="_blank" data-eid="qd_G70">赚钱</a>
+                                        
+                                        
+                                    </p>
+                                </div>
+                            </li>
+                            
+                                <li class="update">
+                                    <b>最近更新</b>
+                                    <div class="detail">
+                                        <p class="cf">
+                                            <a class="blue" href="" data-eid="qd_G19" data-cid="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/swnTq302iMW2uJcMpdsVgA2" title="第101章 第一台电机" target="_blank">第101章 第一台电机</a><i>&#183;</i><em class="time">49分钟前</em>
+                                        </p>
+                                        <p class="tag-wrap mt10">
+                                            
+                                            
+                                            <span class="tags red">连续49天更新</span>
+                                            
+                                        </p>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fans-zone" data-l1="5">
+                    <h3 class="lang">粉丝互动</h3>
+                    <div class="fans-interact cf">
+                        <dl>
+                            <dd>
+                                    <h4 class="lang"><span class="act">推荐票</span></h4>
+                                <div class="action-wrap" id="ticket-wrap">
+                                    
+                                    <div class="ticket rec-ticket ">
+                                        <p>本周票数</p>
+                                        <p class="num"><i id="recCount">1852</i></p>
+                                        
+                                        <p>排名204<i>&#183;</i>还差<em>
+                                            13
+                                            
+                                        </em>票追上前一名</p>
+
+                                        <a class="red-radius-btn" id="recBtn" href="javascript:" data-showtype="2" data-eid="qd_G23"><em class=""></em>投推荐票</a>
+                                    </div>
+                                </div>
+                            </dd>
+                            <dd class="line"></dd>
+                            <dd>
+                                <h4 class="lang"><span class="act">打赏</span></h4>
+                                <div class="action-wrap">
+                                    <div class="ticket">
+                                        <p>本周打赏人数</p>
+                                        <p class="num"><i class="rewardNum" id="rewardNum">4</i></p>
+                                        
+                                        <p>今日<em id="todayNum">2</em>人打赏</p>
+
+                                        <a class="red-radius-btn" id="rewardBtn" href="javascript:" data-showtype="3" data-eid="qd_G24"><em class=""></em>打赏作者</a>
+                                       
+                                    </div>
+                                </div>
+                            </dd>
+                            <dd class="line"></dd>
+                            <dd>
+                                <h4 class="lang"><span>我的粉丝等级</span></h4>
+                                <div class="fans-rank login-out mb20 cf hidden" id="noLogin" data-login="0">
+                                    <div class="user-photo fl">
+                                        <a href="//me.qidian.com" target="_blank">
+                                            <img src="../Images/usr02.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="fans-info">
+                                        <p><a class="blue" id="login-btn" href="javascript:" data-eid="qd_G28">登录</a>查看粉丝等级</p>
+                                    </div>
+                                </div>
+                                <div class="fans-rank login-in mb20 cf " id="loginIn" data-login="1">
+                                    <div class="user-photo fl">
+                                        <a href="//me.qidian.com" id="myUserIcon"  target="_blank">
+                                            <img src="../Images/face.jpg">
+                                            <span class="user-level" id="userLevel"></span>
+                                        </a>
+                                    </div>
+                                    <div class="fans-info hidden" id="haveLv">
+                                        <p>我的排名<b class="red">--</b>名</p>
+                                        <p>还差<span id="Lnterval">--</span>粉丝值升级</p>
+                                    </div>
+                                    <div class="fans-info hidden" id="noLv">
+                                        <p>暂无粉丝等级</p>
+                                        <p id="levelUp">对本书消费可提升等级</p>
+                                    </div>
+                                </div>
+                                <div class="fans-dynamic">
+                                    <h4 class="lang"><span>本书粉丝动态</span></h4>
+                                    
+                                    <div class="fans-slide-wrap">
+                                        <div class="scroll-div" id="scrollDiv">
+                                            <ul class="fans-slide">
+                                            
+                                            <li data-rid="1" class="">
+                                                <em class="rec"></em><a href="" target="_blank" data-eid="" title="冬韵雪山">冬韵雪山</a><span>投了</span>2张推荐票
+                                            </li>
+                                            
+                                            <li data-rid="2" class="">
+                                                <em class="rec"></em><a href="" target="_blank" data-eid="" title="二货爱凤">二货爱凤</a><span>投了</span>3张推荐票
+                                            </li>
+                                            
+                                            <li data-rid="3" class="">
+                                                <em class="rec"></em><a href="" target="_blank" data-eid="" title="大胖羽">大胖羽</a><span>投了</span>3张推荐票
+                                            </li>
+                                            
+                                            <li data-rid="4" class="">
+                                                <em class="rec"></em><a href="" target="_blank" data-eid="" title="秋风舞逸">秋风舞逸</a><span>投了</span>2张推荐票
+                                            </li>
+                                            
+                                            <li data-rid="5" class="">
+                                                <em class="rec"></em><a href="" target="_blank" data-eid="" title="心想明月">心想明月</a><span>投了</span>2张推荐票
+                                            </li>
+                                            
+                                            <li data-rid="6" class="">
+                                                <em class="money"></em><a href="" target="_blank" data-eid="" title="书友20180603092403885">书友20180603092403885</a><span>打赏</span>100惊鸿币
+                                            </li>
+                                            
+                                            <li data-rid="7" class="">
+                                                <em class="money"></em><a href="" target="_blank" data-eid="" title="★诚诺★">★诚诺★</a><span>打赏</span>100惊鸿币
+                                            </li>
+                                            
+                                            <li data-rid="8" class="">
+                                                <em class="money"></em><a href="" target="_blank" data-eid="" title="★诚诺★">★诚诺★</a><span>打赏</span>100惊鸿币
+                                            </li>
+                                            
+                                            <li data-rid="9" class="">
+                                                <em class="money"></em><a href="" target="_blank" data-eid="" title="无心世纪">无心世纪</a><span>打赏</span>1000惊鸿币
+                                            </li>
+                                            
+                                            <li data-rid="10" class="">
+                                                <em class="money"></em><a href="" target="_blank" data-eid="" title="余心一人">余心一人</a><span>打赏</span>100惊鸿币
+                                            </li>
+                                            
+                                        </ul>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                
+                <div class="like-more mb30 cf" data-l1="6" style="margin-top:120px">
+                    <h3 class="lang">喜欢这本书的人还喜欢</h3>
+                    <div class="like-more-list">
+                        <ul class="cf">
+                            
+                            <li data-rid="1">
+                                <div class="book-img" title="万界代购系统">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="1004900395"><img class="lazy" src="../Images/9.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/1004900395/90" alt="万界代购系统"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="万界代购系统" data-eid="qd_G29" data-bid="1004900395">万界代购系统</a></h4>
+                                <p></p>
+                            </li>
+                            
+                            <li data-rid="2">
+                                <div class="book-img" title="重生之投资之王">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="1005291434"><img class="lazy" src="../Images/10.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/1005291434/90" alt="重生之投资之王"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="重生之投资之王" data-eid="qd_G29" data-bid="1005291434">重生之投资之王</a></h4>
+                                <p></p>
+                            </li>
+                            
+                            <li data-rid="3">
+                                <div class="book-img" title="无敌神龙养成系统">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="1011311347"><img class="lazy" src="../Images/11.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/1011311347/90" alt="无敌神龙养成系统"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="无敌神龙养成系统" data-eid="qd_G29" data-bid="1011311347">无敌神龙养成系统</a></h4>
+                                <p></p>
+                            </li>
+                            
+                            <li data-rid="4">
+                                <div class="book-img" title="神级大矿主">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="1004144120"><img class="lazy" src="../Images/12.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/1004144120/90" alt="神级大矿主"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="神级大矿主" data-eid="qd_G29" data-bid="1004144120">神级大矿主</a></h4>
+                                <p></p>
+                            </li>
+                            
+                            <li data-rid="5">
+                                <div class="book-img" title="科技之门">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="3614713"><img class="lazy" src="../Images/13.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/3614713/90" alt="科技之门"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="科技之门" data-eid="qd_G29" data-bid="3614713">科技之门</a></h4>
+                                <p></p>
+                            </li>
+                            
+                            <li data-rid="6">
+                                <div class="book-img" title="万界科技系统">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="1010513863"><img class="lazy" src="../Images/14.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/1010513863/90" alt="万界科技系统"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="万界科技系统" data-eid="qd_G29" data-bid="1010513863">万界科技系统</a></h4>
+                                <p></p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="user-commentWrap" data-l1="8">
+                    <div class="user-comment-wrap book-friend">
+                        <div class="comment-head cf">
+                        </div>
+                      <div class="userCommentWrap"  id="userCommentWrap" data-l1="7">
+                          <div class="la-ball-pulse">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                          </div>
+                          
+                          <div class="my-comment-wrap" id="myCommentWrap">
+                          </div>
+                          
+                      </div>
+
+                    </div>
+                </div>
+            
+            </div>
+            <div class="right-wrap fr">
+                
+                    <div class="author-state mb10">
+                        <div class="author-info">
+                            <div class="info-wrap nobt" data-l1="9">
+                                <div class="author-photo" id="authorId" data-authorid="2967437">
+                                    <a href="" target="_blank" data-eid="qd_G38">
+                                        <img src="../Images/qd_face.jpg">
+                                    </a>
+                                    
+                                            <span class="lv">Lv.5</span>
+                                    
+                                </div>
+                                <p><a href="" target="_blank">五彩贝壳</a>
+                                    
+                                    <a class="god-light lv1" href="" title="大神之光：已经有6人获得" target="_blank" data-eid="qd_G39"></a>
+                                    
+                                </p>
+                                
+                            </div>
+                            <div class="info-wrap" data-l1="9">
+                                <ul class="work-state cf">
+                                    <li>
+                                        <span class="book"></span>
+                                        <p>作品总数</p>
+                                        <em>5</em>
+                                    </li>
+                                    <li>
+                                        <span class="word"></span>
+                                        <p>累计字数</p>
+                                        <em>716.91万</em>
+                                    </li>
+                                    <li>
+                                        <span class="coffee"></span>
+                                        <p>创作天数</p>
+                                        <em>1692</em>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            
+                            <div class="info-wrap other-works" data-l1="10">
+                                <h3 class="lang"><a class="blue" href="" target="_blank" data-eid="qd_G40">更多<em class=""></em></a>其他作品</h3>
+                                    <div class="work-slides cf" id="workSlides">
+                                        <ul>
+                                            
+                                            
+                                            <li id="item1" data-rid="1">
+                                                <div class="book-img">
+                                                    <a href="" target="_blank" data-eid="qd_G43" data-bid="2913045"><img src="../Images/180.jpg"/>
+                                                        
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4><a href="" target="_blank" data-eid="qd_G44" data-bid="2913045">万物风云</a></h4>
+                                                    <p class="red"><a href="" data-eid="qd_G45" target="_blank">仙侠</a></p>
+                                                    <p>　　来到这个世界，苏牧从零开始，开始了自己的修炼之旅。　　身有神物，虽然资质一般，苏牧也是混得风声水起，练神功，夺奇宝，赢取美人心。　　万物现，风云动。　　不知不觉中，苏牧发现自己站在了这个世界的巅峰。　　*****　　两百四十多万字的《抗战之大国崛起》已经完本，这是贝壳的第二本书，大家放心收藏。　　</p>
+                                                    <a class="blue-btn add-book" href="javascript:" data-eid="qd_G46" data-bookId="2913045" data-bid="2913045">加入书架</a>
+                                                </div>
+                                            </li>
+                                            
+                                            <li id="item2" data-rid="2">
+                                                <div class="book-img">
+                                                    <a href="" target="_blank" data-eid="qd_G43" data-bid="3451998"><img data-src="//qidian.qpic.cn/qdbimg/349573/3451998/90"/>
+                                                        
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4><a href="" target="_blank" data-eid="qd_G44" data-bid="3451998">航空梦</a></h4>
+                                                    <p class="red"><a href="" data-eid="qd_G45" target="_blank">都市</a><i>&#183;</i><em>8.9分</em></p>
+                                                    <p>　　贝壳新书《神级大矿主》发布，大家去瞧瞧，帮着加个收藏或投一章推荐票，谢谢大家！　　这是一个航空工业帝国之梦，也是理想之梦。　　飞机制造，常被人们比喻为现代工业的"皇冠"，飞机"心脏"的航空发动机，因其研制技术含量高、工艺难度大，更是被称为"皇冠上的明珠"。　　本文讲述的就是以航空工业为背景的故事，主角从一家机械公司做配件开始，到自己的第一台航空发动机，直至摘取皇冠上的明珠，最后站在世界的工业之巅，成就自己的航空帝国。　　</p>
+                                                    <a class="blue-btn add-book" href="javascript:" data-eid="qd_G46" data-bookId="3451998" data-bid="3451998">加入书架</a>
+                                                </div>
+                                            </li>
+                                            
+                                            <li id="item3" data-rid="3">
+                                                <div class="book-img">
+                                                    <a href="" target="_blank" data-eid="qd_G43" data-bid="1003529728"><img data-src="//qidian.qpic.cn/qdbimg/349573/1003529728/90"/>
+                                                        
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4><a href="" target="_blank" data-eid="qd_G44" data-bid="1003529728">我的明末之旅</a></h4>
+                                                    <p class="red"><a href="i" data-eid="qd_G45" target="_blank">历史</a></p>
+                                                    <p>　　办实业，练新军；
+开海禁，建海军；
+打鞑子，平内乱；
+征倭奴，扬国威；
+这是一个工科男在明末的故事。
+----------------
+初试历史类，望大家多多捧场。
+完本小说《都市阵法师》，《航空梦》大家在书荒的时候可以去瞧瞧。</p>
+                                                    <a class="blue-btn add-book" href="javascript:" data-eid="qd_G46" data-bookId="1003529728" data-bid="1003529728">加入书架</a>
+                                                </div>
+                                            </li>
+                                            
+                                            <li id="item4" data-rid="4">
+                                                <div class="book-img">
+                                                    <a href="" target="_blank" data-eid="qd_G43" data-bid="1004144120"><img data-src="//qidian.qpic.cn/qdbimg/349573/1004144120/90"/>
+                                                        
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4><a href="" target="_blank" data-eid="qd_G44" data-bid="1004144120">神级大矿主</a></h4>
+                                                    <p class="red"><a href="" data-eid="qd_G45" target="_blank">都市</a><i>&#183;</i><em>8.6分</em></p>
+                                                    <p>　　全球最大的矿业公司，毫无疑问是旭东矿业集团，没有之一，这是一只超级巨鳄，作为这只超级巨鳄的所有人，在业界被称之为"神级大矿主"。</p>
+                                                    <a class="blue-btn add-book" href="javascript:" data-eid="qd_G46" data-bookId="1004144120" data-bid="1004144120">加入书架</a>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                        <div class="nav">
+                                            
+                                            <a href="#item1"></a>
+                                            
+                                            <a href="#item2"></a>
+                                            
+                                            <a href="#item3"></a>
+                                            
+                                            <a href="#item4"></a>
+                                            
+                                        </div>
+                                        
+                                        <div class="arrows ">
+                                            <a href="javascript:" class="" data-type="prev" data-eid="qd_G41"></a>
+                                            <a href="javascript:" class="" data-type="next" data-eid="qd_G42"></a>
+                                        </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                
+                    
+                
+                    <div class="book-list-wrap mb10" data-l1="13">
+   <div class="strongrec-list">
+       <h3 class="wrap-title lang">本周强推<i>&#183;</i>都市</h3>
+       <div class="book-list">
+           <ul>
+               
+               <li data-rid="1">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>娱乐明星<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1011932150" title="歌圣">歌圣</a></strong>
+               </li>
+               
+               <li data-rid="2">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>娱乐明星<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1012029544" title="喜剧天王">喜剧天王</a></strong>
+               </li>
+               
+               <li data-rid="3">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>都市生活<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1012015699" title="房产大玩家">房产大玩家</a></strong>
+               </li>
+               
+               <li data-rid="4">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>娱乐明星<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1012018201" title="半个娱乐圈">半个娱乐圈</a></strong>
+               </li>
+               
+               <li data-rid="5">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>都市生活<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1011879101" title="重生资本狂人">重生资本狂人</a></strong>
+               </li>
+               
+               <li data-rid="6">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>异术超能<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1011790606" title="我在都市炼神器">我在都市炼神器</a></strong>
+               </li>
+               
+               <li data-rid="7">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>都市生活<em>」</em></a><strong><a class="name" href="//book.qidian.com/info/1011971435" target="_blank" data-eid="qd_G51" data-bid="1011971435" title="谁动了我的剧本">谁动了我的剧本</a></strong>
+               </li>
+               
+               <li data-rid="8">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>都市生活<em>」</em></a><strong><a class="name" href="//book.qidian.com/info/1009695534" target="_blank" data-eid="qd_G51" data-bid="1009695534" title="我真不要当明星">我真不要当明星</a></strong>
+               </li>
+               
+               <li data-rid="9">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>娱乐明星<em>」</em></a><strong><a class="name" href="//book.qidian.com/info/1011890878" target="_blank" data-eid="qd_G51" data-bid="1011890878" title="在美利坚当大咖">在美利坚当大咖</a></strong>
+               </li>
+               
+               <li data-rid="10">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>都市生活<em>」</em></a><strong><a class="name" href="//book.qidian.com/info/1010537314" target="_blank" data-eid="qd_G51" data-bid="1010537314" title="重生之我是我二大爷">重生之我是我二大爷</a></strong>
+               </li>
+               
+           </ul>
+       </div>
+   </div>
+</div>
+       
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+    <div class="box-center cf">
+   
+        <div class="footer-menu dib-wrap">
+            <a href="" target="_blank">惊鸿</a>
+            <a href="" target="_blank">联系我们</a>
+            <a href="" target="_blank">加入我们</a>
+            <a href="" target="_blank">帮助中心</a>
+            <a href="#" class="advice" target="_blank">提交建议</a>
+            <!--<a href="http://bbs.qidian.com" target="_blank">起点论坛</a>-->
+
+        </div>
+        <div class="copy-right">
+            <p><span>Copyright &copy; 2002-2018 www.qidian.com All Rights Reserved</span>版权所有 上海玄霆娱乐信息科技有限公司</p>
+            <p>上海玄霆娱乐信息科技有限公司 增值电信业务经营许可证沪B2-20080046 出版经营许可证 新出发沪批字第U3718号 沪网文[2015]0081-031 新出网证（沪）字010 沪ICP备08017520号-1</p>
+            <p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！举报电话：010-59357051</p>
+            <p>本站所收录的作品、社区话题、用户评论、用户上传内容或图片等均属用户个人行为。如前述内容侵害您的权益，欢迎举报投诉，一经核实，立即删除，本站不承担任何责任</p>
+            <p>联系方式 总机 021-61870500 地址：中国（上海）自由贸易试验区碧波路690号6号楼101、201室</p>
+        </div>
+        
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

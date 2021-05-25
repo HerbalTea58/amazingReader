@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.WriterMapper">
+<!--	boolean add(Writer writer);
+	boolean alter(Writer writer);
+	Writer getWriter(int readerId);  -->
+	
+	<insert id="add" parameterType="writer">
+		insert into writer (writer_neck_name,writer_password,writer_portrait,writer_short_recommend,
+							writer_real_name,writer_sex,writer_address,writer_tel,writer_statu_id,
+							writer_account
+							)
+		values(
+			#{writerNeckName},#{writerPassword},
+			#{writerPortrait},#{writerShortRecommend},#{writerRealName},
+			#{writerSex},#{writerAddress},#{writerTel},1,
+			#{writerAccount}
+		)
+	</insert>
+	<update id="alter" parameterType="Writer">
+		UPDATE writer set
+			writer_neck_name=#{writerNeckName},
+			writer_password=#{writerPassword},
+			writer_portrait=#{writerPortrait},
+			writer_short_recommend=#{writerShortRecommend},
+			writer_real_name=#{writerRealName},
+			writer_sex=#{writerSex},
+			writer_address=#{writerAddress},
+			writer_tel=#{writerTel},
+			writer_statu_id=#{writerStatuId},
+			writer_account=#{writerAccount}
+		where writer_id=#{writerId}
+	</update>
+	<select id="getWriter" parameterType="int" resultType="Writer">
+		select *
+		from writer
+		where writer_id = #{_parameter}
+	</select>
+	<!--Writer getWriterByName(String writerName);//通过作者昵称 显示作者信息-->
+	<select id="getWritersByName" parameterType="String" resultType="Writer">
+		select *
+		from writer
+		where writer_neck_name LIKE  '%' #{_parameter}  '%'
+	</select>
+	<!--List<Writer> getWritersByName(String name);-->
+	<select id="getWriterByName" parameterType="String" resultType="Writer">
+		SELECT * FROM writer WHERE writer_neck_name=#{_parameter}
+	</select>
+	<!--Writer getWriterByTel(String writerTel);//通过作者联系方式 显示作者信息-->
+	<select id="getWriterByTel" parameterType="String" resultType="Writer">
+		select *
+		from writer
+		where writer_tel =  #{_parameter}
+	</select>
+
+
+
+
+	<!--&lt;!&ndash;//功能操作&ndash;&gt;
+	&lt;!&ndash;boolean newABook(Book book);//创建新书&ndash;&gt;
+	<insert id="newABook" parameterType="Book">
+		insert into book(book_name,book_cover,book_writer_id,book_statu_id,book_style_id,book_short_describe,
+		book_activity_statu) VALUES(#{bookName},#{bookCover},#{bookWriterId},#{bookStatuId},
+		#{bookStyleId},#{bookShortDescribe},#{bookActivityStatu})
+	</insert>
+
+	&lt;!&ndash;public boolean addChapter(int bookId);//通过书籍id 添加章节内容&ndash;&gt;
+	<insert id="addChapter" parameterType="int">
+		INSERT INTO chapter(chapter_num,chapter_book_id,chapter_name,chapter_word_num,
+		chapter_price,chapter_refresh_time,chapter_statu,chapter_content,chapter_addition)
+		 VALUE(#{chapterNum},#{chapterBookId},#{chapterName},#{chapterWordNum},#{chapterPrice},
+		 #{chapterRefreshTime},#{chapterStatu},#{chapterContent},#{chapterAddition})
+	</insert>
+	&lt;!&ndash;public boolean addWriterWordsAfterChapter(ChapterAdditionRemarks chapterAdditionRemarks);//添加章节后面的 作者有话说&ndash;&gt;
+	<insert id="addWriterWordsAfterChapter" parameterType="ChapterAdditionRemarks">
+		insert into chapter VALUES(#{bookChapterId},#{bookCharacter},#{bookImg1},#{bookImag2},#{bookImag3})
+	</insert>
+	&lt;!&ndash;public boolean alterWriterWordsAfterChapter(ChapterAdditionRemarks chapterAdditionRemarks)&ndash;&gt;
+	&lt;!&ndash;public boolean alterChapter(Chapter chapter);//封装chapter对象 修改章节内容&ndash;&gt;
+	<update id="alterChapter" parameterType="Chapter">
+		update chapter set chapter_num=#{},chapter_book_id=#{},chapter_name=#{},
+		chapter_word_num=#{},chapter_click_num=#{},chapter_price=#{},chapter_refresh_time=#{},chapter_statu=#{},
+		chapter_content=#{},chapter_addition=#{} where chapter_id=#{chapterId}
+	</update>
+
+	&lt;!&ndash;public Book selectABookByID(int bookId);//通过id查找自己作品(预览)&ndash;&gt;
+	<select id="selectABookByID" parameterType="int" resultType="Book">
+		select * from book where book_id=#{bookId}
+	</select>-->
+
+	<!--public Double getMoney(int writerId);-->
+	<select id="getMoney" parameterType="int" resultType="Double">
+		select writer_money from writer where writer_id = #{_parameter}
+	</select>
+
+	<!--public boolean upMoney(int writerId, double money);-->
+	<update id="upMoney">
+		update writer set writer_money = writer_money - #{param2} where writer_id = #{param1}
+	</update>
+</mapper>

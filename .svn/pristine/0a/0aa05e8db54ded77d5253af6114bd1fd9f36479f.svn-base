@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.ReportChapterMapper">
+<!--boolean add(ReportChapter reportChapter);-->
+    <insert id="add" parameterType="ReportChapter">
+        insert into report_chapter values(#{reportId},#{chapterId},#{readerId},#{reportTypeId},
+        #{reportReason},now(),#{reportSolution},1,#{reportManagerId})
+    </insert>
+    <!--boolean alter(ReportChapter reportChapter);-->
+    <update id="alter" parameterType="ReportChapter">
+        UPDATE report_chapter set report_solution=#{reportSolution},report_statu_id=#{reportStatuId}
+        where report_id=#{reportId}
+    </update>
+    <!--List<ReportChapter> getBymanagerId(int managerId);-->
+    <select id="getBymanagerId" parameterType="int" resultType="ReportChapter">
+        select * from report_chapter where report_manager_id=#{_parameter}
+    </select>
+
+    <!--ReportChapter getById(int reportChapterId);-->
+    <select id="getById" parameterType="int" resultType="ReportChapter">
+        select * from report_chapter where report_id = #{_parameter}
+    </select>
+    <!--List<ReportChapter> getToDealReportByManagerId(int managerId);-->
+    <select id="getToDealReportByManagerId" resultType="ReportChapter">
+        select * from report_chapter WHERE report_statu_id &lt; 4 AND report_manager_id = #{param};
+    </select>
+    <!--void setReadFor(int managerId);-->
+    <update id="setReadFor">
+        UPDATE report_chapter SET report_statu_id = 2 WHERE report_manager_id = #{param}
+    </update>
+</mapper>

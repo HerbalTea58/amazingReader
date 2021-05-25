@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.ChapterCheckMapper">
+    <resultMap id="getAllInfoOfWriterAndToCheckChaptersMap" type="Writer" autoMapping="true">
+        <collection property="books" ofType="Book" select="getWriterBooks" column="writer_id">
+        </collection>
+    </resultMap>
+    <!--List<Writer> getAllInfoOfWriterAndToCheckChapters();-->
+    <select id="getAllInfoOfWriterAndToCheckChapters" resultMap="getAllInfoOfWriterAndToCheckChaptersMap">
+        SELECT * FROM writer ;
+    </select>
+    <resultMap id="Book" type="Book" autoMapping="true">
+        <collection property="toCheckChapters" ofType="ChapterCheck" select="getToCheckChaptersOfBook" column="book_id"/>
+    </resultMap>
+    <select id="getWriterBooks" resultMap="Book">
+        SELECT * FROM book WHERE book_writer_id = #{param}
+    </select>
+
+    <select id="getToCheckChaptersOfBook" resultType="ChapterCheck">
+        SELECT * FROM chapter_check WHERE check_chapter_book_id = #{param} AND check_chapter_num > 0
+    </select>
+
+    <!-- ChapterCheck getChapterCheck(Integer chapterNum,Integer bookId);-->
+    <select id="getChapterCheck" resultType="ChapterCheck">
+        SELECT * FROM  chapter_check WHERE check_chapter_book_id = #{param2} AND check_chapter_num = #{param1}
+    </select>
+    
+    <!--void removeChapterCheck(Integer chapterNum, Integer bookId);-->
+    <delete id="removeChapterCheck">
+        delete FROM chapter_check WHERE check_chapter_book_id = #{param2} AND check_chapter_num = #{param1};
+    </delete>
+
+    <!--boolean add(ChapterCheck chapterCheck);-->
+    <insert id="add" parameterType="ChapterCheck">
+        insert into chapter_check values(#{checkChapterFrom}, #{checkChapterNum}, #{checkChapterBookId}, #{checkChapterName}, #{checkChapterWordNum}, #{checkChapterPrice},
+        #{checkChapterStatu}, #{checkChapterContent}, #{checkRefreshTime}, #{checkChapterAddtion}, #{checkChapterAdditionCharacter})
+    </insert>
+
+</mapper>

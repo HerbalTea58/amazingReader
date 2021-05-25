@@ -1,0 +1,34 @@
+package com.amazingReader.control;
+
+import com.amazingReader.entity.Reader;
+import com.amazingReader.service.Interface.ReaderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+/*reader/updateReaderName.action*/
+@RequestMapping("/reader")
+@Controller
+public class ReaderAlterNameControl {
+    @Autowired
+    private ReaderService readerService;
+    @RequestMapping("/updateReaderName.action")
+    public void updateReaderName( HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Reader reader= (Reader) request.getSession().getAttribute("reader");
+        request.setAttribute("reader",reader);
+        request.getRequestDispatcher("/JSP/update.jsp").forward(request,response);
+    }
+    @RequestMapping("/updateReaderNameTrue.action")
+    public void updateReaderNameTrue(String name,HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        Reader reader= (Reader) request.getSession().getAttribute("reader");
+        name=request.getParameter("name");
+        readerService.updateReaderName(name,reader.getReaderId());
+        request.getRequestDispatcher("/JSP/update.jsp").forward(request,response);
+    }
+
+}

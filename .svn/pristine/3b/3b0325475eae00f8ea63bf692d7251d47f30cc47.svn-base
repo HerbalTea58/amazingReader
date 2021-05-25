@@ -1,0 +1,191 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 2018/6/3
+  Time: 17:16
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<html>
+<head>
+    <title>作家咨询</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/Css/writer_all.css" type="text/css" >
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/Css/writer_question.css" type="text/css">
+    <script src="../Scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="../Scripts/PopDrag.js" type="text/javascript"></script>
+</head>
+<body style="background: #efefef">
+<div></div>
+<div class="all">
+    <div class="head">
+        <div class="title">
+            <a href="${pageContext.request.contextPath}/JSP/writer_home.jsp"><span class="title1">惊鸿·</span><span class="title2">作家专区</span></a>
+        </div>
+        <div  class="notify">
+            <a href=""><img id="notify" class="img1" src="${pageContext.request.contextPath}/${LoginWriter.writerPortrait}"><span class="notify1">个人中心</span></a>
+        </div>
+        <div id="float_div" class="float_div">
+            <div class="arrow"></div>
+            <span class="float_span">作家资料</span>
+            <span class="float_span">更改密码</span>
+            <span class="float_span" style="border: none">退出登录</span>
+        </div>
+    </div>
+    <div class="main">
+        <div class="All_label">
+            <a href="${pageContext.request.contextPath}/JSP/writer_home.jsp"><div class="son_label">
+                <span class="label_span">专 区 首 页</span>
+            </div></a>
+            <a href="${pageContext.request.contextPath}/Writer/WriterNovels.action" ><div class="son_label">
+                <span class="label_span">作 品 管 理</span>
+            </div></a>
+            <a href="${pageContext.request.contextPath}/Writer/WriterDate.action" ><div class="son_label">
+                <span class="label_span">数 据 统 计</span>
+            </div></a>
+            <a href="${pageContext.request.contextPath}/Writer/WriterIncome.action" ><div class="son_label">
+                <span class="label_span">稿 酬 收 入</span>
+            </div></a>
+            <a href="${pageContext.request.contextPath}/Writer/WriterQuestion.action" ><div class="son_label_choosed">
+                <span class="label_span_choosed">作 家 咨 询</span>
+            </div></a>
+        </div>
+        <div class="context">
+            <div class="context_title">&nbsp;作家咨询</div>
+            <div class="context_summary">
+
+                <%--<a id="new_button" class="new_button" href="#">＋新咨询</a>--%>
+                <input id="new_button" type="button" value="+ 新咨询" class="new_button">
+            </div>
+            <div id="new_question" class="popBox">
+                <button id="close" class="close">×</button>
+                <span class="popBoxHandle">新咨询</span>
+                <form action="${pageContext.request.contextPath }/Writer/AddWriterQuestion.action" method="post">
+                    <span class="new2">标题:</span>
+                    <input name="title" type="text" class="new3"/>
+                    <span class="new4">问题描述:</span>
+                    <textarea name="detail" type="text" class="new5"></textarea>
+                    <button type="submit" id="submit" class="submit">提交</button>
+                </form>
+            </div>
+            <c:if test="${empty QuestionList}">
+                <div class="nomessage">
+                    <img class="img_null" src="${pageContext.request.contextPath }/Images/writer_nomessages.png" />
+                    <span class="span_null">暂无消息</span>
+                </div>
+            </c:if>
+            <c:if test="${not empty QuestionList}">
+                <table cellpadding="0" cellspacing="0" style="float:left;margin-left: 80px;margin-top: 50px;border: #dddddd 1px solid;">
+                    <tr>
+                        <th style="width:150px;height: 30px;line-height: 30px;border: #dddddd 1px solid;">咨询标题</th>
+                        <th style="width:300px;height: 30px;line-height: 30px;border: #dddddd 1px solid;">咨询内容</th>
+                        <th style="width:100px;height: 30px;line-height: 30px;border: #dddddd 1px solid;">收件人</th>
+                        <th style="width:100px;height: 30px;line-height: 30px;border: #dddddd 1px solid;">询问状态</th>
+                        <th style="width:150px;height: 30px;line-height: 30px;border: #dddddd 1px solid;">操作</th>
+                    </tr>
+                    <c:forEach var="ques" items="${QuestionList }">
+                        <tr style="align-text: center">
+                            <td style="height: 30px;line-height: 30px; text-align: center;border: #dddddd 1px solid;">${fn:substringBefore(ques.content, "#")}</td>
+                            <td style="height: 30px;line-height: 30px; text-align: center;border: #dddddd 1px solid;">${fn:substringAfter(ques.content, "#")}</td>
+                            <td style=" height: 30px;line-height: 30px; text-align: center;border: #dddddd 1px solid;">${ques.managerId}</td>
+                            <td style="height: 30px;line-height: 30px; text-align: center;border: #dddddd 1px solid;">${ques.questionDealStatusId}</td>
+                            <c:if test="${ques.questionDealStatusId == 5}">
+                                <td style="height: 30px;line-height: 30px;text-align: center;border: #dddddd 1px solid;"><a id="getReply" href="#">查看回复</a></td>
+                                <div id="selectReply" class="popBox">
+                                    <button id="close2" class="close">×</button>
+                                    <span class="popBoxHandle">回复内容</span>
+                                    <span class="text1">${ques.solution}</span>
+                                    <button type="submit" id="submit2" class="submit">取消</button>
+                                    </form>
+                                </div>
+                            </c:if>
+                            <c:if test="${ques.questionDealStatusId != 5}">
+                                <td style="height: 30px;line-height: 30px;text-align: center;border: #dddddd 1px solid;">尚未获得回复</td>
+                            </c:if>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </c:if>
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    document.getElementById("notify").onmouseover = function () {
+        document.getElementById("float_div").style.display = "block";
+    }
+    document.getElementById("notify").onmouseout = function () {
+        document.getElementById("float_div").style.display = "none";
+    }
+</script>
+
+<script type="text/javascript">
+
+    var p = new PopUp({
+        id: "new_question"
+    });
+    EventUtil.addEvent(window, 'resize', function () {
+        p.setPosition();
+        p.enableShadow && p.enableShadow.shadow && p.enableShadow.setProperty(p.enableShadow.shadow);
+    });
+
+    EventUtil.addEvent(EventUtil._$('new_button'), 'click', function () {
+        p.show({
+/*            x:300,
+            y:300*/
+        });
+    })
+    EventUtil.addEvent(window,'load',function() {
+        if((isIE6 || isOpera) && p.isScroll != null && p.isScroll == 'enabled') {
+            EventUtil.addEvent(window,'scroll', function() {
+                setTimeout(function() {
+                    p.setPosition();
+                },100);
+            });
+        }
+    });
+    EventUtil.addEvent(EventUtil._$('close'),'click', function() {
+        //自定义点击取消按钮之后得操作
+
+        //隐藏弹出框
+        p.hide();
+    });
+</script>
+
+<script type="text/javascript">
+
+    var p1 = new PopUp({
+        id: "selectReply"
+    });
+    EventUtil.addEvent(window, 'resize', function () {
+        p1.setPosition();
+        p1.enableShadow && p1.enableShadow.shadow && p1.enableShadow.setProperty(p1.enableShadow.shadow);
+    });
+
+    EventUtil.addEvent(EventUtil._$('getReply'), 'click', function () {
+        p1.show({
+        });
+    })
+    EventUtil.addEvent(window,'load',function() {
+        if((isIE6 || isOpera) && p1.isScroll != null && p1.isScroll == 'enabled') {
+            EventUtil.addEvent(window,'scroll', function() {
+                setTimeout(function() {
+                    p1.setPosition();
+                },100);
+            });
+        }
+    });
+    EventUtil.addEvent(EventUtil._$('close2'),'click', function() {
+        //自定义点击取消按钮之后得操作
+
+        //隐藏弹出框
+        p1.hide();
+    });
+</script>
+
+</body>
+</html>

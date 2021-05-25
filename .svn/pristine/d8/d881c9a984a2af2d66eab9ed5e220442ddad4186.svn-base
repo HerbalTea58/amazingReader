@@ -1,0 +1,47 @@
+package com.amazingReader.service.Interface;
+
+import com.amazingReader.entity.Chapter;
+import com.amazingReader.entity.ReportChapter;
+
+import java.util.List;
+
+public interface ChapterService {
+	
+	/**
+	 * 计算章节的价格
+	 * @param chapter
+	 * @return
+	 */
+	int calculatePriceOfChapter(int chapter);
+
+	/**
+	 * 计算章节的价格
+	 * @param chapters
+	 * @return
+	 */
+	int calculatePriceOfChapters(List<Integer> chapters);
+
+	/**
+	 * 拿的同时修改状态为已阅
+	 * @param managerId
+	 * @return
+	 */
+	List<ReportChapter> getAllReportedChapter(int managerId);
+
+	/**
+	 * 拿的同时修改状态为已阅
+	 * @param managerId
+	 * @return
+	 */
+	List<ReportChapter> getToDealReportedChapter(int managerId);
+
+	Chapter getChapter(int chapterId);
+
+	Chapter getChapterByChapterNumAndBookId(int chapterNum,int bookId);
+
+	Integer getNextChapterId(int chapterId);
+
+	Integer getPreChapterId(int chapterId);
+	int getMaxChapterNumOfBook(int bookId);
+
+}

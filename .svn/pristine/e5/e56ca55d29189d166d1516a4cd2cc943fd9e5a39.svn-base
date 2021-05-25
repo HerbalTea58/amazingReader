@@ -1,0 +1,930 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="ie-stand">
+    <title>男生频道 - 惊鸿书院网</title>
+
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>manChannelNeed/common.css">
+
+    <script src="<%=basePath%>manChannelNeed/push.js"></script><script src="<%=basePath%>manChannelNeed/hm.js"></script><script type="text/javascript" src="<%=basePath%>manChannelNeed/jquery.js"></script>
+    <script type="text/javascript" src="<%=basePath%>manChannelNeed/jquery_002.js"></script>
+    <script type="text/javascript" src="<%=basePath%>manChannelNeed/layer.js"></script><link rel="stylesheet" href="<%=basePath%>manChannelNeed/layer.css" id="layui_layer_skinlayercss" style="">
+    <script type="text/javascript" src="<%=basePath%>manChannelNeed/common.js"></script>
+    <script type="text/javascript">var user_id = '132215';</script>
+</head>
+<body class="men pd">
+<!--公共头部 开始-->
+<div class="header">
+    <div class="headWrap">
+        <h1>
+            <a href="<%=basePath%>">
+                <img src="<%=basePath%>Picture/惊鸿Logo透明底.png" alt="惊鸿书院" title="惊鸿书院">
+            </a>
+        </h1>
+        <ul class="nav">
+                    <li>
+                <a href="<%=basePath%>Reader/homePageShow.action" target="_self" title="首页">首页</a>
+            </li>
+                    <li>
+                <a href="<%=basePath%>reader/searchBooks.action?keyWord=重生" target="_self" title="书库">书库</a>
+            </li>
+                    <li class="on">
+                <a href="<%=basePath%>reader/manChannel.action" target="_self" title="男频">男频</a>
+            </li>
+                    <li>
+                <a href="<%=basePath%>reader/womanChannel.action" target="_self" title="女频">女频</a>
+            </li>
+                    <li>
+                <a href="<%=basePath%><%--TODO--%>" target="_self" title="充值">充值</a>
+            </li>
+                </ul>
+        <div class="headWrap_r">
+            <div class="search long" id="mod_top_search">
+                <div class="search_sel">
+                    <input class="search-val" placeholder="我要搜.. " maxlength="100" autocomplete="off" type="text">
+                </div>
+                <a href="<%=basePath%>books/" class="search_btn"><s></s></a>
+            </div>
+            <div class="login">
+                            <div class="login_after" style="display: block;" id="mod_login_after">
+                    <span class="yh">
+                        <img src="<%=basePath%>manChannelNeed/15_avatar_small.gif" alt="${sessionScope.reader.readerNeckName}">
+                        <a href="<%=basePath%>index.php?ca=usercenter.userspace">${sessionScope.reader.readerNeckName}</a>
+                    </span>
+                    <ul class="xiala" style="display: none;">
+                        <li><s class="sj"></s><a href="<%=basePath%><%--TODO--%>">我的书架</a></li>
+                        <li><s class="grzx"></s><a href="<%=basePath%><%--TODO--%>">个人中心</a></li>
+                        <li><s class="tc"></s><a href="<%=basePath%><%--TODO--%>">退出</a></li>
+                    </ul>
+                </div>
+                        </div>
+        </div>
+    </div>
+</div>
+<!--公共头部 结束-->
+
+
+
+
+<link type="text/css" rel="stylesheet" href="<%=basePath%>manChannelNeed/mwpd.css">
+
+<div class="content pdcon">
+    <div class="f3 area">
+        <div class="f3_L">
+            <h2 class="tit titp comtit"><s class="qyb"></s>幻</h2>
+            <div class="f3_L_L" mod="index_lunbo">
+                <div class="tjw">
+                    <ul mod="pic" style="position: relative; width: 972px; left: -486px;">
+                        <c:forEach items="${fakeBooks}" var="book" varStatus="statu" begin="5" end="10"><%--界值待定--%>
+                            <li><a href="<%=basePath%>bookDetail/getBookDetail.actin?bookId=${book.bookId}" title="${book.bookName}" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>${book.bookCover}"  class="lazyload_lb" alt="${book.bookName}" style="display: inline;">
+                            </a>
+                            </li>
+                        </c:forEach>
+                    </ul>
+                </div>
+                <ol class="dot" mod="btn" hidden style="overflow: hidden; width: 124px;"><li class=""></li><li class="on"></li></ol>
+                <ul class="sts">
+                    <c:forEach items="${fakeBooks}" var="book" varStatus="statu" begin="0" end="7"><%--界值待定--%>
+                        <c:if test="${(statu.index+1)%2 != 0}">
+                            <li><span><a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.styleName}" target="_blank">[ ${book.styleName} ]</a></span><a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.bookName} " target="_blank">${book.bookName} </a></li>
+                        </c:if>
+                        <c:if test="${(statu.index+1)%2 == 0}">
+                            <li class="fr"><span><a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.styleName}" target="_blank">[ ${book.styleName} ]</a></span><a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.bookName}" target="_blank">${book.bookName}</a></li>
+                        </c:if>
+                    </c:forEach>
+                </ul>
+            </div>
+            <ul class="f3_f5_C">
+                <c:forEach items="${fakeBooks}" var="book" varStatus="statu" begin="8" end="11">
+                    <li>
+                        <a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.bookName}" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>${book.bookCover}"  class="lazyload_book_cover" alt="${book.bookName}">
+                        </a>
+                        <div class="book_inf">
+                            <h3><a href="<%=basePath%>book/77549/" title="${book.bookName}" target="_blank">${book.bookName}</a></h3>
+                            <p class="aut">作者：${book.writer.writerNeckName}</p>
+                            <p class="int">${book.bookShortDescribe}</p>
+                        </div>
+                    </li>
+                </c:forEach>
+            </ul>
+        </div>
+        <div class="f3_R com_R">
+            <h2><s></s>点击榜</h2>
+            <div class="list_wrap">
+                <ol class="list">
+                    <c:forEach items="${fakeBooks}" var="book" varStatus="statu" begin="12" end="21">
+                        <li class="">
+                            <em class="red_bg">${statu.index+1-12}</em>
+                            <h3 class="name"><a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.bookName}" target="_blank">${book.bookName}</a></h3>
+                            <div class="open">
+                                <a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" target="_blank" class="book_cov">
+                                    <img src="<%=basePath%>${book.bookCover}" class="lazyload_book_cover" alt="${book.bookName}">
+                                </a>
+                                <div class="book_inf">
+                                    <span class="aut">作者：${book.writer.writerNeckName}</span>
+                                    <span>类别：<a href="<%=basePath%>reader/searchBooks.action?keyWord=${book.styleName}" title="${book.styleName}" target="_blank">${book.bookName}</a></span>
+                                    <p class="int">${book.bookShortDescribe}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </c:forEach>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="f1 area">
+        <div class="f1_R">
+                    <ul class="sts" style="float: left;">
+                            <li class="first">
+                                <a title="绝世武魂" class="zdz">绝世武魂</a>
+                            </li>
+                            <%--这边放六本--%>
+                            <c:forEach items="${stlyeBook}" var="book" begin="0" end="3">
+                            <li>
+                                <a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.bookName}" target="_blank">${book.bookName}</a>
+                                <p style="height: 40px; overflow-y: hidden">${book.bookShortDescribe}</p>
+                            </li>
+                            </c:forEach>
+                    </ul>
+                    <ul class="sts" style="float: left;">
+                            <li class="first">
+                                <a title="逆天至尊"class="zdz">逆天至尊</a>
+                            </li>
+                            <%--这边放六本--%>
+                            <c:forEach items="${stlyeBook}" var="book" begin="4" end="7">
+                                <li>
+                                    <a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.bookName}" target="_blank">${book.bookName}</a>
+                                    <p style="height: 40px; overflow-y: hidden">${book.bookShortDescribe}</p>
+                                </li>
+                            </c:forEach>
+                    </ul>
+                    <ul class="sts nobor" style="float: left;">
+                            <li class="first">
+                                <a title="重生之妖孽人生" class="zdz">重生之妖孽人生</a>
+                            </li>
+                            <%--这边放六本--%>
+                            <c:forEach items="${stlyeBook}" var="book" begin="8" end="11">
+                                <li>
+                                    <a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.bookName}" target="_blank">${book.bookName}</a>
+                                    <p style="height: 40px; overflow-y: hidden">${book.bookShortDescribe}</p>
+                                </li>
+                            </c:forEach>
+                    </ul>
+                    <ul class="sts nobor" style="float: left;">
+                        <li class="first">
+                            <a title="仙侠奇缘"class="zdz">仙侠奇缘</a>
+                        </li>
+                        <%--这边放六本--%>
+                        <c:forEach items="${stlyeBook}" var="book" begin="12" end="15">
+                            <li>
+                                <a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.bookName}" target="_blank">${book.bookName}</a>
+                                <p style="height: 40px; overflow-y: hidden">${book.bookShortDescribe}</p>
+                            </li>
+                        </c:forEach>
+                    </ul>
+                </div>
+    </div>
+    <div class="f2 srb area">
+        <div class="tit titp">
+            <s class="qyb"></s>
+            <p>惊<br>鸿<br>收<br>入<br>榜</p>
+        </div>
+        <ul>
+            <c:forEach items="${incomeBooks}" var="book">
+            <li>
+					<span>
+						<a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.bookName}" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>${book.bookCover}"  class="lazyload_book_cover" alt="${book.bookName}" style="display: inline;">
+                            <s class="lb">1</s>
+                        </a>
+					</span>
+                <h3><a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}" title="${book.bookName}" target="_blank">${book.bookName}</a></h3>
+            </li>
+            </c:forEach>
+        </ul>
+    </div>
+    <%--<div class="adv">
+        <a href="<%=basePath%>book/77824/" title="神工" target="_blank">
+            <img src="<%=basePath%>manChannelNeed/grey.gif" data-src="http://img.yc.ireader.com.cn/ad/20180509/113054_5.jpg" class="lazyload" alt="神工">
+        </a>
+    </div>--%>
+
+   <%-- <div class="adv">
+        <a href="<%=basePath%>book/77350/" title="诛天战帝" target="_blank">
+            <img src="<%=basePath%>manChannelNeed/grey.gif" data-src="http://img.yc.ireader.com.cn/ad/20180413/175521_23.jpg" class="lazyload" alt="诛天战帝">
+        </a>
+    </div>--%>
+<%--    <div class="f4 area">
+        <div class="f4_L">
+            <h2 class="tit titp comtit"><s class="qyb"></s>新书力荐</h2>
+            <div class="f4_L_L">
+                                <a href="<%=basePath%>book/77191/" title="全能小神医" target="_blank" class="book_cov">
+                    <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/71/77191_large.jpg" class="lazyload_book_cover" alt="全能小神医">
+                </a>
+                <h3><a href="<%=basePath%>book/77191/" title="全能小神医" target="_blank">全能小神医</a></h3>
+                <div class="book_inf">
+                    <span class="aut">作者：十指轩辕</span>
+                    <span class="fr">分类：<a href="<%=basePath%>books/nan/c1/mc32/" title="都市异能" target="_blank">都市异能</a></span>
+                    <span>字数：22万字+</span>
+                    <span class="fr">进度：连载中</span>
+                    <span>总点击：41</span>
+                    <p class="int">伤风感冒？我治！缺胳膊断腿？我治！什么？人心不蛊？哼哼！我也能治！且看从大山中走出的小神医，万花丛中过，片叶不沾身！</p>
+                </div>
+                            </div>
+            <ul class="f4_L_R">
+                                <li class="book_inf">
+                    <a href="<%=basePath%>book/77778/" title="修真小地主" target="_blank" class="book_cov">
+                        <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/77/77778_small.jpg" class="lazyload_book_cover" alt="修真小地主">
+                    </a>
+                    <h3><a href="<%=basePath%>book/77778/" title="修真小地主" target="_blank">修真小地主</a></h3>
+                    <p class="aut">帅比</p>
+                </li>
+                                <li class="book_inf">
+                    <a href="<%=basePath%>book/78368/" title="上古金仙纵横都市" target="_blank" class="book_cov">
+                        <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/83/78368_small.jpg" class="lazyload_book_cover" alt="上古金仙纵横都市">
+                    </a>
+                    <h3><a href="<%=basePath%>book/78368/" title="上古金仙纵横都市" target="_blank">上古金仙纵横都市</a></h3>
+                    <p class="aut">金牌书生</p>
+                </li>
+                                <li class="book_inf">
+                    <a href="<%=basePath%>book/77782/" title="女总裁的至尊兵皇" target="_blank" class="book_cov">
+                        <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/77/77782_small.jpg" class="lazyload_book_cover" alt="女总裁的至尊兵皇">
+                    </a>
+                    <h3><a href="<%=basePath%>book/77782/" title="女总裁的至尊兵皇" target="_blank">女总裁的至尊兵皇</a></h3>
+                    <p class="aut">月天子</p>
+                </li>
+                                <li class="book_inf">
+                    <a href="<%=basePath%>book/77343/" title="冰美总裁的极品兵王" target="_blank" class="book_cov">
+                        <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/73/77343_small.jpg" class="lazyload_book_cover" alt="冰美总裁的极品兵王">
+                    </a>
+                    <h3><a href="<%=basePath%>book/77343/" title="冰美总裁的极品兵王" target="_blank">冰美总裁的极品兵王</a></h3>
+                    <p class="aut">温酒煮茶</p>
+                </li>
+                                <li class="book_inf">
+                    <a href="<%=basePath%>book/77228/" title="末日之杀戮进化" target="_blank" class="book_cov">
+                        <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/72/77228_small.jpg" class="lazyload_book_cover" alt="末日之杀戮进化">
+                    </a>
+                    <h3><a href="<%=basePath%>book/77228/" title="末日之杀戮进化" target="_blank">末日之杀戮进化</a></h3>
+                    <p class="aut">红泥绿酒黄衫</p>
+                </li>
+                                <li class="book_inf">
+                    <a href="<%=basePath%>book/77432/" title="我跳大神的那些年" target="_blank" class="book_cov">
+                        <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/74/77432_small.jpg" class="lazyload_book_cover" alt="我跳大神的那些年">
+                    </a>
+                    <h3><a href="<%=basePath%>book/77432/" title="我跳大神的那些年" target="_blank">我跳大神的那些年</a></h3>
+                    <p class="aut">羡鬼</p>
+                </li>
+                                <li class="book_inf">
+                    <a href="<%=basePath%>book/77780/" title="断龙劫" target="_blank" class="book_cov">
+                        <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/77/77780_small.jpg" class="lazyload_book_cover" alt="断龙劫">
+                    </a>
+                    <h3><a href="<%=basePath%>book/77780/" title="断龙劫" target="_blank">断龙劫</a></h3>
+                    <p class="aut">大虫</p>
+                </li>
+                                <li class="book_inf">
+                    <a href="<%=basePath%>book/78045/" title="阴间线人那些事" target="_blank" class="book_cov">
+                        <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/80/78045_small.jpg" class="lazyload_book_cover" alt="阴间线人那些事">
+                    </a>
+                    <h3><a href="<%=basePath%>book/78045/" title="阴间线人那些事" target="_blank">阴间线人那些事</a></h3>
+                    <p class="aut">截教散仙</p>
+                </li>
+                            </ul>
+        </div>
+        <div class="f4_R com_R">
+            <h2><s></s>鲜花榜</h2>
+            <div class="list_wrap">
+                <ol class="list">
+                                        <li class="lis_sh">
+                    <em class="red_bg">1</em>
+                    <h3 class="name"><a href="<%=basePath%>book/64499/" title="武器大师" target="_blank">武器大师</a></h3>
+                    <div class="open">
+                        <a href="<%=basePath%>book/64499/" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/44/64499_small.jpg" class="lazyload_book_cover" alt="武器大师">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：独悠</span>
+                            <span>类别：<a href="<%=basePath%>books/nan/c3/mc14/" title="异界大陆" target="_blank">异界大陆</a></span>
+                            <p class="int">万族林立，亿城争锋，高手辈出。
+
+倚天剑、屠龙刀，争奇斗艳。
+
+孔雀翎、霸王枪，各领风骚。
+
+地球上最年轻的铸剑大师，异界重生，一鼎九阳神炉，一卷神器图谱，让他如鱼得水，踏临武道巅峰。
+
+强者如林，我主沉浮！
+
+※本书已获神秘改编，保证完本，绝不太监※
+
+※独悠出品，本本精品※</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li>
+                    <em class="red_bg">2</em>
+                    <h3 class="name"><a href="<%=basePath%>book/65600/" title="第三重人格" target="_blank">第三重人格</a></h3>
+                    <div class="open">
+                        <a href="<%=basePath%>book/65600/" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/56/65600_small.jpg" class="lazyload_book_cover" alt="第三重人格">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：常舒欣</span>
+                            <span>类别：<a href="<%=basePath%>books/nan/c1/mc5/" title="现实百态" target="_blank">现实百态</a></span>
+                            <p class="int">双重人格就像一个身体里住着两个灵魂
+一个好，一个坏；一个善，一个恶
+甚至一个卑鄙，另一个却很高尚
+他们截然不同却可以同处
+而我拥有的人格不止两重
+我身上分裂出来的每一重人格
+都是我的……化身</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li>
+                    <em class="red_bg">3</em>
+                    <h3 class="name"><a href="<%=basePath%>book/77824/" title="神工" target="_blank">神工</a></h3>
+                    <div class="open">
+                        <a href="<%=basePath%>book/77824/" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/78/77824_small.jpg" class="lazyload_book_cover" alt="神工">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：任怨</span>
+                            <span>类别：<a href="<%=basePath%>books/nan/c1/mc32/" title="都市异能" target="_blank">都市异能</a></span>
+                            <p class="int">郭泰来从一个普通学生，变成制造加工领域的神级大师。
+不断进取，加工范围从数百米到数十个原子，加工精度从微米到纳米到原子分子级，无所不能。
+瓦森纳协定？对华夏禁运？我们禁运的都是华夏看不上的技术，大部分成员国都得向华夏进口技术，是不是应该成员国开会讨论一下，把华夏也拉进来？
+禁售芯片？有没有搞错？我们好不容易大范围补贴才维持住的低端市场，华夏没有启动反倾销调查就不错了，总统你是不是有病？
+恩，貌似活体细胞也可以精密加工的，你扩散的癌细胞需要不需要精加工一下？</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li>
+                    <em>4</em>
+                    <h3 class="name"><a href="<%=basePath%>book/65920/" title="剑中仙" target="_blank">剑中仙</a></h3>
+                    <div class="open">
+                        <a href="<%=basePath%>book/65920/" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/59/65920_small.jpg" class="lazyload_book_cover" alt="剑中仙">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：高慕遥</span>
+                            <span>类别：<a href="<%=basePath%>books/nan/c6/mc18/" title="古典仙侠" target="_blank">古典仙侠</a></span>
+                            <p class="int">魔门游侠方骏眉离家乡，飘远洋，踏仙门，碎敌颅，斩天地星辰，杀出一个仙路颠峰。
+    再回首时，身后是千千万万的追随者，眼前还有万万千千的妖魔邪鬼。
+    再来战！
+    取我的利剑，牵我的战马来！
+    ……
+    逆乱时光，踏碎凌霄，只为她，一怒拔剑！</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li>
+                    <em>5</em>
+                    <h3 class="name"><a href="<%=basePath%>book/77421/" title="绝顶航路" target="_blank">绝顶航路</a></h3>
+                    <div class="open">
+                        <a href="<%=basePath%>book/77421/" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/74/77421_small.jpg" class="lazyload_book_cover" alt="绝顶航路">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：果味喵</span>
+                            <span>类别：<a href="<%=basePath%>books/nan/c1/mc32/" title="都市异能" target="_blank">都市异能</a></span>
+                            <p class="int">他是福全（渔317）号灭船案唯一的幸存者，十岁那年，他和整船的尸体一起，在混杂着血腥味的海风中，漂了17个白天18个夜晚，获救后，他被世界著名的心理创伤专家——马二丰教授收养。
+十年之后，教授去世。
+他和他的“兄弟姐妹”，遵照教授的遗愿，踏上了那条教授为他们留下的绝顶航路……</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li>
+                    <em>6</em>
+                    <h3 class="name"><a href="<%=basePath%>book/75359/" title="道岳独尊" target="_blank">道岳独尊</a></h3>
+                    <div class="open">
+                        <a href="<%=basePath%>book/75359/" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/53/75359_small.jpg" class="lazyload_book_cover" alt="道岳独尊">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：雾外江山</span>
+                            <span>类别：<a href="<%=basePath%>books/nan/c6/mc17/" title="奇幻修真" target="_blank">奇幻修真</a></span>
+                            <p class="int">浩瀚宇宙，百万世界，三千圣道，时空秘宝，仙秦诸天，远古洞府，英雄无数，少年张岳，奋发而起，奇遇传承，一剑在手，掌万界生死，圣道在心，阅宇宙存亡！
+改天换地，只为红颜一笑！乾坤独尊，问剑天下英雄！</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li>
+                    <em>7</em>
+                    <h3 class="name"><a href="<%=basePath%>book/66103/" title="重生之出人头地" target="_blank">重生之出人头地</a></h3>
+                    <div class="open">
+                        <a href="<%=basePath%>book/66103/" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/61/66103_small.jpg" class="lazyload_book_cover" alt="重生之出人头地">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：闹闹不爱闹</span>
+                            <span>类别：<a href="<%=basePath%>books/nan/c1/mc2/" title="商战风云" target="_blank">商战风云</a></span>
+                            <p class="int">这是个关于香港五十年代的故事。 
+    那是个轰轰烈烈的火红年代。 
+    在那段火红岁月，可以有数不胜数的大哥，小弟，有道不尽的颠沛流离。
+    在那个火红年代，可以有不胜枚举的美女，才人，有诉不完的风月情浓。
+   你可以说那是鱼龙混杂，漆黑一团的黑暗岁月，但是英雄却往往发迹于此。</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li>
+                    <em>8</em>
+                    <h3 class="name"><a href="<%=basePath%>book/73130/" title="一世兵王" target="_blank">一世兵王</a></h3>
+                    <div class="open">
+                        <a href="<%=basePath%>book/73130/" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/31/73130_small.jpg" class="lazyload_book_cover" alt="一世兵王">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：我本疯狂</span>
+                            <span>类别：<a href="<%=basePath%>books/nan/c1/mc32/" title="都市异能" target="_blank">都市异能</a></span>
+                            <p class="int">他是国之利刃，也是令各国地下势力闻风丧胆的华夏龙王！
+    他有一个名动京城的未婚妻，一个个人间尤物，却相继出现在他的身边，诱惑不断，他是来者不拒，还是弱水三千，只取一瓢？
+    他离开军营，归隐花都，怎奈树欲静而风不止，各方势力来势汹汹，草莽权贵虎视眈眈，他该如何应对？
+   “动我亲友者，势必清算；犯我华夏者，虽远必诛！”
+    ——秦风。</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li>
+                    <em>9</em>
+                    <h3 class="name"><a href="<%=basePath%>book/74089/" title="娱乐春秋" target="_blank">娱乐春秋</a></h3>
+                    <div class="open">
+                        <a href="<%=basePath%>book/74089/" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/40/74089_small.jpg" class="lazyload_book_cover" alt="娱乐春秋">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：姬叉</span>
+                            <span>类别：<a href="<%=basePath%>books/nan/c4/mc19/" title="架空历史" target="_blank">架空历史</a></span>
+                            <p class="int">架空异界，武道百家。
+现代人告诉他们，除了修行，还有很多方法可以得到你想要的东西。
+要做江湖上人人追捧的少侠？嗯，这个简单，只是要看你的诚意……比如让你师妹来喝杯酒？
+子曰：
+穿越莫只苦修行，人家土著没你行？
+天作棋盘星作子，知识就是金手指。
+又云：
+穿越一世不推土，不如回家卖红薯。
+江山百色尽妖娆，何必较劲逆天高。</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li>
+                    <em>10</em>
+                    <h3 class="name"><a href="<%=basePath%>book/77501/" title="荣耀法兰西" target="_blank">荣耀法兰西</a></h3>
+                    <div class="open">
+                        <a href="<%=basePath%>book/77501/" target="_blank" class="book_cov">
+                            <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/75/77501_small.jpg" class="lazyload_book_cover" alt="荣耀法兰西">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：管杀不管填</span>
+                            <span>类别：<a href="<%=basePath%>books/nan/c4/mc19/" title="架空历史" target="_blank">架空历史</a></span>
+                            <p class="int">穿越者在法国大革命时代上演的一幕欢乐英雄故事！</p>
+                        </div>
+                    </div>
+                    </li>
+                                    </ol>
+                <span class="more"><a href="<%=basePath%>rank/nan/flower/monthflower/" target="_blank"><s></s><i>查看更多</i><s></s></a></span>
+            </div>
+        </div>
+    </div>
+    <div class="adv">
+        <a href="<%=basePath%>book/75471/" title="吞天神帝" target="_blank">
+            <img src="<%=basePath%>manChannelNeed/grey.gif" data-src="http://img.yc.ireader.com.cn/ad/20171211/164614_36.jpg" class="lazyload" alt="吞天神帝">
+        </a>
+    </div>
+    <div class="f5 area">
+        <div class="f3_L">
+            <h2 class="tit titp comtit"><s class="qyb"></s>最新作品更新</h2>
+            <div class="new_list">
+                <ol class="cur">
+                    <li>
+                        <ul class="list_h">
+                            <li class="lb">类别</li>
+                            <li class="sm">书名</li>
+                            <li class="gx">最新更新章节</li>
+                            <li class="zz">作者</li>
+                            <li class="sj">更新时间</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="lb"><a href="<%=basePath%>books/nv/c1/mc32/" title="都市异能" target="_blank">都市异能</a></li>
+                            <li class="sm"><h3><a href="<%=basePath%>book/76838/" target="_blank">极品透视小相师</a></h3></li>
+                            <li class="gx"><a href="<%=basePath%>book/76838/12510170/" title="第二百三十九章 红颜祸水" target="_blank">第二百三十九章 红颜祸水</a><s class="vzj"></s></li>
+                            <li class="zz">云逸</li>
+                            <li class="sj">4分钟前</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="lb"><a href="<%=basePath%>books/nv/c5/mc28/" title="灵异奇谈" target="_blank">灵异奇谈</a></li>
+                            <li class="sm"><h3><a href="<%=basePath%>book/68344/" target="_blank">死亡剧组</a></h3></li>
+                            <li class="gx"><a href="<%=basePath%>book/68344/12510162/" title="第920章  天狗食日" target="_blank">第920章  天狗食日</a><s class="vzj"></s></li>
+                            <li class="zz">战歌</li>
+                            <li class="sj">6分钟前</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="lb"><a href="<%=basePath%>books/nv/c3/mc13/" title="东方玄幻" target="_blank">东方玄幻</a></li>
+                            <li class="sm"><h3><a href="<%=basePath%>book/78541/" target="_blank">绝世龙神</a></h3></li>
+                            <li class="gx"><a href="<%=basePath%>book/78541/12510161/" title="第五十一章 生死之境！" target="_blank">第五十一章 生死之境！</a></li>
+                            <li class="zz">月半王其</li>
+                            <li class="sj">6分钟前</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="lb"><a href="<%=basePath%>books/nv/c1/mc40/" title="现代修真" target="_blank">现代修真</a></li>
+                            <li class="sm"><h3><a href="<%=basePath%>book/76717/" target="_blank">一拳秒杀系统</a></h3></li>
+                            <li class="gx"><a href="<%=basePath%>book/76717/12510157/" title="第二百九十九章    收服天兵" target="_blank">第二百九十九章    收服天兵</a><s class="vzj"></s></li>
+                            <li class="zz">不苦田七</li>
+                            <li class="sj">12分钟前</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="lb"><a href="<%=basePath%>books/nv/c1/mc32/" title="都市异能" target="_blank">都市异能</a></li>
+                            <li class="sm"><h3><a href="<%=basePath%>book/73258/" target="_blank">极品透视医圣</a></h3></li>
+                            <li class="gx"><a href="<%=basePath%>book/73258/12510156/" title="第1381章  公益电影" target="_blank">第1381章  公益电影</a><s class="vzj"></s></li>
+                            <li class="zz">恩赐</li>
+                            <li class="sj">12分钟前</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="lb"><a href="<%=basePath%>books/nv/c3/mc13/" title="东方玄幻" target="_blank">东方玄幻</a></li>
+                            <li class="sm"><h3><a href="<%=basePath%>book/78838/" target="_blank">史上第一怒神</a></h3></li>
+                            <li class="gx"><a href="<%=basePath%>book/78838/12510155/" title="第57章 仗着女人算什么本事" target="_blank">第57章 仗着女人算什么本事</a></li>
+                            <li class="zz">齐流海</li>
+                            <li class="sj">13分钟前</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="lb"><a href="<%=basePath%>books/nv/c1/mc32/" title="都市异能" target="_blank">都市异能</a></li>
+                            <li class="sm"><h3><a href="<%=basePath%>book/70305/" target="_blank">绝品透视仙医</a></h3></li>
+                            <li class="gx"><a href="<%=basePath%>book/70305/12510153/" title="第868章 小炼妖壶" target="_blank">第868章 小炼妖壶</a><s class="vzj"></s></li>
+                            <li class="zz">暴躁甜瓜</li>
+                            <li class="sj">15分钟前</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="lb"><a href="<%=basePath%>books/nv/c1/mc32/" title="都市异能" target="_blank">都市异能</a></li>
+                            <li class="sm"><h3><a href="<%=basePath%>book/75785/" target="_blank">究极神豪打脸系统</a></h3></li>
+                            <li class="gx"><a href="<%=basePath%>book/75785/12510152/" title="第538章  一点机会不给" target="_blank">第538章  一点机会不给</a><s class="vzj"></s></li>
+                            <li class="zz">巨星家驹</li>
+                            <li class="sj">15分钟前</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="lb"><a href="<%=basePath%>books/nv/c3/mc33/" title="转世重生" target="_blank">转世重生</a></li>
+                            <li class="sm"><h3><a href="<%=basePath%>book/73859/" target="_blank">重生八万年</a></h3></li>
+                            <li class="gx"><a href="<%=basePath%>book/73859/12510147/" title="第九百二十八章  此物是何人锻造？" target="_blank">第九百二十八章  此物是何人锻造？</a><s class="vzj"></s></li>
+                            <li class="zz">隔壁江叔叔</li>
+                            <li class="sj">19分钟前</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="lb"><a href="<%=basePath%>books/nv/c5/mc28/" title="灵异奇谈" target="_blank">灵异奇谈</a></li>
+                            <li class="sm"><h3><a href="<%=basePath%>book/77780/" target="_blank">断龙劫</a></h3></li>
+                            <li class="gx"><a href="<%=basePath%>book/77780/12510146/" title="第九十三章 阳煞破邪" target="_blank">第九十三章 阳煞破邪</a><s class="vzj"></s></li>
+                            <li class="zz">大虫</li>
+                            <li class="sj">21分钟前</li>
+                        </ul>
+                    </li>
+                                </ol>
+            </div>
+        </div>
+        <div class="com_R">
+            <h2><s></s>评分榜</h2>
+            <div class="list_wrap">
+                <ol class="list">
+                                    <li class="lis_sh">
+                        <em class="red_bg">1</em>
+                        <h3 class="name"><a href="<%=basePath%>book/73024/" title="天枢之契约行者" target="_blank">天枢之契约行者</a></h3>
+                        <div class="open">
+                            <a href="<%=basePath%>book/73024/" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/30/73024_small.jpg" class="lazyload_book_cover" alt="天枢之契约行者">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：宫九</span>
+                                <span>类别：<a href="<%=basePath%>books/nan/c3/mc16/" title="异术超能" target="_blank">异术超能</a></span>
+                                <p class="int">一场由秘宝引起的血雨腥风，一段兄弟之间的相爱相杀，看男主力挽狂澜破解数百年的家族诅咒，杀狐蝠过海镜斗洞人决战九龙之巅。</p>
+                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <em class="red_bg">2</em>
+                        <h3 class="name"><a href="<%=basePath%>book/64323/" title="危险拍档" target="_blank">危险拍档</a></h3>
+                        <div class="open">
+                            <a href="<%=basePath%>book/64323/" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/43/64323_small.jpg" class="lazyload_book_cover" alt="危险拍档">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：常舒欣</span>
+                                <span>类别：<a href="<%=basePath%>books/nan/c1/mc5/" title="现实百态" target="_blank">现实百态</a></span>
+                                <p class="int">警察有同事为伍、罪犯有同伙结伴。
+他们天生为敌、水火不容。
+可他们有一个共同的朋友。
+既是警察的搭档、又是罪犯的同伙。
+他们是……线人。
+他们是……最危险的拍档。</p>
+                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <em class="red_bg">3</em>
+                        <h3 class="name"><a href="<%=basePath%>book/65600/" title="第三重人格" target="_blank">第三重人格</a></h3>
+                        <div class="open">
+                            <a href="<%=basePath%>book/65600/" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/56/65600_small.jpg" class="lazyload_book_cover" alt="第三重人格">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：常舒欣</span>
+                                <span>类别：<a href="<%=basePath%>books/nan/c1/mc5/" title="现实百态" target="_blank">现实百态</a></span>
+                                <p class="int">双重人格就像一个身体里住着两个灵魂
+一个好，一个坏；一个善，一个恶
+甚至一个卑鄙，另一个却很高尚
+他们截然不同却可以同处
+而我拥有的人格不止两重
+我身上分裂出来的每一重人格
+都是我的……化身</p>
+                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <em>4</em>
+                        <h3 class="name"><a href="<%=basePath%>book/64499/" title="武器大师" target="_blank">武器大师</a></h3>
+                        <div class="open">
+                            <a href="<%=basePath%>book/64499/" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/44/64499_small.jpg" class="lazyload_book_cover" alt="武器大师">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：独悠</span>
+                                <span>类别：<a href="<%=basePath%>books/nan/c3/mc14/" title="异界大陆" target="_blank">异界大陆</a></span>
+                                <p class="int">万族林立，亿城争锋，高手辈出。
+
+倚天剑、屠龙刀，争奇斗艳。
+
+孔雀翎、霸王枪，各领风骚。
+
+地球上最年轻的铸剑大师，异界重生，一鼎九阳神炉，一卷神器图谱，让他如鱼得水，踏临武道巅峰。
+
+强者如林，我主沉浮！
+
+※本书已获神秘改编，保证完本，绝不太监※
+
+※独悠出品，本本精品※</p>
+                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <em>5</em>
+                        <h3 class="name"><a href="<%=basePath%>book/64364/" title="斗战破天" target="_blank">斗战破天</a></h3>
+                        <div class="open">
+                            <a href="<%=basePath%>book/64364/" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/43/64364_small.jpg" class="lazyload_book_cover" alt="斗战破天">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：墨迹</span>
+                                <span>类别：<a href="<%=basePath%>books/nan/c3/mc13/" title="东方玄幻" target="_blank">东方玄幻</a></span>
+                                <p class="int">任北重回少年时。
+
+前一世，他是炼器大宗师，他是仙界一方之主，他是孑然一身的独夫。
+
+这一世，亲人他要，兄弟他要，爱人他也要！
+饮最烈的酒，持最凶之刀，杀最强之敌，交无双兄弟，护倾世爱人。
+
+这是任北的修行之路…</p>
+                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <em>6</em>
+                        <h3 class="name"><a href="<%=basePath%>book/64583/" title="通灵诡医" target="_blank">通灵诡医</a></h3>
+                        <div class="open">
+                            <a href="<%=basePath%>book/64583/" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/45/64583_small.jpg" class="lazyload_book_cover" alt="通灵诡医">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：秋风寒</span>
+                                <span>类别：<a href="<%=basePath%>books/nan/c5/mc28/" title="灵异奇谈" target="_blank">灵异奇谈</a></span>
+                                <p class="int">我是个医生，救死扶伤，游走于生与死的边缘。
+我懂驱鬼法术，并且精通巫、道两家之长。
+在拿手术刀救人同时，也在用法术拯救这个世界。
+并且再偷偷告诉你一声，我还会医鬼！
+有一天，我收到了块人皮，那是登上幽灵火车的车票……
+从此，过阴胎遇到通灵女，诡秘的人皮尸出没，邪恶鬼鸟再现人间，无人鬼村里的七盏油灯会是这一切罪恶来源吗？</p>
+                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <em>7</em>
+                        <h3 class="name"><a href="<%=basePath%>book/64913/" title="邪王傲妃谋天下" target="_blank">邪王傲妃谋天下</a></h3>
+                        <div class="open">
+                            <a href="<%=basePath%>book/64913/" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/49/64913_small.jpg" class="lazyload_book_cover" alt="邪王傲妃谋天下">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：月流香</span>
+                                <span>类别：<a href="<%=basePath%>books/nv/c2/mc12/" title="古代言情" target="_blank">古代言情</a></span>
+                                <p class="int">误食毛毛虫，天才变废柴？姐告诉你什么叫一飞冲天！
+        被他人陷害，受他人侮辱？姐告诉你什么叫睚眦必报！
+        当聪慧狡黠的她遇到冷漠腹黑的他，
+        当既定的宿命扯出天下纷争，
+        她擅于谋略、运筹帷幄，陪他一起历经天下风云，
+        他攻于心计、机关算尽，谋得不止是天下，还有她的心。</p>
+                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <em>8</em>
+                        <h3 class="name"><a href="<%=basePath%>book/65920/" title="剑中仙" target="_blank">剑中仙</a></h3>
+                        <div class="open">
+                            <a href="<%=basePath%>book/65920/" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/59/65920_small.jpg" class="lazyload_book_cover" alt="剑中仙">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：高慕遥</span>
+                                <span>类别：<a href="<%=basePath%>books/nan/c6/mc18/" title="古典仙侠" target="_blank">古典仙侠</a></span>
+                                <p class="int">魔门游侠方骏眉离家乡，飘远洋，踏仙门，碎敌颅，斩天地星辰，杀出一个仙路颠峰。
+    再回首时，身后是千千万万的追随者，眼前还有万万千千的妖魔邪鬼。
+    再来战！
+    取我的利剑，牵我的战马来！
+    ……
+    逆乱时光，踏碎凌霄，只为她，一怒拔剑！</p>
+                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <em>9</em>
+                        <h3 class="name"><a href="<%=basePath%>book/65599/" title="绝顶枪王" target="_blank">绝顶枪王</a></h3>
+                        <div class="open">
+                            <a href="<%=basePath%>book/65599/" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/55/65599_small.jpg" class="lazyload_book_cover" alt="绝顶枪王">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：果味喵</span>
+                                <span>类别：<a href="<%=basePath%>books/nan/c7/mc37/" title="电子竞技" target="_blank">电子竞技</a></span>
+                                <p class="int">一块键盘，一只鼠标，要么杀戮，要么死亡！
+从深山里走出来的猎人少年，一头扎进了陌生的城市、陌生的学校和陌生的电竞职业圈——带着他飞扬的双手，和他的枪！
+呐，所以，你以为我们要讲的是一个失足少年撞大运捡秘籍得金手指然后人挡杀人佛挡灭佛的故事？
+不不不，并没有那么复杂。这是一个失足少年没大运没秘籍没金手指然后人挡杀人佛挡灭佛的故事。</p>
+                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <em>10</em>
+                        <h3 class="name"><a href="<%=basePath%>book/65477/" title="诱妻入室：冷血总裁深深爱" target="_blank">诱妻入室：冷血总裁深深爱</a></h3>
+                        <div class="open">
+                            <a href="<%=basePath%>book/65477/" target="_blank" class="book_cov">
+                                <img src="<%=basePath%>manChannelNeed/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/54/65477_small.jpg" class="lazyload_book_cover" alt="诱妻入室：冷血总裁深深爱">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：三三三爷</span>
+                                <span>类别：<a href="<%=basePath%>books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                                <p class="int">简芷颜是京城权势滔天的简将军的孙女，她仗势欺人，纵横跋扈，娇蛮狠毒的小三名声远扬京城内外。
+
+她爷爷气得吐血，为守住简家的声誉，随便就找了个人将她嫁了。
+
+她气急败坏，而在见到那个俊美如神祗，浑身贵气的充斥着上位者气息，据说‘出身贫寒’的男人时，她懵了。
+
+男人深不可测的眼眸瞥了她一眼，“嫁我，委屈你了？”
+
+她想哭：“不，不委屈……”
+
+很快的她也发现这个男人不仅仅有一张祸国殃民的脸，手腕过人的他还以迅雷不及掩耳之势成为了在商场上叱咤风云的新贵，惹得无数大人物和名门淑女趋之若鹜。
+
+于是，不断有女人跑来戳着她鼻子骂她，”你这种恶毒的女人，凭什么嫁给他？！你配得上他吗？!”
+
+“……”她哭笑不得，很想说这个男人是她爷爷随便给她找的。
+
+可现在看来，这随便还真的是够不随便的啊！！</p>
+                            </div>
+                        </div>
+                    </li>
+                                </ol>
+                <span class="more"><a href="<%=basePath%>rank/nan/star/pfb/" target="_blank"><s></s><i>查看更多</i><s></s></a></span>
+            </div>
+        </div>
+    </div>--%>
+</div>
+
+<script type="text/javascript" src="<%=basePath%>manChannelNeed/index.js"></script>
+
+<!--内容 结束-->
+<!--公共底部 开始-->
+<div class="foot">
+    <div class="foot_T">
+        <div class="tWrap">
+            <p>友情链接</p>
+            <ul>
+                            <li><a href="http://www.ireader.com/" title="惊鸿书城" target="_blank">惊鸿书城</a></li>
+                            <li><a href="<%=basePath%>" title="惊鸿书院" target="_blank">惊鸿书院</a></li>
+                            <li><a href="http://www.lkong.net/forum.php" title="龙的天空" target="_blank">龙的天空</a></li>
+                            <li><a href="http://www.quyuewang.cn/" title="趣阅中文网" target="_blank">趣阅中文网</a></li>
+                            <li><a href="http://www.hongshu.com/" title="红薯中文网" target="_blank">红薯中文网</a></li>
+                            <li><a href="http://www.iyoule.com/" title="有乐中文网" target="_blank">有乐中文网</a></li>
+                            <li><a href="http://yuedu.163.com/yc/" title="网易云阅读" target="_blank">网易云阅读</a></li>
+                            <li><a href="http://www.zongheng.com/" title="纵横中文网" target="_blank">纵横中文网</a></li>
+                            <li><a href="http://www.17k.com/" title="17k小说网" target="_blank">17k小说网</a></li>
+                            <li><a href="http://www.yousuu.com/" title="优书网" target="_blank">优书网</a></li>
+                            <li><a href="http://www.3gsc.com.cn/" title="3G小说网" target="_blank">3G小说网</a></li>
+                            <li><a href="http://www.zhulang.com/" title="逐浪小说网" target="_blank">逐浪小说网</a></li>
+                            <li><a href="http://www.yuedunovel.com/" title="阅读小说网" target="_blank">阅读小说网</a></li>
+                            <li><a href="http://www.tadu.com/" title="塔读文学" target="_blank">塔读文学</a></li>
+                            <li><a href="http://www.ouj.com/" title="偶家中文网" target="_blank">偶家中文网</a></li>
+                            <li><a href="http://www.iciyuan.com/" title="i次元轻小说" target="_blank">i次元轻小说</a></li>
+                            <li><a href="http://www.haoread.com/" title="浩阅文学" target="_blank">浩阅文学</a></li>
+                            <li><a href="http://www.9kus.com/" title="九库文学" target="_blank">九库文学</a></li>
+                            <li><a href="http://yc.ifeng.com/" title="凤凰书城" target="_blank">凤凰书城</a></li>
+                            <li><a href="http://www.yuedufang.com/" title="悦读坊" target="_blank">悦读坊</a></li>
+                            <li><a href="http://www.junshishu.com/" title="铁血读书" target="_blank">铁血读书</a></li>
+                            <li><a href="http://www.sweetread.net/" title="甜悦读" target="_blank">甜悦读</a></li>
+                            <li><a href="http://www.yuelu.net/" title="阅路小说网" target="_blank">阅路小说网</a></li>
+                            <li><a href="http://www.mgwxw.com/" title="芒果文学网" target="_blank">芒果文学网</a></li>
+                            <li><a href="http://www.aiduwenxue.com//" title="爱读文学网" target="_blank">爱读文学网</a></li>
+                            <li><a href="http://www.qczww.cn/" title="起创中文网" target="_blank">起创中文网</a></li>
+                            <li><a href="http://zuok.com.cn/" title="作客文学网" target="_blank">作客文学网</a></li>
+                            <li><a href="http://www.timeread.com/" title="时阅文学网" target="_blank">时阅文学网</a></li>
+                            <li><a href="http://www.kaolafm.com/" title="考拉FM" target="_blank">考拉FM</a></li>
+                            <li><a href="http://www.cqzww.com/" title="传奇中文网" target="_blank">传奇中文网</a></li>
+                            <li><a href="http://www.itangyuan.com/" title="汤圆创作" target="_blank">汤圆创作</a></li>
+                            <li><a href="http://www.jujiangkk.com/" title="巨匠阅读网" target="_blank">巨匠阅读网</a></li>
+                            <li><a href="http://www.dmread.com/" title="朵米阅读网" target="_blank">朵米阅读网</a></li>
+                            <li><a href="http://www.s4yd.com/" title="盛世阅读网" target="_blank">盛世阅读网</a></li>
+                            <li><a href="http://www.dreamersall.com/" title="梦想家中文网" target="_blank">梦想家中文网</a></li>
+                            <li><a href="http://www.sxyj.net/" title="书香云集" target="_blank">书香云集</a></li>
+                            <li><a href="http://www.lmyd5.com/" title="懒喵阅读网" target="_blank">懒喵阅读网</a></li>
+                            <li><a href="http://www.huaxi.net/" title="花溪小说网" target="_blank">花溪小说网</a></li>
+                            <li><a href="http://www.chenggua.com/" title="橙瓜-网文之家" target="_blank">橙瓜-网文之家</a></li>
+                            <li><a href="http://www.pinyuew.com/" title="品阅中文网" target="_blank">品阅中文网</a></li>
+                            <li><a href="http://book.km.com/" title="小说大全" target="_blank">小说大全</a></li>
+                            <li><a href="http://yuedu.wtzw.com/" title="梧桐阅读" target="_blank">梧桐阅读</a></li>
+                            <li><a href="http://book.sina.com.cn/?pos=20123" title="新浪小说" target="_blank">新浪小说</a></li>
+                            <li><a href="https://www.cooldu.com/" title="酷读网" target="_blank">酷读网</a></li>
+                        </ul>
+        </div>
+    </div>
+    <div class="foot_B">
+        <p style="width: auto;">
+            <a href="<%=basePath%>static/about/gyzy.html" target="_blank">关于惊鸿</a>|
+            <a href="<%=basePath%>static/about/lxwm.html" target="_blank">联系我们</a>|
+            <a href="<%=basePath%>static/about/yhxy.html" target="_blank">用户协议</a>|
+            <a href="<%=basePath%>static/authornews/tgsm.html" target="_blank">投稿说明</a>|
+            <a href="<%=basePath%>static/about/bqsm.html" target="_blank">版权声明</a>|
+            <a href="<%=basePath%>static/about/kfzx.html" target="_blank">客服中心</a>|
+            <a href="<%=basePath%>static/message/" target="_blank">反馈留言</a>|
+            <a href="<%=basePath%>index.php?ca=user.register_author" target="_blank">作者申请</a>
+        </p>
+		<p class="Co">
+			Copyright (C) 2008-2017 yc.ireader.com.cn All rights reserved
+			<br>
+			<a href="http://www.ireader.com/static/images/papers/publishing_license.jpg" target="_blank" style="margin: 0 10px;">出版物经营许可证</a>
+			<a href="http://www.ireader.com/static/images/papers/icp.jpg" target="_blank" style="margin: 0 10px;">京ICP证090653号</a>
+			<a href="javascript:void(0)" style="margin: 0 10px;">新出网证(京)字117号</a>
+			<a href="http://www.ireader.com/static/images/papers/document.jpg" target="_blank" style="margin: 0 10px;">网文证</a>
+			<a href="javascript:void(0)" style="margin: 0 10px;">京ICP备11008516号-8</a>
+		</p>
+        <p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！本站所收录作品、社区话题、书库评论及本站所做之广告均属其个人行为，与本站立场无关</p>
+		<p>不良信息举报：jubao@zhangyue.com</p>
+    </div>
+</div>
+<!--公共底部 结束-->
+
+<span class="gotop" id="btn_back_top" title="返回顶部" style="left: 1244.5px; display: none;"><img src="<%=basePath%>manChannelNeed/gotop.png" data-src="/static/images/common/gotop_hov.png" alt="返回顶部"></span>
+
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?10e53c6d39dab05a49df82fec406c083";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    (function() {
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+
+</body></html>

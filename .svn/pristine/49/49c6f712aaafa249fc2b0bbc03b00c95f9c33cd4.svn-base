@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.PlatformProfitMapper">
+    <!--public boolean add(PlatformProfit platformProfit);-->
+    <insert  id="add" parameterType="PlatformProfit">
+        insert into platform_profit VALUES(#{orderId},#{profitTypeId},#{profitTime},#{profitPrice})
+    </insert >
+    <!--public double countProfit();-->
+    <select id="countProfit" resultType="double">
+        select SUM(profit_price) from platform_profit
+    </select>
+    <!--public double countProfitBetween(Date dateBottom, Date dateTop);-->
+    <select id="countProfitBetween" resultType="double">
+        select SUM(profit_price) from platform_profit
+                where profit_time BETWEEN #{param1} and #{param2}
+    </select>
+    <!--public double countProfitBetweenTimeByType(Date dateBottom, Date dateTop, int Type_id);-->
+    <select id="countProfitBetweenTimeByType" resultType="double">
+        select SUM(profit_price) from platform_profit
+                where profit_time BETWEEN #{param1} and #{param2} and profit_type_id = #{param3}
+    </select>
+</mapper>

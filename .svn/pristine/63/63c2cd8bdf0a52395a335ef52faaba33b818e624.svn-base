@@ -1,0 +1,64 @@
+package com.amazingReader.util;
+
+import com.amazingReader.entity.Manager;
+import com.amazingReader.entity.Writer;
+import org.springframework.lang.Nullable;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+import com.amazingReader.entity.Reader;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class LoginIntcepter implements HandlerInterceptor {
+    //请求没有处理之前拦截（身份检测）
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+       //安全认证
+        //获得用户请求的url
+        String url=request.getRequestURI();//获得用户请求路径
+        if(url.endsWith("login_writer.jsp")
+                ||url.endsWith("managerLogin.jsp")
+                ||url.endsWith("login_reader.action")
+                ||url.endsWith("register.jsp")
+                ||url.endsWith("login.action")
+                ||url.endsWith("register.action")
+                ||url.endsWith("/")
+                ||url.endsWith("homePageShow.action")
+                ||url.endsWith("checkIdentifyCode.action")
+                ||url.endsWith("findPass.action")
+                ||url.endsWith("registerCheckTel.action")
+                ||url.endsWith("womanChannel.action")
+                ||url.endsWith("loginCheck.action")
+                ||url.endsWith("manChannel/detailInfo.action")
+                ||url.endsWith("readChapter.action")||url.endsWith("comment/chapterComment.action")
+                ||url.endsWith("comment/comments.action"))
+        {
+            return true;
+        }
+        //已经登录（session里面取user）
+        HttpSession session=request.getSession();
+        Reader reader = (Reader) session.getAttribute("reader");
+        Writer writer = (Writer) session.getAttribute("LoginWriter");
+        Manager manager = (Manager) session.getAttribute("manager");
+        if (reader!=null || writer != null || manager != null){
+            return true;//已经登录 不拦截
+        }
+        //没有登录 转发到登录界面
+        request.getRequestDispatcher("/JSP/login_reader.jsp").forward(request,response);
+        return false;
+    }
+
+    //请求处理后没有到view拦截
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
+
+    }
+
+    //全部处理完之后了拦截 （关闭）
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable Exception ex) throws Exception {
+
+    }
+}

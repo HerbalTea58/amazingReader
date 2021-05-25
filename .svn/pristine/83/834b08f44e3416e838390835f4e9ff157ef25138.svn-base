@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.NoticeMapper">
+
+    <!--List<Notice> getNotices();-->
+    <select id="getNotices" resultType="Notice">
+        select * from notice;
+    </select>
+
+    <!--List<Notice> getNoticesRead(int writerId);-->
+    <select id="getNoticesRead" parameterType="int" resultType="Notice">
+        select * from notice where notice_id in (
+          select notice_id from notice_writer where writer_id = #{_parameter}
+        )
+    </select>
+</mapper>

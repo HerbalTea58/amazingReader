@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.BookStatusMapper">
+
+
+    <!--public boolean add(BookStatus bookStatus);
+    public BookStatus getBookStatu(int statuId);
+    public boolean remove(BookStatus bookStatus);-->
+    <insert id="add" parameterType="BookStatus">
+        insert into book_status VALUES(#{bookStatusId},"#{bookStatusName}")
+    </insert>
+    <select id="getBookStatu" parameterType="int" resultType="BookStatus">
+        SELECT* FROM book_status WHERE book_status_id=#{_parameter}
+    </select>
+    <delete id="remove" parameterType="BookStatus">
+        DELETE FROM book_status WHERE book_status_id=#{bookStatusId}
+    </delete>
+</mapper>

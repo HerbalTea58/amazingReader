@@ -1,0 +1,2080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="amazingReader:war" />
+      <artifact name="amazingReader:war exploded" />
+      <artifact name="amazingReader:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="3e0b295f-ae88-4541-bb37-c3f45e498859" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="amazingreader" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ReadingPageControl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/ReadingPageControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="158" column="82" lean-forward="false" selection-start-line="158" selection-start-column="82" selection-end-line="158" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readingPage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/readingPage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="243" column="90" lean-forward="false" selection-start-line="243" selection-start-column="63" selection-end-line="243" selection-end-column="90" />
+              <folding>
+                <marker date="1498618884696" expanded="true" signature="3166:3180" ph="..." />
+                <marker date="1498618884696" expanded="true" signature="8437:8451" ph="..." />
+                <marker date="1498618884696" expanded="true" signature="20180:20194" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookdetail1.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/bookdetail1.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="349" column="3" lean-forward="false" selection-start-line="349" selection-start-column="3" selection-end-line="349" selection-end-column="3" />
+              <folding>
+                <marker date="1498619555703" expanded="true" signature="7622:7635" ph="..." />
+                <marker date="1498619555703" expanded="true" signature="17348:17366" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RanksControl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/RanksControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manageBook.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/manageBook.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="451" column="0" lean-forward="true" selection-start-line="451" selection-start-column="0" selection-end-line="451" selection-end-column="0" />
+              <folding>
+                <marker date="1530162938035" expanded="true" signature="22333:22351" ph="..." />
+                <marker date="1530162938035" expanded="true" signature="23233:23251" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getBookByWriterNameLike</find>
+      <find>help</find>
+      <find>getByLabelNameOrStyleName</find>
+      <find>search</find>
+      <find>rank</find>
+      <find>reader/showRanks</find>
+      <find>getChaptersByBookId</find>
+      <find>isReaderCanRead</find>
+      <find>helper</find>
+      <find>buy</find>
+      <find>input[type=</find>
+      <find>tobuy</find>
+      <find>orderChapters</find>
+      <find>recomment</find>
+      <find>writer</find>
+      <find>add</find>
+      <find>alterChapter</find>
+      <find>ajax</find>
+      <find>reload</find>
+      <find>lay</find>
+      <find>layer</find>
+      <find>log</find>
+      <find>alert(</find>
+      <find>getChapterNumIfReaderIsReadingBook</find>
+      <find>orderChapter</find>
+      <find>recharge</find>
+      <find>rewardWriter</find>
+      <find>reward</find>
+      <find>rewa</find>
+      <find>请选择</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>comment</replace>
+      <replace>&lt;%=basePath%&gt;Reader/homePageShow.action</replace>
+      <replace>&lt;%=basePath%&gt;Reader/homePageShow.action`</replace>
+      <replace>books</replace>
+      <replace>reportChapter</replace>
+      <replace>manChannelNeed</replace>
+      <replace>&lt;%=basePath%&gt;manChannelNeed</replace>
+      <replace>惊鸿</replace>
+      <replace>&lt;%=basePath%&gt;</replace>
+      <replace>getBasicInfoOfBooks</replace>
+      <replace>Integer</replace>
+      <replace>reader/rank/showRanks</replace>
+    </replaceStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/commentPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/postPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/SearchControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/control/RanksControl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/allRanks.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/nvpin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/manChannel.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/OffLineReadService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Interface/OfflineReadService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Interface/BookService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/BookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/mapper/ChapterMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/amazingReader/mapper/ChapterMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/OffLineReadControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/OffLineReadServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/offLineHelperFiles/chapter.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/searchPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Css/vote_popup.3844d.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/OrderingPageControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/entity/Chapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Interface/ReaderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/ReadingPageControl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/recommendtickets.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/ToCheckChapterManage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Interface/ToCheckChapterManageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/ToCheckChapterManageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/entity/Book.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/mapper/ChapterCheckMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/amazingReader/mapper/ChapterCheckMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/entity/Writer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/ToCheckChapterManageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/managerPlatform.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/manageWriter.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/managerDealChapterReportPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/managerDealCommentReportPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Interface/ChapterService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/ToCheckChapterManageControl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/managerReadingToCheckChapterPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/ChapterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/homePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/manageToCheckChapter.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/amazingReader/mapper/PlatformProfitMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/managerPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/manageBook.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/util/LoginIntcepter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/RewardControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/ReaderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/readingPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/JSP/bookdetail1.jsp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="G:/Program Files/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="G:\Program Files\apache-maven-3.5.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="745" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages ProjectPane="false" />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="amazingreader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazingReader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazingreader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazingReader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazingreader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazingReader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazingreader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazingReader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazingreader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazingReader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazingreader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazingReader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="amazingReader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazingreader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazingReader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazingreader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazingReader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="JSP" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="amazingreader" type="58d84e3e:PackageViewProjectNode" />
+              <item name="main" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.33115673" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\finalProject\amazingReader\src\main\webapp\Picture" />
+      <recent name="G:\finalProject\amazingReader\src\main\webapp\image\reader" />
+      <recent name="D:\jhbook\AmazingReader\src\main\webapp\Css" />
+      <recent name="D:\jhbook\AmazingReader\src\main\webapp\JSP" />
+      <recent name="D:\jhbook\AmazingReader\src\main\java\com\amazingReader\control" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.amazingReader.service.Impl" />
+      <recent name="com.amazingReader.service.Interface" />
+      <recent name="com.amazingReader.control" />
+      <recent name="com.amazingReader.service" />
+      <recent name="com.amazingReader.mapper" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\finalProject\amazingReader\src\main\webapp\image\writer\1" />
+      <recent name="G:\finalProject\amazingReader\src\main\java\com\amazingReader\mapper" />
+      <recent name="G:\finalProject\amazingReader\src\main\webapp\JSP" />
+      <recent name="G:\finalProject\amazingReader\src\main\resources\com\amazingReader\mapper" />
+      <recent name="G:\finalProject\amazingReader\src\main\webapp\WEB-INF\lib" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\java\com\amazingReader\control\Gao\PersonalControl.java</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\java\com\amazingReader\control\Gao\SearchBookshelfBookControl.java</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\java\com\amazingReader\control\Chen\BookManageControl.java</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\java\com\amazingReader\control\Chen\ReportManageControl.java</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\java\com\amazingReader\control\ManageBookControl.java</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\java\com\amazingReader\service\Impl\BookServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\java\com\amazingReader\service\Impl\ManagerServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\java\com\amazingReader\service\Impl\WriterServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\java\com\amazingReader\service\Interface\BookService.java</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\SearchBookShelf.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\book.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\comment2.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\last.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\money.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\orderdetail.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\personal.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\recharge.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\rechargeRecord.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\recommendtickets.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\score.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\scoreintroduce.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\security.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\update.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\userinformation.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\userinformation1.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\writerIntroduce.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\manageBook.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\manageWriter.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\managerDealChapterReportPage.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\managerDealCommentReportPage.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\managerLogin.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\managerPage.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\managerPlatform.jsp</PATH>
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\resources\com\amazingReader\mapper\PlatformProfitMapper.xml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\manageUpShelfBook.jsp</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\webapp\JSP\message.jsp</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+        <PATH vcs="svn" revision="127">G:\finalProject\amazingReader\src\main\java\com\amazingReader\service\Impl\ReaderServiceImpl.java</PATH>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.amazingReader">
+    <configuration name="ChapterServiceImpl.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.amazingReader.service.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="amazingReader" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.amazingReader.service.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.amazingReader.service.Impl.ChapterServiceImpl" />
+      <option name="METHOD_NAME" value="read" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://." />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="OffLineReadServiceImpl.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.amazingReader.service.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="amazingReader" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.amazingReader.service.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.amazingReader.service.Impl.OffLineReadServiceImpl" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://." />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ReadingPageControl.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.amazingReader.control.Chen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="amazingReader" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.amazingReader.control.Chen" />
+      <option name="MAIN_CLASS_NAME" value="com.amazingReader.control.Chen.ReadingPageControl" />
+      <option name="METHOD_NAME" value="read" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://." />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="AmazingReader" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="amazingReader:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/amazingReader" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_amazingreader" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55444" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="amazingReader:war exploded" />
+          <artifact name="amazingReader:war exploded" />
+          <artifact name="amazingReader:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="amazingReader" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.30" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="amazingReader:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/amazingReader" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_amazingreader_10" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55444" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+    </configuration>
+    <configuration name="amazingReader8.0" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.50" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="amazingReader:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/amazingReader" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_amazingreader_11" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55444" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.amazingReader" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.amazingReader8.0" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ReadingPageControl.read" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ChapterServiceImpl.read" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.OffLineReadServiceImpl.test" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.OffLineReadServiceImpl.test" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ChapterServiceImpl.read" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ReadingPageControl.read" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="G:\finalProject\amazingReader" />
+          <option name="myCopyRoot" value="G:\finalProject\amazingReader" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="G:\finalProject\amazingReader\.idea" />
+          <option name="myCopyRoot" value="G:\finalProject\amazingReader\.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="G:\finalProject\amazingReader" />
+          <option name="myCopyRoot" value="G:\finalProject\amazingReader" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e0b295f-ae88-4541-bb37-c3f45e498859" name="Default" comment="" />
+      <created>1528112032199</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528112032199</updated>
+      <workItem from="1528112034464" duration="1495000" />
+      <workItem from="1528114665637" duration="215000" />
+      <workItem from="1528115119565" duration="144000" />
+      <workItem from="1528115717383" duration="4596000" />
+      <workItem from="1528158581486" duration="32794000" />
+      <workItem from="1528244209746" duration="38372000" />
+      <workItem from="1528329036945" duration="31055000" />
+      <workItem from="1528369582980" duration="1078000" />
+      <workItem from="1528371418175" duration="3694000" />
+      <workItem from="1528379031706" duration="3636000" />
+      <workItem from="1528384080158" duration="2521000" />
+      <workItem from="1528417938657" duration="17845000" />
+      <workItem from="1528506877397" duration="9018000" />
+      <workItem from="1528519161182" duration="23355000" />
+      <workItem from="1528633620903" duration="1078000" />
+      <workItem from="1528676352296" duration="45184000" />
+      <workItem from="1528763091942" duration="39615000" />
+      <workItem from="1528849111156" duration="23353000" />
+      <workItem from="1528891246218" duration="45656000" />
+      <workItem from="1529022140670" duration="29599000" />
+      <workItem from="1529069913537" duration="1677000" />
+      <workItem from="1529110826211" duration="158000" />
+      <workItem from="1529111380373" duration="25579000" />
+      <workItem from="1529196946869" duration="34011000" />
+      <workItem from="1529280732295" duration="23522000" />
+      <workItem from="1529313286465" duration="340000" />
+      <workItem from="1529367290642" duration="39791000" />
+      <workItem from="1529454567916" duration="5376000" />
+      <workItem from="1529478755842" duration="19281000" />
+      <workItem from="1529544804682" duration="59050000" />
+      <workItem from="1529715107970" duration="15155000" />
+      <workItem from="1529741961793" duration="833000" />
+      <workItem from="1529743476937" duration="1516000" />
+      <workItem from="1529811500745" duration="1899000" />
+      <workItem from="1529886647924" duration="16218000" />
+      <workItem from="1529908588003" duration="82050000" />
+      <workItem from="1498618384732" duration="4105000" />
+    </task>
+    <task id="LOCAL-00011" summary="dizhu">
+      <created>1528348170238</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1528348170239</updated>
+    </task>
+    <task id="LOCAL-00012" summary="dizhu">
+      <created>1528356866671</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1528356866671</updated>
+    </task>
+    <task id="LOCAL-00013" summary="dizhu">
+      <created>1528359197640</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1528359197640</updated>
+    </task>
+    <task id="LOCAL-00014" summary="dizhu">
+      <created>1528366112175</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1528366112176</updated>
+    </task>
+    <task id="LOCAL-00015" summary="3.0">
+      <created>1528383354223</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1528383354223</updated>
+    </task>
+    <task id="LOCAL-00016" summary="3.0">
+      <created>1528419684471</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1528419684471</updated>
+    </task>
+    <task id="LOCAL-00017" summary="3.0">
+      <created>1528419923847</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1528419923847</updated>
+    </task>
+    <task id="LOCAL-00018" summary="3.0">
+      <created>1528421260268</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1528421260268</updated>
+    </task>
+    <task id="LOCAL-00019" summary="bookDetail.jsp&#10;and&#10;It`s relation files changes">
+      <created>1528465961512</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1528465961512</updated>
+    </task>
+    <task id="LOCAL-00020" summary="bookDetail.jsp&#10;and&#10;It`s relation files changes">
+      <created>1528511422460</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1528511422460</updated>
+    </task>
+    <task id="LOCAL-00021">
+      <created>1528520944182</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1528520944182</updated>
+    </task>
+    <task id="LOCAL-00022">
+      <created>1528534809607</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1528534809607</updated>
+    </task>
+    <task id="LOCAL-00023">
+      <created>1528536528454</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1528536528455</updated>
+    </task>
+    <task id="LOCAL-00024">
+      <created>1528537236721</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1528537236721</updated>
+    </task>
+    <task id="LOCAL-00025">
+      <created>1528537467500</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1528537467500</updated>
+    </task>
+    <task id="LOCAL-00026">
+      <created>1528547674260</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1528547674260</updated>
+    </task>
+    <task id="LOCAL-00027" summary="ChapterCommentFunction&#10;and&#10;LikeFunction(all of support loginReader and logOutReader)">
+      <created>1528721867266</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1528721867266</updated>
+    </task>
+    <task id="LOCAL-00028" summary="ChapterCommentFunction&#10;and&#10;LikeFunction(all of support loginReader and logOutReader)">
+      <created>1528793441126</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1528793441126</updated>
+    </task>
+    <task id="LOCAL-00029" summary="ChapterCommentFunction&#10;and&#10;LikeFunction(all of support loginReader and logOutReader)">
+      <created>1528804490425</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1528804490425</updated>
+    </task>
+    <task id="LOCAL-00030" summary="ChapterCommentFunction&#10;and&#10;LikeFunction(all of support loginReader and logOutReader)">
+      <created>1528804879456</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1528804879456</updated>
+    </task>
+    <task id="LOCAL-00031" summary="ChapterCommentFunction&#10;and&#10;LikeFunction(all of support loginReader and logOutReader)">
+      <created>1528876159221</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1528876159221</updated>
+    </task>
+    <task id="LOCAL-00032" summary="searchFunction Done">
+      <created>1528983984275</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1528983984275</updated>
+    </task>
+    <task id="LOCAL-00033" summary="ManagerPartHalfDone">
+      <created>1529283919977</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1529283919977</updated>
+    </task>
+    <task id="LOCAL-00034" summary="ManagerPartHalfDone">
+      <created>1529313471032</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1529313471032</updated>
+    </task>
+    <task id="LOCAL-00035" summary="SearchPageTo&#10;验收">
+      <created>1529371786286</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1529371786286</updated>
+    </task>
+    <task id="LOCAL-00036" summary="SearchPageTo&#10;验收">
+      <created>1529406747026</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1529406747026</updated>
+    </task>
+    <task id="LOCAL-00037" summary="SearchPageTo&#10;验收">
+      <created>1529416046841</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1529416046841</updated>
+    </task>
+    <task id="LOCAL-00038" summary="manChannelAdded">
+      <created>1529502960759</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1529502960759</updated>
+    </task>
+    <task id="LOCAL-00039" summary="去除外链">
+      <created>1529568190213</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1529568190213</updated>
+    </task>
+    <task id="LOCAL-00040" summary="加入拦截器">
+      <created>1529580219813</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1529580219813</updated>
+    </task>
+    <task id="LOCAL-00041" summary="加入拦截器">
+      <created>1529580958217</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1529580958217</updated>
+    </task>
+    <task id="LOCAL-00042" summary="加入拦截器">
+      <created>1529581163865</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1529581163865</updated>
+    </task>
+    <task id="LOCAL-00043" summary="加入拦截器">
+      <created>1529586851501</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1529586851501</updated>
+    </task>
+    <task id="LOCAL-00044" summary="加入拦截器">
+      <created>1529647901484</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1529647901484</updated>
+    </task>
+    <task id="LOCAL-00045" summary="加入拦截器">
+      <created>1529650892080</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1529650892080</updated>
+    </task>
+    <task id="LOCAL-00046" summary="加入拦截器">
+      <created>1529653679503</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1529653679503</updated>
+    </task>
+    <task id="LOCAL-00047" summary="加入拦截器">
+      <created>1529655843905</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1529655843905</updated>
+    </task>
+    <task id="LOCAL-00048" summary="加入拦截器">
+      <created>1529675578728</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1529675578728</updated>
+    </task>
+    <task id="LOCAL-00049" summary="加入拦截器">
+      <created>1529720178760</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1529720178760</updated>
+    </task>
+    <task id="LOCAL-00050" summary="加入拦截器">
+      <created>1529722683954</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1529722683955</updated>
+    </task>
+    <task id="LOCAL-00051" summary="加入拦截器">
+      <created>1529730291377</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1529730291377</updated>
+    </task>
+    <task id="LOCAL-00052" summary="de 死了史上最大的b~u~g~~~~~">
+      <created>1529744649743</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1529744649743</updated>
+    </task>
+    <task id="LOCAL-00053" summary="de 死了史上最大的b~u~g~~~~~">
+      <created>1529893836984</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1529893836985</updated>
+    </task>
+    <task id="LOCAL-00054" summary="多章购买&#10;&#10;推荐票记录">
+      <created>1529982240760</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1529982240762</updated>
+    </task>
+    <task id="LOCAL-00055" summary="多章购买&#10;&#10;推荐票记录">
+      <created>1529992109773</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1529992109773</updated>
+    </task>
+    <task id="LOCAL-00056" summary="+章节审核">
+      <created>1530069620808</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1530069620808</updated>
+    </task>
+    <task id="LOCAL-00057" summary="移除离线功能">
+      <created>1530078111388</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1530078111388</updated>
+    </task>
+    <task id="LOCAL-00058" summary="移除离线功能">
+      <created>1530097309466</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1530097309466</updated>
+    </task>
+    <task id="LOCAL-00059" summary="补：打赏的消费记录">
+      <created>1530163083565</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1530163083566</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ChapterServiceImpl_read - 2018.06.13 at 21h 33m 55s.xml">
+      <configuration name="ChapterServiceImpl.read" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChapterServiceImpl_read - 2018.06.13 at 21h 34m 23s.xml">
+      <configuration name="ChapterServiceImpl.read" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChapterServiceImpl_read - 2018.06.13 at 22h 04m 00s.xml">
+      <configuration name="ChapterServiceImpl.read" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OffLineReadServiceImpl_test - 2018.06.25 at 16h 52m 23s.xml">
+      <configuration name="OffLineReadServiceImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OffLineReadServiceImpl_test - 2018.06.25 at 17h 42m 16s.xml">
+      <configuration name="OffLineReadServiceImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OffLineReadServiceImpl_test - 2018.06.25 at 17h 42m 22s.xml">
+      <configuration name="OffLineReadServiceImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OffLineReadServiceImpl_test - 2018.06.25 at 17h 42m 39s.xml">
+      <configuration name="OffLineReadServiceImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OffLineReadServiceImpl_test - 2018.06.25 at 17h 43m 11s.xml">
+      <configuration name="OffLineReadServiceImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OffLineReadServiceImpl_test - 2018.06.25 at 17h 44m 16s.xml">
+      <configuration name="OffLineReadServiceImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ReadingPageControl_read - 2018.06.13 at 20h 08m 37s.xml">
+      <configuration name="ReadingPageControl.read" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="575637000" />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36070853" sideWeight="0.49092284" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.273752" sideWeight="0.4773071" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7004831" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28019324" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40257648" sideWeight="0.49394855" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18357489" sideWeight="0.49092284" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22383253" sideWeight="0.6815431" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47504026" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4057971" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2965204" sideWeight="0.48192772" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26928896" sideWeight="0.5180723" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1709531" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28985506" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20681818" sideWeight="0.50855744" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20611916" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28019324" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40257648" sideWeight="0.49394855" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1709531" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28985506" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36070853" sideWeight="0.49092284" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.273752" sideWeight="0.4773071" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7004831" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18357489" sideWeight="0.49092284" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22383253" sideWeight="0.6815431" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47504026" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4057971" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30030257" sideWeight="0.48192772" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26928896" sideWeight="0.5180723" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20611916" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20681818" sideWeight="0.50855744" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="G:/" />
+    </ignored-roots>
+    <MESSAGE value="dizhu" />
+    <MESSAGE value="3.0" />
+    <MESSAGE value="bookDetail.jsp&#10;and&#10;It`s relation files changes" />
+    <MESSAGE value="NewFor6/9" />
+    <MESSAGE value="ChapterCommentFunction&#10;and&#10;LikeFunction(all of support loginReader and logOutReader)" />
+    <MESSAGE value="searchFunction Done" />
+    <MESSAGE value="ManagerPartHalfDone" />
+    <MESSAGE value="SearchPageTo&#10;验收" />
+    <MESSAGE value="manChannelAdded" />
+    <MESSAGE value="去除外链" />
+    <MESSAGE value="加入拦截器" />
+    <MESSAGE value="de 死了史上最大的b~u~g~~~~~" />
+    <MESSAGE value="多章购买&#10;&#10;推荐票记录" />
+    <MESSAGE value="+章节审核" />
+    <MESSAGE value="移除离线功能" />
+    <MESSAGE value="补：打赏的消费记录" />
+    <option name="LAST_COMMIT_MESSAGE" value="补：打赏的消费记录" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/JSP/commentPage.jsp</url>
+          <line>270</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/ReadingPageControl.java</url>
+          <line>102</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="61" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/WriterManageControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/service/Interface/OfflineReadService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Css/writer_pop.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/recommendtickets.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/mapper/BookLabelMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/entity/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="45" column="52" lean-forward="false" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+          <folding>
+            <element signature="e#858#859#0" expanded="false" />
+            <element signature="e#932#933#0" expanded="false" />
+            <element signature="e#986#987#0" expanded="false" />
+            <element signature="e#6426#6427#0" expanded="false" />
+            <element signature="e#6487#6488#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/mapper/ChapterMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="56" column="4" lean-forward="true" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/OffLineReadServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/amazingReader/mapper/DraftMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="24" column="55" lean-forward="true" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+          <folding>
+            <marker date="1530014546781" expanded="true" signature="338:414" ph="select max(d... draft" />
+            <marker date="1530014546781" expanded="true" signature="555:630" ph="select * fro... draft" />
+            <marker date="1530014546781" expanded="true" signature="791:866" ph="select * fro... draft" />
+            <marker date="1530014546781" expanded="true" signature="979:1691" ph="INSERT INTO `draft`... " />
+            <marker date="1530014546781" expanded="true" signature="1852:1937" ph="select * fro... draft" />
+            <marker date="1530014546781" expanded="true" signature="2058:2838" ph="UPDATE `draf... " />
+            <marker date="1530014546781" expanded="true" signature="2967:3073" ph="update draft... " />
+            <marker date="1530014546781" expanded="true" signature="3180:3278" ph="update draft... " />
+            <marker date="1530014546781" expanded="true" signature="3378:3476" ph="update draft... " />
+            <marker date="1530014546781" expanded="true" signature="3621:3680" ph="select * fro... chapter" />
+            <marker date="1530014546781" expanded="true" signature="3795:3878" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/entity/ChapterCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/entity/Draft.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/amazingReader/mapper/ChapterAdditionRemarksMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <marker date="1529994612726" expanded="true" signature="644:696" ph="SELECT max(c... chapter_addition_remarks" />
+            <marker date="1529994612726" expanded="true" signature="778:980" ph="INSERT into chapter_addition_remarks... " />
+            <marker date="1529994612726" expanded="true" signature="1066:1266" ph="UPDATE chapt... " />
+            <marker date="1529994612726" expanded="true" signature="1353:1423" ph="DELETE FROM " />
+            <marker date="1529994612726" expanded="true" signature="1502:1569" ph="DELETE from " />
+            <marker date="1529994612726" expanded="true" signature="1684:1753" ph="SELECT * FRO... chapter_addition_remarks" />
+            <marker date="1529994612726" expanded="true" signature="1927:1993" ph="SELECT * FRO... chapter_addition_remarks" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/BookDetailPageControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/entity/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-996">
+          <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+          <folding>
+            <element signature="e#802#803#0" expanded="false" />
+            <element signature="e#869#870#0" expanded="false" />
+            <element signature="e#927#928#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/service/Interface/ToCheckChapterManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/manageWriter.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="99" column="21" lean-forward="false" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
+          <folding>
+            <marker date="1530162938419" expanded="true" signature="10131:10149" ph="..." />
+            <marker date="1530162938419" expanded="true" signature="10979:10997" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/managerDealCommentReportPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="99" column="21" lean-forward="false" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
+          <folding>
+            <marker date="1530162938551" expanded="true" signature="9284:9302" ph="..." />
+            <marker date="1530162938551" expanded="true" signature="11504:11565" ph="..." />
+            <marker date="1530162938551" expanded="true" signature="11764:11775" ph="..." />
+            <marker date="1530162938551" expanded="true" signature="12087:12103" ph="..." />
+            <marker date="1530162938551" expanded="true" signature="12440:12454" ph="..." />
+            <marker date="1530162938551" expanded="true" signature="12684:12695" ph="..." />
+            <marker date="1530162938551" expanded="true" signature="13127:13159" ph="..." />
+            <marker date="1530162938551" expanded="true" signature="13930:13955" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/managerDealChapterReportPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="98" column="21" lean-forward="false" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+          <folding>
+            <marker date="1530162938482" expanded="true" signature="9148:9166" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/managerLogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/service/Interface/ChapterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="99" column="71" lean-forward="true" selection-start-line="99" selection-start-column="71" selection-end-line="99" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/ToCheckChapterManageControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/managerPlatform.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="158" column="10" lean-forward="true" selection-start-line="158" selection-start-column="10" selection-end-line="158" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="163" column="17" lean-forward="true" selection-start-line="163" selection-start-column="17" selection-end-line="163" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/homePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="32" column="48" lean-forward="true" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/managerReadingToCheckChapterPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="42" column="117" lean-forward="false" selection-start-line="42" selection-start-column="117" selection-end-line="42" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/manageToCheckChapter.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-218">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <marker date="1530068793694" expanded="false" signature="9530:9568" ph="..." />
+            <marker date="1530068793694" expanded="false" signature="9710:9743" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/amazingReader/mapper/ChapterCheckMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+          <folding>
+            <marker date="1530069477987" expanded="true" signature="619:639" ph="SELECT * FRO... writer" />
+            <marker date="1530069477987" expanded="true" signature="910:960" ph="SELECT * FRO... book" />
+            <marker date="1530069477987" expanded="true" signature="1053:1145" ph="SELECT * FRO... chapter_check" />
+            <marker date="1530069477987" expanded="true" signature="1306:1408" ph="SELECT * FRO... chapter_check" />
+            <marker date="1530069477987" expanded="true" signature="1545:1644" ph="delete FROM " />
+            <marker date="1530069477987" expanded="true" signature="1771:2067" ph="insert into chapter_check... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/ToCheckChapterManageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/lib.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/managerPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="105" column="75" lean-forward="false" selection-start-line="105" selection-start-column="75" selection-end-line="105" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/amazingReader/mapper/QuestionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1529407376877" expanded="true" signature="314:518" ph="insert into question... " />
+            <marker date="1529407376877" expanded="true" signature="643:877" ph="update quest... " />
+            <marker date="1529407376877" expanded="true" signature="995:1040" ph="delete from " />
+            <marker date="1529407376877" expanded="true" signature="1202:1257" ph="select * fro... Question" />
+            <marker date="1529407376877" expanded="true" signature="1416:1470" ph="select * fro... question" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/mapper/ChapterCheckMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/SendSms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/image/writer/2/1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/service/Interface/ReaderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="231" column="42" lean-forward="false" selection-start-line="231" selection-start-column="8" selection-end-line="231" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/Gao/SearchBookshelfBookControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="74" column="32" lean-forward="true" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/ChapterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/util/LoginIntcepter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/amazingReader/mapper/PlatformProfitMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <marker date="1530162938882" expanded="true" signature="338:429" ph="insert into platform_profit... " />
+            <marker date="1530162938882" expanded="true" signature="543:588" ph="select SUM(p... platform_profit" />
+            <marker date="1530162938882" expanded="true" signature="744:855" ph="select SUM(p... platform_profit" />
+            <marker date="1530162938882" expanded="true" signature="1044:1186" ph="select SUM(p... platform_profit" />
+            <marker date="1530162938882" expanded="true" signature="1394:1638" ph="select YEAR(... " />
+            <marker date="1530162938882" expanded="true" signature="1845:2300" ph="select YEAR(... " />
+            <marker date="1530162938882" expanded="true" signature="2675:2803" ph="select YEAR(... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/service/Impl/ReaderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="280" column="59" lean-forward="true" selection-start-line="280" selection-start-column="59" selection-end-line="280" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/OrderingPageControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="66" column="12" lean-forward="false" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/RewardControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/Chen/ReadingPageControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="158" column="82" lean-forward="false" selection-start-line="158" selection-start-column="82" selection-end-line="158" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/orderdetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/readingPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="243" column="90" lean-forward="false" selection-start-line="243" selection-start-column="63" selection-end-line="243" selection-end-column="90" />
+          <folding>
+            <marker date="1498618884696" expanded="true" signature="3166:3180" ph="..." />
+            <marker date="1498618884696" expanded="true" signature="8437:8451" ph="..." />
+            <marker date="1498618884696" expanded="true" signature="20180:20194" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/bookdetail1.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="349" column="3" lean-forward="false" selection-start-line="349" selection-start-column="3" selection-end-line="349" selection-end-column="3" />
+          <folding>
+            <marker date="1498619555703" expanded="true" signature="7622:7635" ph="..." />
+            <marker date="1498619555703" expanded="true" signature="17348:17366" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazingReader/control/RanksControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/JSP/manageBook.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="451" column="0" lean-forward="true" selection-start-line="451" selection-start-column="0" selection-end-line="451" selection-end-column="0" />
+          <folding>
+            <marker date="1530162938035" expanded="true" signature="22333:22351" ph="..." />
+            <marker date="1530162938035" expanded="true" signature="23233:23251" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>amazingReader:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.33115673" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.33115673" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.33115673" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.33115673" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>amazingReader</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.33115673" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.33115673" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

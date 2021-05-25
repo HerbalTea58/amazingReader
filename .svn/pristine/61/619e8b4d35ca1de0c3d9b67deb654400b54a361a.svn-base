@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.WriterIncomeMapper">
+<!-- boolean add(WriterIncome writerIncome);
+	List<WriterIncome> getByWriterId(int writerId); -->
+	
+	<select id="getByWriterId" parameterType="int" resultType="WriterIncome">
+		select *
+		from writer_income
+		where writer_id = #{_parameter}
+	</select>
+	
+	<insert id="add" parameterType="WriterIncome">
+		insert into writer_income
+		values(#{writerId},#{writerIncomeTypeId},#{writerIncomeTotal},#{writerIncomeDate},#{readerId} )
+	</insert>
+
+	<!--Integer getRewardTimes(int writerId);-->
+	<select id="getRewardTimes" resultType="Integer">
+		select COALESCE (count(*),0) from writer_income WHERE writer_id = #{param} AND writer_income_type_id = 3
+
+	</select>
+
+	<!--Integer getWriterRewardIncome(int writerId);-->
+	<select id="getWriterRewardIncome" resultType="Integer">
+		SELECT COALESCE (sum(writer_income_total),0 ) FROM writer_income WHERE writer_income_type_id= 2 AND writer_id = #{param}
+	</select>
+
+	<!--Integer getWriterSubscribeIncome(int writerId);-->
+	<select id="getWriterSubscribeIncome" resultType="Integer">
+		SELECT COALESCE (sum(writer_income_total),0 ) FROM writer_income WHERE writer_income_type_id= 1 AND writer_id = #{param}
+	</select>
+
+	<!--Integer getMonthIncomeOf(String year, String month, int writerId);-->
+	<select id="getMonthIncomeOf" resultType="Integer">
+		SELECT COALESCE (sum(writer_income_total),0) FROM writer_income WHERE writer_income_date LIKE CONCAT( '%', #{param1} , '-' ,#{param2}, '%' )
+		 AND writer_id = #{param3}
+	</select>
+</mapper>

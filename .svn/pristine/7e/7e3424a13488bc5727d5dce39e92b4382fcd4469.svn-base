@@ -1,0 +1,291 @@
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息设置_个人中心_起点中文网</title>
+    <meta name="keywords" content="小说,小说网,玄幻小说,武侠小说,都市小说,历史小说,网络小说,言情小说,青春小说,原创网络文学">
+    <meta name="description" content="小说阅读,精彩小说尽在起点中文网. 起点中文网提供玄幻小说,武侠小说,原创小说,网游小说,都市小说,言情小说,青春小说,历史小说,军事小说,网游小说,科幻小说,恐怖小说,首发小说,最新章节免费">
+    <link rel="icon" type="image/x-icon" href="//qidian.gtimg.com/qdp/img/favicon.0.2.ico">
+    
+
+<link rel="stylesheet" data-ignore="true" href="../Csssymbols.3.56.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/common.0.80.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/index.0.3.csss"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/idnex.0.11.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/sprite.0.12.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/index.0.14.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/Date.04.css"/>
+
+    <script>document.domain ='qidian.com';</script>
+    <script>var speedTimer = [], speedZero = new Date().getTime();</script>
+</head>
+<body class="setting">
+            <div class="personal-header" data-l1="1">
+                <div class="header-wrapper">
+                    <div class="header-logo">
+                        <img src="../Images/log.png" style=" width: 80%; height:60%; margin-top: 10px;margin-left: -57px"/>
+                        <a href="<%=basePath%>person/personal.action">个人中心</a>
+                    </div>
+                    <ul class="header-nav">
+                        <li class="header-nav-li">
+                            <a href="<%=basePath%>person/personal.action" class="header-nav-a active" accesskey="1" data-eid="qd_M01"><i class=""></i>我的首页</a>
+                        </li>
+                        <li class="header-nav-li" id="headerNav">
+                            <a href="<%=basePath%>bookshelf/searchbookshelf.action" class="header-nav-a " accesskey="2" data-eid="qd_M02"><i class=""></i>我的书架</a>
+                        </li>
+                        <li class="header-nav-li">
+                            <a href="message.jsp" class="header-nav-a " accesskey="3" data-eid="qd_M03"><i class=""></i><i class="qdp-unread elUnread dn">未读</i>消息中心</a>
+                        </li>
+                        <
+                    </ul>
+                    <a href="/" id="headerLog" class="header-log" data-eid="qd_M06">
+                        
+                        书友20180529192024748
+                        
+                    </a>
+                    <div class="header-goHome">
+                        <a href="" target="_blank" accesskey="5" data-eid="qd_M05">惊鸿首页</a>
+                    </div>
+                </div>
+                <ul id="headerDropList" class="header-drop">
+                    <li>
+                        <a href="recharge.jsp" target="_blank" data-guid="854007726165" class="elNewToPay" data-eid="qd_M07">充值</a>
+                    </li>
+                   
+                    <li>
+                        <a href="javascript:;" id="elLoginOut" data-eid="qd_M11">退出</a>
+                    </li>
+                </ul>
+            </div>
+        <div class="qdp-wrapper">
+               <div class="personal-sideBar" data-l1="2">
+                    <ul class="sideBar-group">
+                        <li class="">
+                        <a href="<%=basePath%>person/personal.action" class="sideBar-list-a"><i class=""></i>首页</a>
+                        </li>
+                       
+                        <li class="">
+                            <a href="recommendtickets.jsp" class="sideBar-list-a" data-eid="qd_M13"><i class="  "></i>我的票夹</a>
+                        </li>
+                        <li class="">
+                            <a href="<%= basePath%>readercomment/ReaderPost.action" class="sideBar-list-a" data-eid="qd_M15"><i class=""></i>我的书评</a>
+                        </li>
+                    </ul>
+                    <ul class="sideBar-group">
+                        <li class="">
+                            <a href="<%=basePath%>score/personalscore.action" class="sideBar-list-a" data-eid="qd_M16"><i class=""></i>积分等级</a>
+                        </li>
+                       
+                    </ul>
+                    <ul class="sideBar-group">
+                       
+                        <li>
+                            <a href="security.jsp" class="sideBar-list-a" target="_blank" data-eid="qd_M20"><i class=""></i>安全中心</a>
+                        </li>
+                      
+                        </li>
+                    </ul>
+
+                </div>
+    <div class="qdp-content" data-l1="3" >
+        <h2 class="qdp-hometitle"><a href="/">首页</a>&nbsp;>&nbsp;个人信息设置</h2>
+        <div class="qdp-record setting-record" data-l2="9">
+            <div id="tabView" class="ui-tab-tabs">
+                <a href="userinformation.jsp" data-rel="tabTarget1" class="" data-eid="qd_M134">基本设置</a>
+                <a href="head.jsp" class="checked" data-rel="tabTarget2" data-eid="qd_M135">头像设置</a>
+            </div>
+            <div id="jsTabContents" class="ui-tab-contents" >
+                <div id="tabTarget1" class="ui-tab-content " data-l3="24">
+
+                </div>
+                <div id="tabTarget2" class="ui-tab-content setting-avatar checked" data-l3="24">
+                    <form method="post" enctype="multipart/form-data" action="/ajax/headimage/uploadimg" target="iframeAvatar">
+                        <input type="hidden" name="_csrfToken" value="" class="elCsrf" >
+                        <input type="file" id="fileAvatar" name="image" class="clip" accept="image/png, image/jpeg, image/gif, image/jpg">
+                    </form>
+                    <iframe src="javascript:;" id="iframeAvatar" name="iframeAvatar" class="clip dn"></iframe>
+                    <form id="setAvatarForm" action="/ajax/headimage/upload" method="post">
+                        <input type="hidden" name="_csrfToken" value="" class="elCsrf" >
+                        <input type="radio" id="avatarRadioUpload" class="avatar-radio-upload" name="avatarType" value="0" checked="" tabindex="-1">
+                        <input type="radio" id="avatarRadioSystem" class="avatar-radio-system" name="avatarType" value="1" tabindex="-1">
+                        <input type="hidden" id="elUploadUrl" name="url" value="">
+                        <div id="avatarXChoose" class="avatar-x-choose">
+                            <img class="avatar-show" src="../Images/user.png" alt="书友20180529192024748的头像">
+
+
+
+                            <div class="avatar-text">
+                                <p>本地上传: 选择本地图片编辑后上传 (上传头像将会在2个工作日内进行审核，通过后需重新登录显示新头像)。</p>
+                                <p class="gray">支持jpg、gif、png格式图片，上传文件大小不超过5MB，图片尺寸需大于200*200。</p>
+                            </div>
+
+                            <div>
+                               <label class="ui-button" for="fileAvatar" id="elLabelforup" role="button" tabindex="-1" data-eid="qd_M141" >本地上传</label>
+                               <label for="avatarRadioSystem" class="ui-button" role="button" tabindex="0" data-eid="qd_M142">选择系统头像</label>
+                            </div>
+                            <!-- <p class="mt12 highlight">图片尺寸需大于200*200。</p> -->
+                        </div>
+                        <div id="avatarXCrop" class="avatar-x-crop pr dn">
+                            <input type="hidden" id="iptCropLeft" name="left" value="0">
+                            <input type="hidden" id="iptCropTop" name="top" value="0">
+                            <input type="hidden" id="iptCropWidth" name="width" value="120">
+                            <input type="hidden" id="iptCropHeight" name="height" value="120">
+                            <div id="avatarCrop" class="avatar-crop"></div>
+                            <div class="avatar-preview">
+                                <h3>预览头像</h3>
+                                <div class="avatar-big">
+                                    <div id="avatarCropL" class="avatar-big-img"><img></div>
+                                    <div class="avatar-preview-size">
+                                        <div>大尺寸</div>
+                                        <div>120x120</div>
+                                    </div>
+                                </div>
+                                <div class="avatar-middle">
+                                    <div id="avatarCropM" class="avatar-middle-img"><img></div>
+                                    <div class="avatar-preview-size">
+                                        <div>中尺寸</div>
+                                        <div>60x60</div>
+                                    </div>
+                                </div>
+                                <div class="avatar-small">
+                                    <div id="avatarCropS" class="avatar-small-img"><img></div>
+                                    <div class="avatar-preview-size">
+                                        <div>小尺寸</div>
+                                        <div>30x30</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="avatarSubmit" class="ui-button" id="elUserAvatar" data-eid="qd_M143">保存头像</label>
+                                <a href="javascript:;" id="btnUploadCancel" class="ui-button ui-button-default">取消</a>
+                            </div>
+                        </div>
+                        <div id="avatarXSystem" class="avatar-x-system dn">
+                            <h3>选择系统头像</h3>
+                            <ul class="avatar-system">
+                            </ul>
+                            <div>
+                                <label for="avatarSubmit" class="ui-button" role="button" data-eid="qd_M143">保存头像</label>
+                                <label for="avatarRadioUpload" class="ui-button ui-button-default" role="button" tabindex="0">取消</label>
+                            </div>
+                        </div>
+                        <input type="submit" id="avatarSubmit" class="clip">
+                    </form>
+                </div>
+                <div id="tabTarget3" class="ui-tab-content setting-secret " data-l3="24">
+                    <div class="qdp-form">
+                        <form id="setAbleMsgForm" action="/ajax/message/UpdateSetting" method="post">
+                        <input type="hidden" name="_csrfToken" value="" class="elCsrf" >
+
+                            <
+                            <dl class="qdp-form-higher">
+                                <dt></dt>
+                                <dd>
+                                    <div>
+                                        <input type="submit" id="msgSysSubmit" class="clip">
+                                        <label class="ui-button" for="msgSysSubmit">保存</label>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </form>
+                    </div>
+                </div>
+                <div id="tabTarget4" class="ui-tab-content " style="visibility:hidden;" data-l3="24">
+
+                    <div id="tableTarget4" class="table-x">
+                        <div class="table-size">
+                            <table class="ui-table">
+
+                                <tbody></tbody>
+                            </table>
+                            <div class="table-null-x dn">
+
+                            </div>
+                            <div class="ui-loading" style="visibility:visible;"><i class="ui-loading-icon"></i></div>
+                         </div>
+                         <!-- <div class="table-page-x">
+                             <div class="table-page"></div>
+                         </div> -->
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+    <script id="tplNameChg" type="text/ejs-template">
+    <div class="setting-dialog-name">
+        <h3>支付<span class="red ml5 mr5">10000</span>惊鸿币修改昵称</h3>
+        <form action="/ajax/nickname/update" method="post" class="qdp-form">
+            <input type="hidden" name="_csrfToken" value="" id="elNameCsrf" >
+            <div class="ui-input-x" style="width:400px;">
+                <input id="iptNameEdit" minlength="2" maxlength="12" required name="nickname">
+                <div class="ui-input"></div>
+            </div>
+            <div class="qdp-form-button">
+                <input type="submit" id="dialogNameSubmit" class="clip">
+                <label class="ui-button" for="dialogNameSubmit">确定修改</label>
+            </div>
+        </form>
+    </div>
+    </script>
+    <script id="tplEasyToChange" type="text/ejs-template">
+    <div class="setting-dialog-name">
+        <h3>你只能免费修改一次昵称</h3>
+        <form action="/ajax/nickname/update" method="post" class="qdp-form">
+            <input type="hidden" name="_csrfToken" value="" id="elnicknameCsrf" >
+            <div class="ui-input-x" style="width:400px;">
+                <input id="iptNameEdit" minlength="2" maxlength="12" required name="nickname">
+                <div class="ui-input"></div>
+            </div>
+            <div class="qdp-form-button">
+                <input type="submit" id="dialogNameSubmit" class="clip">
+                <label class="ui-button" for="dialogNameSubmit">确定修改</label>
+            </div>
+        </form>
+    </div>
+    </script>
+    <script id="tplNameTips" type="text/ejs-template">
+        <div class="qdp-form-agree">
+            <input type="checkbox" id="agreeNamePay" checked="" required>
+            <label for="agreeNamePay" class="ui-checkbox"></label><label for="agree" class="ml5">我已阅读并同意《<a href="https://passport.qidian.com/pact.html?mobile=0" target="_blank" class="blue">用户服务协议</a>》</label>
+        </div>
+    </script>
+
+
+            
+            <div class="go-top dn">
+                <div class="go-top-wrap">
+                    <a href="#" class="icon-go-top bTips" title="返回顶部" ><i class="iconfont icon-backtop"></i></a>
+                </div>
+            </div>
+        </div>
+            <div class="personal-footer">
+
+                <div class="footer-menu">
+                    <a href="" target="_blank">关于惊鸿</a>
+                    <a href="" target="_blank">联系我们</a>
+                    <a href="" target="_blank">加入我们</a>
+                    <a href="" target="_blank">帮助中心</a>
+                    <a href="" class="commitAdvice" target="_blank">提交建议</a>
+                    <!-- <a href="//wwwploy.qidian.com/help/about_link.aspx" target="_blank">合作伙伴</a> -->
+                    <!-- <a href="//bbs.qidian.com" target="_blank">起点论坛</a> -->
+                    <!-- <a href="//webgame.qidian.com/jiazhang.html" target="_blank">家长监护工程</a> -->
+                </div>
+                <div class="footer-copyright">
+                    <p>Copyright (C) 2002-2018 www.qidian.com All Rights Reserved 版权所有 </p>
+                    <p>上海玄霆娱乐信息科技有限公司 上海玄霆娱乐信息科技有限公司 增值电信业务经营许可证沪B2-20080046 沪网文[2017]0081-031 新出网证(沪)字010 沪ICP备08017520号-1</p>
+                    <p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！</p>
+                    <p>本站所收录作品、社区话题、书库评论及本站所做之广告均属其个人行为，与本站立场无关</p>
+                </div>
+            </div>
+
+
+
+        </body>
+</html>

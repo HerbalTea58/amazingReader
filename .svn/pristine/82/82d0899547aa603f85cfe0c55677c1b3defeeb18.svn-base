@@ -1,0 +1,203 @@
+.bookImg{
+    position: absolute;
+    top:100px;
+    left: 70px;
+    width: 130px;
+    height: 170px;
+    border: #0f0f0f 1px solid;
+}
+.upimg{
+    position: absolute;
+    top: 290px;
+    left: 85px;
+    width: 100px;
+    height: 30px;
+}
+.bookId{
+    position: absolute;
+    top:70px;
+    left: 250px;
+    width: 100px;
+    height: 20px;
+    color: #7c7c7c;
+    font-size: 20px;
+}
+.bookId1{
+    position: absolute;
+    top:65px;
+    left: 350px;
+    width: 300px;
+    height: 30px;
+    color: #7c7c7c;
+    font-size: 20px;
+    border: #dddddd 1px solid;
+    line-height: 30px;
+}
+.bookName{
+    position: absolute;
+    top:120px;
+    left: 250px;
+    width: 100px;
+    height: 20px;
+    color: #7c7c7c;
+    font-size: 20px;
+}
+.bookName1{
+    position: absolute;
+    top:115px;
+    left: 350px;
+    width: 300px;
+    height: 30px;
+    color: #7c7c7c;
+    font-size: 20px;
+    border: #dddddd 1px solid;
+    line-height: 30px;
+}
+.bookType{
+    position: absolute;
+    top:170px;
+    left: 250px;
+    width: 100px;
+    height: 20px;
+    color: #7c7c7c;
+    font-size: 20px;
+}
+.bookType1{
+    position: absolute;
+    top:165px;
+    left: 350px;
+    width: 300px;
+    height: 30px;
+    color: #7c7c7c;
+    font-size: 20px;
+    border: #dddddd 1px solid;
+    line-height: 30px;
+}
+.bookType2{
+    position: absolute;
+    top:165px;
+    left: 350px;
+    width: 100px;
+    height: 30px;
+    color: #7c7c7c;
+    font-size: 20px;
+    display: none;
+    font-size: 18px;
+}
+.bookType22{
+    position: absolute;
+    top:165px;
+    left: 470px;
+    width: 100px;
+    height: 30px;
+    color: #7c7c7c;
+    font-size: 20px;
+    display: none;
+    font-size: 18px;
+}
+.bookRe{
+    position: absolute;
+    top:220px;
+    left: 250px;
+    width: 100px;
+    height: 20px;
+    color: #7c7c7c;
+    font-size: 20px;
+}
+.bookRe1{
+    position: absolute;
+    top:215px;
+    left: 350px;
+    width: 300px;
+    height: 30px;
+    color: #7c7c7c;
+    font-size: 20px;
+    border: #dddddd 1px solid;
+    line-height: 30px;
+}
+.bookNum{
+    position: absolute;
+    top:270px;
+    left: 250px;
+    width: 100px;
+    height: 20px;
+    color: #7c7c7c;
+    font-size: 20px;
+}
+.bookNum1{
+    position: absolute;
+    top:265px;
+    left: 350px;
+    width: 300px;
+    height: 30px;
+    color: #7c7c7c;
+    font-size: 20px;
+    border: #dddddd 1px solid;
+    line-height: 30px;
+}
+.bookStatu{
+    position: absolute;
+    top:320px;
+    left: 250px;
+    width: 100px;
+    height: 20px;
+    color: #7c7c7c;
+    font-size: 20px;
+}
+.bookStatu1{
+    position: absolute;
+    top:315px;
+    left: 350px;
+    width: 300px;
+    height: 30px;
+    color: #7c7c7c;
+    font-size: 20px;
+    border: #dddddd 1px solid;
+    line-height: 30px;
+}
+.bookDc{
+    position: absolute;
+    top:370px;
+    left: 250px;
+    width: 100px;
+    height: 20px;
+    color: #7c7c7c;
+    font-size: 20px;
+}
+.bookDc1{
+    position: absolute;
+    top:365px;
+    left: 350px;
+    width: 300px;
+    height: 150px;
+    color: #7c7c7c;
+    font-size: 20px;
+    border: #dddddd 1px solid;
+    line-height: 30px;
+}
+.update{
+    position: absolute;
+    top:550px;
+    left: 350px;
+    width: 120px;
+    height: 30px;
+    color: #aeaeae;
+}
+.sure{
+    position: absolute;
+    top:550px;
+    left: 300px;
+    width: 100px;
+    height: 30px;
+    color: #aeaeae;
+    display: none;
+}
+.cancel{
+    position: absolute;
+    top:550px;
+    left: 450px;
+    width: 100px;
+    height: 30px;
+    color: #aeaeae;
+    display: none;
+}

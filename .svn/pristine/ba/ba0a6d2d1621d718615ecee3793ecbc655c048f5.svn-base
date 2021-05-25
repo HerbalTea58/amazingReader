@@ -1,0 +1,46 @@
+package com.amazingReader.service.Interface;
+
+import com.amazingReader.entity.Book;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+
+public interface RankingListService {
+    //收入榜
+    public List<Book> queryBookForIncome();
+
+    //推荐榜
+    public List<Book> queryBookForRecommend();
+
+    //热销榜
+    public List<Book> queryBookForOrder();
+
+    //收藏榜
+    public List<Book> queryBookForCollect();
+
+    //打赏榜
+    public List<Book> queryBookForReward();
+
+    //新书推荐
+    public List<Book> queryBookForRecentCreate();
+
+    //全本免费专区
+    public List<Book> queryBookForFree();
+
+    //限时免费
+    public List<Book> queryBookForFreeOfTimeLimit();
+
+    //完结专区
+    public List<Book> queryBookForFinished();
+
+    //女频热度排行榜
+    public List<Book> queryBookForHotOfWoman();
+
+    //男频热度排行榜
+    public List<Book> queryBookForHotOfMan();
+
+
+
+
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.CommentLikeRecordMapper">
+
+    <!--public boolean addCommentLike(CommentLikeRecord record);-->
+    <insert id="addCommentLike" parameterType="CommentLikeRecord">
+        insert into comment_like_record value(#{ReaderID}, #{CommentID})
+    </insert >
+    <!--public boolean removeCommentLike(CommentLikeRecord record);-->
+    <delete id="removeCommentLike" parameterType="CommentLikeRecord">
+        delete from comment_like_record where reader_id=#{ReaderID} and comment_id = #{CommentID}
+    </delete>
+    
+    <!-- public int isLiked(int readerId,int commentId); -->
+    <select id="isLiked" resultType="int">
+    	select * from comment_like_record where reader_id = #{param1} and comment_id = #{param2}
+    </select>
+</mapper>

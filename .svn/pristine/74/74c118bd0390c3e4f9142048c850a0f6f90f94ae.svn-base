@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.ChapterCheckMapper">
+    <!--boolean add(ChapterCheck chapterCheck);-->
+    <insert id="add" parameterType="ChapterCheck">
+        insert into chapter_check values(#{checkChapterFrom}, #{checkChapterNum}, #{checkChapterBookId}, #{checkChapterName}, #{checkChapterWordNum}, #{checkChapterPrice},
+        #{checkChapterStatu}, #{checkChapterContent}, #{checkRefreshTime}, #{checkChapterAddtion}, #{checkChapterAdditionCharacter})
+    </insert>
+</mapper>

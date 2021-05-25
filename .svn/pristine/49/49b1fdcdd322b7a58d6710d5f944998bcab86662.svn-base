@@ -1,0 +1,798 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<head>
+    
+    <meta charset="UTF-8">
+    <title>《${book.bookName}》_${writer.writerNeckName}著_${book.styleName}_惊鸿书院网</title>
+    <link rel="shortcut icon" href="<%=basePath%>Picture/惊鸿图标.jpg"/>
+
+<link rel="stylesheet" data-ignore="true" href="../Css/icon.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/Drag.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/rset.ddecf.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/book_popuar.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/ejoyec4.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/vote_popuar.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/spirit44.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/qd_popuar.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/font089a4.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/footerfeb73.css"/>
+<link rel="stylesheet" data-ignore="true" href="../Css/global.css"/>
+    <link data-ignore="true" rel="stylesheet" href="../Css/moudle.css"/>
+    <link data-ignore="true" rel="stylesheet" href="../Css/layout5deof.css"/>
+    <link data-ignore="true" rel="stylesheet" href="../Css/bookdetail.css"/>
+
+
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="<%=basePath%>jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="<%=basePath%>bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>layui/css/layui.css"/>
+    <script src="<%=basePath%>layui/layui.js"></script>
+</head>
+<body>
+<div class="share-img">
+
+</div>
+<script>
+    function showReaderMenu(){
+        $(".Readerdropdown").toggle("act");
+    };
+</script>
+<div class="wrap" style="background-color: #ffffff">
+<div id="pin-nav" class="pin-nav-wrap need-search" data-l1="40">
+    <div class="box-center cf">
+        <div class="nav-list site-nav fl">
+            <ul>
+                <li class="site"><a class="pin-logo" href="" data-eid="qd_A43"><span></span></a>
+                    <div class="dropdown">
+                        <a href="" target="" >惊鸿女生网</a>
+                    </div>
+                </li>
+                <li><a href="" target="" data-eid="qd_A47">玄幻</a></li>
+                <li><a href="" target="" data-eid="qd_A48">都市</a></li>
+                <li><a href="" target="" data-eid="qd_A49">仙侠</a></li>
+                <li><a href="" target="" data-eid="qd_A50">科幻</a></li>
+                <li><a href="" target="" data-eid="qd_A52">历史</a></li>
+                <li><a href="" target="_blank" data-eid="qd_A53">排行</a></li>
+
+            </ul>
+        </div>
+        <div class="nav-list min-user fr">
+            <ul>
+                <li id="min-search">
+                    <form id="formUrl" action="<%=basePath%>/search/search.action" method="get" target="_blank">
+                        <label id="pin-search" for="topSearchSubmit" data-eid="qd_A62"><em class=""></em>
+                        </label>
+                        <input id="pin-input" class="pin-input hide" type="text" name="kw" placeholder="要搜啥">
+                        <input class="submit-input" type="submit" id="topSearchSubmit" data-eid="qd_A62">
+                    </form>
+                </li>
+                <li class="line"></li>
+
+                <li class="sign-in" id="signin" style="width: 180px;text-align: center">
+                    <a href="javascript:" data-eid="qd_A65"><i id="nav-user-name">${reader.readerNeckName}</i><span></span></a>
+                </li>
+                <li class="line"></li>
+                <li class="book-shelf" id="top-book-shelf">
+                    <a href="<%=basePath%>bookshelf/searchbookshelf.action" target="_blank" data-eid="qd_A63"><em class=""></em><i>我的书架
+                    </i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div id="j-topHeadBox" class="top-bg-op-box hidden" data-cookie="0" style="background-image:url('//qidian.qpic.cn/qidian_common/349573/c613c5cd398749ccc18c4dbde831b3fb/0')" data-l1="1">
+        <a class="jumpWrap" href="" target="_blank" data-eid="qd_G100" data-qd_dd_p1="1">
+            <span class="op-tag"></span>
+        </a>
+    </div>
+    <div class="top-bg-box " id="j-topBgBox" style="background-image: url(../Images/back.jpg)">
+
+    </div>
+
+
+<div class="border-shadow ">
+    <span></span>
+    <span></span>
+</div>
+
+    <div class="book-detail-wrap center990">
+        <div class="book-information cf" data-l1="2">
+
+    
+    <div class="book-img">
+        <a class="J-getJumpUrl" id="bookImg" href="2" data-eid="qd_G09" data-bid="1011817068" data-firstchapterjumpurl="<%=basePath%>reader/readChapter.action?chapterId=${firstChapterId}"><img src="<%=basePath%>${book.bookCover}"/>
+"></a>
+    </div>
+    <script>
+        function recomment() {
+            layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.open({
+                    offset: ['30%', '40%'],
+                    title:'投推荐票',
+                    content:'<input class="recommentTieckts" type="number" style="height: 30px;" min="1" placeholder="选择要投的票数">',
+                    btn:['确认','取消'],
+                    yes:function () {
+                        $.ajax({
+                            url:'<%=basePath%>reader/recommentTieckts.action?bookId=${book.bookId}&num='+$(".recommentTieckts").val(),
+                            async:true,
+                            success:function (flag) {
+                                if(flag){
+                                    layui.use('layer', function(){
+                                        var layer = layui.layer;
+                                        layer.msg('感谢您的推荐')
+                                    })
+                                }else{
+                                    layui.use('layer', function(){
+                                        var layer = layui.layer;
+                                        layer.msg('不好意思，投推荐票失败了')
+                                    })
+                                }
+                            }
+                        })
+                    }
+                });
+            })
+        }
+
+    </script>
+    <script>
+        function addToShelf(){
+            $.ajax({
+                url:"<%=basePath%>reader/addToShelf.action?bookId=${book.bookId}"
+                ,async:true
+                ,success:function(info){
+                    if(info){
+                        layui.use('layer',function () {
+                            var layer = layui.layer;
+                            var index = layer.msg(1,{content:'加入成功',offset:['45%','45%']});
+                            layer.style(index, {
+                                width: '200px',
+                                height:'25px'
+                            });
+                        })
+                    }else{
+                        layui.use('layer',function () {
+                        var layer = layui.layer;
+                            var index = layer.msg(1,{content:'<strong>加入书架失败,请查看书架中是否已经存在该书籍</strong>',offset:['40%','40%']});
+                            layer.style(index, {
+                                width: '400px',
+                                height:'60px'
+                            });
+                        })
+                    }
+                }
+            })
+        }
+
+    </script>
+    <script>
+        //TODO
+        function sendToFirstChapter(){
+            $.ajax({
+                url:'',
+                async:true,
+                success:function(info){
+                    alter(info)
+                }
+            })
+        }
+    </script>
+
+    <div class="book-info ">
+        <h1>
+            
+            <em>${book.bookName}</em>
+            <span><a class="writer" href="" target="_blank" data-eid="qd_G08">${writer.writerNeckName}</a> 著</span>
+            
+        </h1>
+        <p class="tag"><span class="blue">
+            <c:if test="${book.bookStatuId eq 1}">连载</c:if>
+            <c:if test="${book.bookStatuId eq 2}">完结</c:if>
+
+        </span>
+
+            <span class="blue">
+                <c:if test="${!book.bookActivityStatu}">免费</c:if>
+                <c:if test="${book.bookActivityStatu}">付费</c:if>
+            </span>
+            
+            <a href="<%=basePath%>search/seachByLabelId.action?labelId=${book.bookStyleId}" class="red" target="_blank" data-eid="qd_G10">${book.styleName}</a>
+            
+        </p>
+        
+        <p class="intro">${book.bookShortDescribe}</p>
+        <p>
+            <em>
+            <style>@font-face { font-family: JwoSyImk;
+                src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.eot?')
+                format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.woff')
+                format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.ttf')
+                format('truetype'); } .JwoSyImk { font-family: 'JwoSyImk' !important;
+                display: initial !important; color: inherit !important; vertical-align: initial !important;
+            }
+            </style>
+            <span class="JwoSyImk">&#100385;&#100383;&#100381;&#100380;&#100384;</span>
+        </em><cite>万字</cite>
+            <i>|</i>
+            <em><style>@font-face { font-family: JwoSyImk;
+                src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.eot?')
+                format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.woff')
+                format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.ttf')
+                format('truetype'); } .JwoSyImk { font-family: 'JwoSyImk' !important;
+                display: initial !important; color: inherit !important; vertical-align: initial
+                !important; }
+            </style>
+                <span class="JwoSyImk">&#100388;&#100386;&#100381;&#100378;&#100384;</span>
+            </em><cite>万总点击<span>&#183;</span>会员周点击
+            <style>@font-face { font-family: JwoSyImk;
+                src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.eot?')
+                format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.woff')
+                format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.ttf')
+                format('truetype'); } .JwoSyImk { font-family: 'JwoSyImk' !important;
+                display: initial !important; color: inherit !important; vertical-align: initial
+                !important; }</style>
+            <span class="JwoSyImk">&#100386;&#100381;&#100380;&#100380;</span>
+            万</cite><i>|</i><em><style>@font-face { font-family: JwoSyImk;
+            src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.eot?')
+            format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.woff')
+            format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.ttf')
+            format('truetype'); } .JwoSyImk { font-family: 'JwoSyImk' !important;
+            display: initial !important; color: inherit !important;
+            vertical-align: initial !important; }</style>
+            <span class="JwoSyImk">&#100385;&#100381;&#100388;&#100387;</span></em>
+            <cite>万总推荐<span>&#183;</span>周
+                <style>@font-face { font-family: JwoSyImk;
+                    src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.eot?')
+                    format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.woff')
+                    format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/JwoSyImk.ttf')
+                    format('truetype'); } .JwoSyImk { font-family: 'JwoSyImk' !important;
+                    display: initial !important; color: inherit !important; vertical-align:
+                            initial !important; }</style>
+                <span class="JwoSyImk">&#100387;&#100384;&#100387;&#100384;</span></cite></p>
+        
+        <p>
+            <c:if test="${empty readingChapter}">
+                <a class="red-btn J-getJumpUrl " style="text-decoration: none" onclick="sendToFirstChapter()" href="<%=basePath%>reader/readChapter.action?chapterId=${firstChapterId}" id="readBtn" data-eid="qd_G03" data-bid="1011817068">免费试读</a>
+            </c:if>
+            <c:if test="${not empty readingChapter}">
+                <a class="red-btn J-getJumpUrl " style="text-decoration: none" href="<%=basePath%>reader/readChapter.action?chapterId=${readingChapter.chapterId}" id="readBtn" data-eid="qd_G03" data-bid="1011817068" data-firstchapterjumpurl="//read.qidian.com/chapter/GVTb_Xs_43QPfAGvZBg6QQ2/i2EvUJ_HeQ9p4rPq4Fd4KQ2">继续阅读 ${fn:substring(readingChapter.chapterName,0,6)}</a>
+            </c:if>
+
+            <a class="blue-btn add-book" id="addBookBtn" href="javascript:" style="text-decoration: none" data-eid="qd_G05" onclick="addToShelf()" data-bookId="1011817068" data-bid="1011817068">加入书架</a>
+            
+            <a class="blue-btn" id="topRewardBtn" style="text-decoration: none"  href="javascript:" data-showtype="2" data-eid="qd_G07" onclick="recomment()">投推荐票
+            </a>
+            
+        </p>
+        
+    </div>
+    
+
+    <div class="take-wrap">
+        
+    </div>
+    
+
+</div>
+        <script>
+            function showInfo() {
+                    $(".catalog-content-wrap").addClass("hidden");
+                    $(".book-content-wrap cf").removeClass("hidden");
+                    $(".j_catalog_block").removeClass("act");
+                    $(".bookInfo").addClass("act");
+
+            }
+            function showMenu(){
+                    $(".catalog-content-wrap").removeClass("hidden");
+                    $(".book-content-wrap cf").addClass("hidden");
+                    $(".bookInfo").removeClass("act");
+                    $(".j_catalog_block").addClass("act");
+            }
+
+        </script>
+        <div class="content-nav-wrap cf" data-l1="3">
+            <div class="nav-wrap fl">
+                <ul>
+                    <li class="bookInfo act">
+                        <a class="langInfo" id="j-bookInfoPage" onclick="showInfo()" href="javascript:"
+                           data-eid="qd_G15">作品信息</a>
+                    </li>
+                    <li class="j_catalog_block">
+                        <a class="langMenu" onclick="showMenu()" href="javascript:"
+                           id="j_catalogPage" data-eid="qd_G16">目录
+                            <i><span id="J-catalogCount">(${fn:length(menu)}章)</span></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="catalog-content-wrap hidden" id="j-catalogWrap" data-l1="14">
+            <div class="go-top">
+                <div class="go-top-wrap">
+                    <a href="#" class="icon-go-top">
+                        <em class="iconfont" data-eid="qd_G72">
+                            <span class="glyphicon glyphicon-menu-up" style="padding-top: 13px;" aria-hidden="true"></span>
+                        </em>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="volume-wrap">
+                
+                <div class="volume">
+                    <div class="cover"></div>
+                    <h3>
+                        
+                        正文卷<i>&#183;</i>共${fn:length(menu)}章
+                        <span class=free>
+                            <c:if test="${!book.bookActivityStatu}">免费</c:if>
+                            <c:if test="${book.bookActivityStatu}">付费</c:if>
+                        </span>
+                        <em class="count">本书共<cite>${book.wordsNum}</cite>字</em></h3>
+                    <ul class="cf">
+                        <c:forEach items="${menu}" var="chapter">
+                        <li data-rid="${chapter.chapterId}">
+                            <a href="<%=basePath%>reader/readChapter.action?chapterId=${chapter.chapterId}"
+                               target="_blank"
+                               title="首发时间：<fmt:formatDate value="${chapter.chapterRefreshTime}" pattern="yyyy年MM月dd日 hh:mm:ss"></fmt:formatDate> 章节字数：${chapter.chapterWordNum}">
+                                ${chapter.chapterName}
+                            </a>
+                        </li>
+                        </c:forEach>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+        <script>
+            function rewardWriter() {
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    layer.open({
+                        offset: ['30%', '40%'],
+                        title: '打赏作者'
+                        , content: '<input width="300px" step="5" type="number" name="price" class="rewardPrice" required lay-verify="required"  min="1"   placeholder="请选择打赏的惊鸿币数量" autocomplete="off" class="layui-input" width="350px">'
+                        ,btn: ['确认打赏','取消']
+                        ,yes:function () {
+                            $.ajax({
+                                url:"<%=basePath%>bookDetail/reward.action?writerId=${writer.writerId}"+"&price="+$(".rewardPrice").val(),
+                                async:true,
+                                success:function(info) {
+                                    if(info){
+                                        layui.use('layer', function() {
+                                            var layer = layui.layer;
+                                            layer.msg('谢谢')
+                                        })
+                                        window.href('<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}')
+                                    }else{
+                                        layui.use('layer', function() {
+                                            var layer = layui.layer;
+                                            layer.open({
+                                                title: '打赏失败',
+                                                content: '余额不足，打赏失败',
+                                                btn: ['去充值', '算了'],
+                                                yes: function () {
+                                                    window.open("<%=basePath%>rechargePage.jsp")
+                                                },
+                                                btn2: function () {
+
+                                                }
+                                            })
+                                        })
+                                    }
+
+                                }
+                            })
+                        }
+
+                    })
+                })
+            }
+
+        </script>
+        <div class="book-content-wrap cf">
+            
+            <div class="left-wrap fl">
+                <div class="book-info-detail">
+                    <cite class="icon-pin"></cite>
+                    <div class="book-intro">
+                        <p>
+                            
+                                　　${book.bookShortDescribe}
+                            
+                        </p>
+                    </div>
+                    <div class="book-state" data-l1="4">
+                        <ul>
+                            
+                            
+                            <li>
+                                <b>标签</b>
+                                <div class="detail">
+                                    <p class="tag-wrap" data-l1="4">
+                                        <c:forEach items="${book.labels}" var="label">
+                                            <a class="tags" href="<%=basePath%>search/getByLabel.action?labelId=${label.bookLabelId}" target="_blank" data-eid="qd_G70">${label.bookLabelName}</a>
+                                        </c:forEach>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fans-zone" data-l1="5">
+                    <h3 class="lang">粉丝互动</h3>
+                    <div class="fans-interact cf">
+                        <dl>
+                            <dd>
+                                    <h4 class="lang"><span class="act">推荐票</span></h4>
+                                <div class="action-wrap" id="ticket-wrap">
+                                    
+                                    <div class="ticket rec-ticket ">
+
+                                        <p>总票数</p>
+
+                                        <p class="num"><i id="recCount">${book.bookRecommendTicket}</i></p>
+                                        <p></p>
+                                        <p></p>
+
+                                        <a class="red-radius-btn" id="recBtn" href="javascript:" data-showtype="2"  onclick="recomment()" data-eid="qd_G23"><em class=""></em>投推荐票</a>
+                                    </div>
+                                </div>
+                            </dd>
+                            <dd class="line"></dd>
+                            <dd>
+                                <h4 class="lang"><span class="act">打赏</span></h4>
+                                <div class="action-wrap">
+                                    <div class="ticket">
+                                        <p>打赏人数</p>
+                                        <p class="num"><i class="rewardNum" id="rewardNum">${rewardTimes}</i></p>
+
+                                        <p></p>
+
+                                        <a class="red-radius-btn" id="rewardBtn" href="javascript:" onclick="rewardWriter() " data-showtype="3" data-eid="qd_G24"><em class=""></em>打赏作者</a>
+                                       
+                                    </div>
+                                </div>
+                            </dd>
+                            <dd class="line"></dd>
+                            <dd style="overflow: hidden;">
+                                <h4 class="lang"><span>我的粉丝等级</span></h4>
+                                <c:choose>
+                                    <c:when test="${empty sessionScope.reader}">
+                                        <div class="fans-rank login-out mb20 cf" id="noLogin" data-login="0">
+                                            <div class="user-photo fl">
+                                                <a href="<%=basePath%>person/personal.action" target="_blank">
+                                                    <img src="../Images/face.jpg" class="circle">
+                                                </a>
+                                            </div>
+                                            <div class="fans-info">
+                                                <p><a class="blue" id="login-btn" href="<%=basePath%>JSP/login_reader.jsp" data-eid="qd_G28">登录</a>查看粉丝等级</p>
+                                            </div>
+                                        </div>
+                                    </c:when>
+                                    <c:when test="${not empty sessionScope.reader}">
+                                        <div class="fans-rank login-in mb20 cf " id="loginIn" data-login="1">
+                                            <div class="user-photo fl">
+                                                <a href="<%=basePath%>person/personal.action" id="myUserIcon"  target="_blank">
+                                                    <img src="<%=basePath%>${reader.readerPortrait}">
+                                                    <span class="user-level" id="userLevel"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="fans-info" id="haveLv">
+                                            <p><span>您当前的等级</span>：${readerLevel}</p>
+                                            <p><span>距离下一等级还有<span style="color: #980c10;">${withUpperLevel}</span>分</span></p>
+                                        </div>
+                                    </c:when>
+                                </c:choose>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                
+                <div class="like-more mb30 cf" data-l1="6" style="margin-top:120px">
+                    <h3 class="lang">喜欢这本书的人还喜欢</h3>
+                    <div class="like-more-list">
+                        <ul class="cf">
+                            
+                            <li data-rid="1">
+                                <div class="book-img" title="万界代购系统">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="1004900395"><img class="lazy" src="../Images/9.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/1004900395/90" alt="万界代购系统"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="万界代购系统" data-eid="qd_G29" data-bid="1004900395">万界代购系统</a></h4>
+                                <p></p>
+                            </li>
+                            
+                            <li data-rid="2">
+                                <div class="book-img" title="重生之投资之王">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="1005291434"><img class="lazy" src="../Images/10.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/1005291434/90" alt="重生之投资之王"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="重生之投资之王" data-eid="qd_G29" data-bid="1005291434">重生之投资之王</a></h4>
+                                <p></p>
+                            </li>
+                            
+                            <li data-rid="3">
+                                <div class="book-img" title="无敌神龙养成系统">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="1011311347"><img class="lazy" src="../Images/11.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/1011311347/90" alt="无敌神龙养成系统"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="无敌神龙养成系统" data-eid="qd_G29" data-bid="1011311347">无敌神龙养成系统</a></h4>
+                                <p></p>
+                            </li>
+                            
+                            <li data-rid="4">
+                                <div class="book-img" title="神级大矿主">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="1004144120"><img class="lazy" src="../Images/12.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/1004144120/90" alt="神级大矿主"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="神级大矿主" data-eid="qd_G29" data-bid="1004144120">神级大矿主</a></h4>
+                                <p></p>
+                            </li>
+                            
+                            <li data-rid="5">
+                                <div class="book-img" title="科技之门">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="3614713"><img class="lazy" src="../Images/13.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/3614713/90" alt="科技之门"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="科技之门" data-eid="qd_G29" data-bid="3614713">科技之门</a></h4>
+                                <p></p>
+                            </li>
+                            
+                            <li data-rid="6">
+                                <div class="book-img" title="万界科技系统">
+                                    <a href="" target="_blank" data-eid="qd_G30" data-bid="1010513863"><img class="lazy" src="../Images/14.jpg" data-original="//qidian.qpic.cn/qdbimg/349573/1010513863/90" alt="万界科技系统"></a>
+                                </div>
+                                <h4><a href="" target="_blank" title="万界科技系统" data-eid="qd_G29" data-bid="1010513863">万界科技系统</a></h4>
+                                <p></p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="user-commentWrap" data-l1="8">
+                    <div class="user-comment-wrap book-friend">
+                        <div class="comment-head cf">
+                        </div>
+                      <div class="userCommentWrap"  id="userCommentWrap" data-l1="7">
+                          <div class="la-ball-pulse">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                          </div>
+                          
+                          <div class="my-comment-wrap" id="myCommentWrap">
+                          </div>
+                          
+                      </div>
+
+                    </div>
+                </div>
+            
+            </div>
+            <div class="right-wrap fr">
+                
+                    <div class="author-state mb10">
+                        <div class="author-info">
+                            <div class="info-wrap nobt" data-l1="9">
+                                <div class="author-photo" id="authorId" data-authorid="2967437">
+                                    <a href="" target="_blank" data-eid="qd_G38">
+                                        <img src="../Images/qd_face.jpg">
+                                    </a>
+                                    
+                                            <span class="lv">Lv.5</span>
+                                    
+                                </div>
+                                <p><a href="" target="_blank">五彩贝壳</a>
+                                    
+                                    <a class="god-light lv1" href="" title="大神之光：已经有6人获得" target="_blank" data-eid="qd_G39"></a>
+                                    
+                                </p>
+                                
+                            </div>
+                            <div class="info-wrap" data-l1="9">
+                                <ul class="work-state cf">
+                                    <li>
+                                        <span class="book"></span>
+                                        <p>作品总数</p>
+                                        <em>5</em>
+                                    </li>
+                                    <li>
+                                        <span class="word"></span>
+                                        <p>累计字数</p>
+                                        <em>716.91万</em>
+                                    </li>
+                                    <li>
+                                        <span class="coffee"></span>
+                                        <p>创作天数</p>
+                                        <em>1692</em>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            
+                            <div class="info-wrap other-works" data-l1="10">
+                                <h3 class="lang"><a class="blue" href="" target="_blank" data-eid="qd_G40">更多<em class=""></em></a>其他作品</h3>
+                                    <div class="work-slides cf" id="workSlides">
+                                        <ul>
+                                            
+                                            
+                                            <li id="item1" data-rid="1">
+                                                <div class="book-img">
+                                                    <a href="" target="_blank" data-eid="qd_G43" data-bid="2913045"><img src="../Images/180.jpg"/>
+                                                        
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4><a href="" target="_blank" data-eid="qd_G44" data-bid="2913045">万物风云</a></h4>
+                                                    <p class="red"><a href="" data-eid="qd_G45" target="_blank">仙侠</a></p>
+                                                    <p>　　来到这个世界，苏牧从零开始，开始了自己的修炼之旅。　　身有神物，虽然资质一般，苏牧也是混得风声水起，练神功，夺奇宝，赢取美人心。　　万物现，风云动。　　不知不觉中，苏牧发现自己站在了这个世界的巅峰。　　*****　　两百四十多万字的《抗战之大国崛起》已经完本，这是贝壳的第二本书，大家放心收藏。　　</p>
+                                                    <a class="blue-btn add-book" href="javascript:" data-eid="qd_G46" data-bookId="2913045" data-bid="2913045">加入书架</a>
+                                                </div>
+                                            </li>
+                                            
+                                            <li id="item2" data-rid="2">
+                                                <div class="book-img">
+                                                    <a href="" target="_blank" data-eid="qd_G43" data-bid="3451998"><img data-src="//qidian.qpic.cn/qdbimg/349573/3451998/90"/>
+                                                        
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4><a href="" target="_blank" data-eid="qd_G44" data-bid="3451998">航空梦</a></h4>
+                                                    <p class="red"><a href="" data-eid="qd_G45" target="_blank">都市</a><i>&#183;</i><em>8.9分</em></p>
+                                                    <p>　　贝壳新书《神级大矿主》发布，大家去瞧瞧，帮着加个收藏或投一章推荐票，谢谢大家！　　这是一个航空工业帝国之梦，也是理想之梦。　　飞机制造，常被人们比喻为现代工业的"皇冠"，飞机"心脏"的航空发动机，因其研制技术含量高、工艺难度大，更是被称为"皇冠上的明珠"。　　本文讲述的就是以航空工业为背景的故事，主角从一家机械公司做配件开始，到自己的第一台航空发动机，直至摘取皇冠上的明珠，最后站在世界的工业之巅，成就自己的航空帝国。　　</p>
+                                                    <a class="blue-btn add-book" href="javascript:" data-eid="qd_G46" data-bookId="3451998" data-bid="3451998">加入书架</a>
+                                                </div>
+                                            </li>
+                                            
+                                            <li id="item3" data-rid="3">
+                                                <div class="book-img">
+                                                    <a href="" target="_blank" data-eid="qd_G43" data-bid="1003529728"><img data-src="//qidian.qpic.cn/qdbimg/349573/1003529728/90"/>
+                                                        
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4><a href="" target="_blank" data-eid="qd_G44" data-bid="1003529728">我的明末之旅</a></h4>
+                                                    <p class="red"><a href="i" data-eid="qd_G45" target="_blank">历史</a></p>
+                                                    <p>　　办实业，练新军；
+开海禁，建海军；
+打鞑子，平内乱；
+征倭奴，扬国威；
+这是一个工科男在明末的故事。
+----------------
+初试历史类，望大家多多捧场。
+完本小说《都市阵法师》，《航空梦》大家在书荒的时候可以去瞧瞧。</p>
+                                                    <a class="blue-btn add-book" href="javascript:" data-eid="qd_G46" data-bookId="1003529728" data-bid="1003529728">加入书架</a>
+                                                </div>
+                                            </li>
+                                            
+                                            <li id="item4" data-rid="4">
+                                                <div class="book-img">
+                                                    <a href="" target="_blank" data-eid="qd_G43" data-bid="1004144120"><img data-src="//qidian.qpic.cn/qdbimg/349573/1004144120/90"/>
+                                                        
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <h4><a href="" target="_blank" data-eid="qd_G44" data-bid="1004144120">神级大矿主</a></h4>
+                                                    <p class="red"><a href="" data-eid="qd_G45" target="_blank">都市</a><i>&#183;</i><em>8.6分</em></p>
+                                                    <p>　　全球最大的矿业公司，毫无疑问是旭东矿业集团，没有之一，这是一只超级巨鳄，作为这只超级巨鳄的所有人，在业界被称之为"神级大矿主"。</p>
+                                                    <a class="blue-btn add-book" href="javascript:" data-eid="qd_G46" data-bookId="1004144120" data-bid="1004144120">加入书架</a>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                        <div class="nav">
+                                            
+                                            <a href="#item1"></a>
+                                            
+                                            <a href="#item2"></a>
+                                            
+                                            <a href="#item3"></a>
+                                            
+                                            <a href="#item4"></a>
+                                            
+                                        </div>
+                                        
+                                        <div class="arrows ">
+                                            <a href="javascript:" class="" data-type="prev" data-eid="qd_G41"></a>
+                                            <a href="javascript:" class="" data-type="next" data-eid="qd_G42"></a>
+                                        </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                
+                    
+                
+                    <div class="book-list-wrap mb10" data-l1="13">
+   <div class="strongrec-list">
+       <h3 class="wrap-title lang">本周强推<i>&#183;</i>都市</h3>
+       <div class="book-list">
+           <ul>
+               
+               <li data-rid="1">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>娱乐明星<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1011932150" title="歌圣">歌圣</a></strong>
+               </li>
+               
+               <li data-rid="2">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>娱乐明星<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1012029544" title="喜剧天王">喜剧天王</a></strong>
+               </li>
+               
+               <li data-rid="3">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>都市生活<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1012015699" title="房产大玩家">房产大玩家</a></strong>
+               </li>
+               
+               <li data-rid="4">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>娱乐明星<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1012018201" title="半个娱乐圈">半个娱乐圈</a></strong>
+               </li>
+               
+               <li data-rid="5">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>都市生活<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1011879101" title="重生资本狂人">重生资本狂人</a></strong>
+               </li>
+               
+               <li data-rid="6">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>异术超能<em>」</em></a><strong><a class="name" href="" target="_blank" data-eid="qd_G51" data-bid="1011790606" title="我在都市炼神器">我在都市炼神器</a></strong>
+               </li>
+               
+               <li data-rid="7">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>都市生活<em>」</em></a><strong><a class="name" href="//book.qidian.com/info/1011971435" target="_blank" data-eid="qd_G51" data-bid="1011971435" title="谁动了我的剧本">谁动了我的剧本</a></strong>
+               </li>
+               
+               <li data-rid="8">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>都市生活<em>」</em></a><strong><a class="name" href="//book.qidian.com/info/1009695534" target="_blank" data-eid="qd_G51" data-bid="1009695534" title="我真不要当明星">我真不要当明星</a></strong>
+               </li>
+               
+               <li data-rid="9">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>娱乐明星<em>」</em></a><strong><a class="name" href="//book.qidian.com/info/1011890878" target="_blank" data-eid="qd_G51" data-bid="1011890878" title="在美利坚当大咖">在美利坚当大咖</a></strong>
+               </li>
+               
+               <li data-rid="10">
+                   <a class="channel" href="" target="_blank" data-eid="qd_G52"><em>「</em>都市生活<em>」</em></a><strong><a class="name" href="//book.qidian.com/info/1010537314" target="_blank" data-eid="qd_G51" data-bid="1010537314" title="重生之我是我二大爷">重生之我是我二大爷</a></strong>
+               </li>
+               
+           </ul>
+       </div>
+   </div>
+</div>
+       
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+    <div class="box-center cf">
+   
+        <div class="footer-menu dib-wrap">
+            <a href="" target="_blank">惊鸿</a>
+            <a href="" target="_blank">联系我们</a>
+            <a href="" target="_blank">加入我们</a>
+            <a href="" target="_blank">帮助中心</a>
+            <a href="#" class="advice" target="_blank">提交建议</a>
+            <!--<a href="http://bbs.qidian.com" target="_blank">起点论坛</a>-->
+
+        </div>
+        <div class="copy-right">
+            <p><span>Copyright &copy; 2002-2018 www.qidian.com All Rights Reserved</span>版权所有 上海玄霆娱乐信息科技有限公司</p>
+            <p>上海玄霆娱乐信息科技有限公司 增值电信业务经营许可证沪B2-20080046 出版经营许可证 新出发沪批字第U3718号 沪网文[2015]0081-031 新出网证（沪）字010 沪ICP备08017520号-1</p>
+            <p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！举报电话：010-59357051</p>
+            <p>本站所收录的作品、社区话题、用户评论、用户上传内容或图片等均属用户个人行为。如前述内容侵害您的权益，欢迎举报投诉，一经核实，立即删除，本站不承担任何责任</p>
+            <p>联系方式 总机 021-61870500 地址：中国（上海）自由贸易试验区碧波路690号6号楼101、201室</p>
+        </div>
+        
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

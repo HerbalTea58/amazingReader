@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.VisitorPermissionMapper">
+ <!--
+ void add(VisitorPermission visitorPermission);
+
+    boolean alter(VisitorPermission visitorPermission);
+
+    VisitorPermission get(int readerId);-->
+
+    <insert id="add" parameterType="VisitorPermission">
+        INSERT into visitor_permission VALUES (${bookShelf},${readingRecord},${readerId})
+    </insert>
+
+    <update id="alter" parameterType="VisitorPermission">
+        UPDATE visitor_permission
+        SET book_shelf = #{bookShelf}
+        , reading_record = #{readingRecord}
+        WHERE reader_id = #{readerId}
+    </update>
+
+    <select id="get" resultType="VisitorPermission">
+        SELECT * from visitor_permission WHERE reader_id = #{param}
+    </select>
+
+
+</mapper>

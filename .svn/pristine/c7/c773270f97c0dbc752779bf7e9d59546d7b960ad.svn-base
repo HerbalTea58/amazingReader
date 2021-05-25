@@ -1,0 +1,160 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 2018/6/1
+  Time: 14:19
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
+<html>
+<head>
+    <title>首页</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/Css/writer_all.css" type="text/css" >
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/Css/writer_home.css" type="text/css">
+    <%
+        String path = request.getContextPath();
+        String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    %>
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>Css/theme_white/css/pagination.css"/>
+    <script language="JavaScript" src="<%=basePath%>jquery-1.11.2.js"></script>
+    <script language="JavaScript"  src="<%=basePath%>Scripts/page/jquery-1.2.3.pack.js"></script>
+    <script language="JavaScript" src="<%=basePath%>Scripts/page/jquery.cookie-min.js"></script>
+    <script language="JavaScript" src="<%=basePath%>Scripts/page/pagination.js"></script>
+
+<style>
+    #pagetest5 .pgContainer{
+        border: none;
+    }
+</style>
+</head>
+<body style="background: #efefef">
+<div></div>
+<div class="all">
+    <div class="head">
+        <div class="title">
+            <a href="${pageContext.request.contextPath}/JSP/writer_home.jsp"><span class="title1">惊鸿·</span><span class="title2">作家专区</span></a>
+            <%--<a href="writer_home.jsp"><img class="logo" src="${pageContext.request.contextPath }/images/logo2.jpg" /><span class="title2">作家专区</span></a>--%>
+        </div>
+        <div  class="notify" onmouseover="h = setTimeout('over()',1000);" onmouseout="y = setTimeout('out()', 1000)">
+            <a href=""><img id="notify" class="img1" src="${pageContext.request.contextPath}/${LoginWriter.writerPortrait}"><span class="notify1">个人中心</span></a>
+        </div>
+        <div id="float_div" class="float_div" onmouseover="show()" onmouseout="notshow()">
+            <div class="arrow"></div>
+            <a href="writer_owner.jsp"><span class="float_span">作家资料</span></a>
+            <span class="float_span">更改密码</span>
+            <span class="float_span" style="border: none">退出登录</span>
+        </div>
+    </div>
+    <div class="main">
+        <div class="All_label">
+            <a href="${pageContext.request.contextPath}/JSP/writer_home.jsp"><div class="son_label_choosed">
+                <span class="label_span_choosed">专 区 首 页</span>
+            </div></a>
+            <a href="${pageContext.request.contextPath}/Writer/WriterNovels.action" ><div class="son_label">
+                <span class="label_span">作 品 管 理</span>
+            </div></a>
+            <a href="${pageContext.request.contextPath}/Writer/WriterDate.action" ><div class="son_label">
+                <span class="label_span">数 据 统 计</span>
+            </div></a>
+            <a href="${pageContext.request.contextPath}/Writer/WriterIncome.action" ><div class="son_label">
+                <span class="label_span">稿 酬 收 入</span>
+            </div></a>
+            <a href="${pageContext.request.contextPath}/Writer/WriterQuestion.action" ><div class="son_label">
+                <span class="label_span">作 家 咨 询</span>
+            </div></a>
+        </div>
+        <div class="context">
+            <div class="context_top">
+                <img class="img2" src="${pageContext.request.contextPath}/${LoginWriter.writerPortrait}" />
+                <span class="call1">${LoginWriter.writerNeckName } 你好</span>
+                <jsp:useBean id="time" class="java.util.Date">
+                    <jsp:setProperty name="time" property="time"/>
+                </jsp:useBean>
+                <span class="call2">今天是<fmt:formatDate value="${time }" type="both" pattern="yyyy年MM月dd日，EEEE"/>,书山有路勤为径，学海无涯苦做舟</span>     </div>
+            <div class="context_main">
+                <span class="little_title">作家新闻</span>
+
+                <div id="pagetest7" class="ul1" style="border:none;left: 70px;top: 100px"></div>
+
+                <ul class="ul1" id="list" style="display:none;">
+                    <c:forEach  var="notice" items="${notices}">
+                        <a name="ali" href="#"><li class="li1" style="list-style-type: none">
+                            <img class="img3" src="${pageContext.request.contextPath }/Images/writer_redpoint.png" />${notice.noticeContent}
+                            <span class="li_span"><fmt:formatDate value="${notice.noticeTime}" type="both" pattern="yyyy.MM.dd HH:mm:ss"/></span>
+                        </li></a>
+                    </c:forEach>
+                   <%-- <a href=""><li class="li1"><img class="img3" src="${pageContext.request.contextPath }/Images/writer_redpoint.png" />起点历史“大国记·秦时明月”征文来袭<span class="li_span">2018.05.21 17:18</span></li></a>
+                    <a href=""><li class="li1"><img class="img3" src="${pageContext.request.contextPath }/Images/writer_redpoint.png" />二次元频道一帝四皇通缉令，18年第一批奖名单正式公布！<span class="li_span">2018.05.21 17:18</span></li></a>
+--%>            </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    function show(){
+        alert("xianzhi");
+        document.getElementById("float_div").style.display = "block";
+    }
+    function notshow() {
+        document.getElementById("float_div").style.display = "none";
+    }
+
+
+    var   h = 0;
+    var y = 0;
+    function over(){
+        document.getElementById("float_div").style.display = "block";
+    }
+    function out2() {
+        if(y){
+            clearTimeout(y);
+            y=0;
+        }
+    }
+
+    function out(){
+        if(h)
+        {
+            clearTimeout(h);
+            h=0;
+        }
+        document.getElementById("float_div").style.display = "none";
+        out2();
+    }
+
+</script>
+<script language="javascript">
+    <!--
+
+    $(document).ready(
+
+        function(){
+            var date = document.getElementsByName("ali");
+            var datenum = date.length;
+
+            var datelist = [];
+            for(var n=0; n<datenum; n++){
+                datelist[n] = "<a href='#'>"+date[n].innerHTML+"</a>";
+            }
+            var initData = datelist;
+
+            //demo2带初始数据
+
+            //普通模式
+            $("#pagetest7").pagination({totalRecord:datenum,dataStore:initData,showMode:'normal'});
+
+
+        }
+    )
+    //-->
+</script>
+
+</body>
+</html>

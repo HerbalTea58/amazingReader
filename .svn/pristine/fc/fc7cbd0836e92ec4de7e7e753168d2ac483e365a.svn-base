@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.ReaderBookRelationMapper">
+    <!--public boolean add(ReaderBookRelation readerBookRelation);-->
+    <insert  id="add" parameterType="ReaderBookRelation">
+        insert into reader_book_relation values(#{readerId}, #{readerBookBookId}, #{readerBookReadingChapterNum}, #{readerBookAddTime})
+    </insert >
+    <!--public boolean alter(ReaderBookRelation readerBookRelation);-->
+    <update id="alter" parameterType="ReaderBookRelation">
+        update reader_book_relation set reader_book_reading_chapter_num = #{readerBookReadingChapterNum},
+                reader_book_add_time=#{readerBookAddTime} where reader_id = #{readerId} and reader_book_book_id =  #{readerBookBookId}
+    </update>
+    <!--public boolean remove(ReaderBookRelation readerBookRelation);-->
+    <delete id="remove" parameterType="ReaderBookRelation">
+        delete from reader_book_relation where reader_id = #{readerId} and reader_book_book_id =  #{readerBookBookId}
+    </delete>
+    <!--public List<ReaderBookRelation> getByReaderId(int readerId);-->
+    <select id="getByReaderId" parameterType="int" resultType="ReaderBookRelation">
+        select * from reader_book_relation where reader_id = #{_parameter}
+    </select>
+    <!--public int countBook(int readerId);-->
+    <select id="countBook" parameterType="int" resultType="int">
+        select COUNT(*) from reader_book_relation where reader_id = #{_parameter}
+    </select>
+    <!--public int countReader(int bookId);-->
+    <select id="countReader" parameterType="int" resultType="int">
+        select COUNT(*) from reader_book_relation where  reader_book_book_id = #{_parameter}
+    </select>
+
+    <select id="getBookShelfBooksByWriterName" resultType="ReaderBookRelation">
+        SELECT reader_book_relation.* FROM reader_book_relation INNER  JOIN  book on reader_book_relation.reader_book_book_id =book.book_id INNER JOIN writer on
+        book.book_writer_id= writer.writer_id AND writer.writer_neck_name=#{param1} and reader_book_relation.reader_id=#{param2}
+    </select>
+    <select id="getBookShelfBooksByBookName"  resultType="ReaderBookRelation">
+        SELECT reader_book_relation.* FROM reader_book_relation INNER  JOIN  book on reader_book_relation.reader_book_book_id =book.book_id
+        and book.book_name=#{param1} and  reader_book_relation.reader_id=#{param2}
+    </select>
+</mapper>

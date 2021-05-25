@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.RechargeMapper">
+    <!--boolean add(Recharge recharge);-->
+    <insert id="add" parameterType="Recharge">
+        insert into recharge values(#{rechargeId},#{rechargeReaderId},#{rechargePrice},#{rechargeTime})
+    </insert>
+    <!--List<Recharge> getByReader(int readerID); -->
+    <select id="getByReader" parameterType="int" resultType="Recharge">
+        select * from recharge where recharge_reader_id=#{_parameter}
+    </select>
+    <!--/**
+     * 计算所有用户充值总额，用于计算平台报表
+     * @return
+     */
+    double sumUp();-->
+    <select id="sumUp" resultType="double">
+        select sum(recharge_price) from recharge
+    </select>
+</mapper>

@@ -1,0 +1,20 @@
+package com.amazingReader.control;
+
+import com.amazingReader.service.Interface.ReaderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@RequestMapping("/visitor")
+@RestController
+public class ReaderVisitorPageControl {
+    @Autowired
+    private ReaderService readerService;
+    @RequestMapping("/readerHome")
+    public void readerHome(HttpServletResponse response, HttpServletRequest request){
+        int requestReaderId = Integer.parseInt(request.getParameter("readerId"));
+    }
+}

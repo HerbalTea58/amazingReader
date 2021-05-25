@@ -1,0 +1,88 @@
+package com.amazingReader.mapper;
+
+import java.util.List;
+
+import com.amazingReader.entity.Book;
+
+public interface BookMapper {
+    public int getMaxIndex();
+    public boolean add(Book book);
+    public boolean alter(Book book);
+    /**
+     * 仅将书籍下架
+     * @param book
+     * @return
+     */
+     boolean removeBook(Book book);
+     boolean removeByBookId(int bookId);
+     Book getBookById(int bookId);
+     Book getBookByName(String bookName);
+     List<Book> getBooksByLabelId(int LabelId);
+     List<Integer> getBooksByStyleId(int styleId);
+     void addRecommendTicket(int tickets, int bookId);
+
+     List<Book> getVisitBookBasic();
+
+    void collect(int bookId);
+
+    List<Book> getActivityBooks();
+
+    Integer getClickNum(int bookId);
+
+    int getWordsNumOfBook(int bookId);
+
+    Book getBookByWriterId(int writerId);
+
+    //男女频书籍
+    List<Integer> queryBooksOfMan();
+    List<Integer> queryBooksOfWoman();
+
+    //收入榜
+    public List<Integer> queryBookForIncome();
+
+    //推荐榜
+    public List<Integer> queryBookForRecommend();
+
+    //热销榜
+    public List<Integer> queryBookForOrder();
+
+    //收藏榜
+    public List<Integer> queryBookForCollect();
+
+    //打赏榜
+    public List<Integer> queryBookForReward();
+
+    //新书推荐
+    public List<Integer> queryBookForRecentCreate();
+
+    //全本免费专区
+    public List<Integer> queryBookForFree();
+
+    //限时免费
+    public List<Integer> queryBookForFreeOfTimeLimit();
+
+    //完结专区
+    public List<Integer> queryBookForFinished();
+
+
+    //男频热度排行榜
+    public List<Integer> queryBookForHotOfMan();
+
+    //女频热度排行榜
+    public List<Integer> queryBookForHotOfWoman();
+    //女频推荐排行榜
+    public List<Integer> queryBookForRecommendOfWoman();
+    //女频新书
+    public List<Integer> queryBookForRecentCreateOfWoman();
+    //女频免费
+    public List<Integer> queryBookForFreeOfWoman();
+    //女频完结
+    public List<Integer> queryBookForFinishedOfWoman();
+    //女频收藏榜
+    public List<Integer> queryBookForCollectOfWoman();
+
+
+
+
+
+}

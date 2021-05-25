@@ -1,0 +1,200 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 18-6-1
+  Time: 13:00
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>layui/css/layui.css"/>
+    <script src="<%=basePath%>layui/layui.js"></script>
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="<%=basePath%>jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="<%=basePath%>bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <title>惊鸿书院后台</title>
+</head>
+
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">惊鸿书院后台管理</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="">控制台</a></li>
+            <li class="layui-nav-item"><a href="">商品管理</a></li>
+            <li class="layui-nav-item"><a href="">用户</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">邮件管理</a></dd>
+                    <dd><a href="">消息管理</a></dd>
+                    <dd><a href="">授权管理</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="<%=basePath%>${sessionScope.manager.managerPortrait}" class="layui-nav-img">
+                    ${ sessionScope.manager.managerName}
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+
+            </li>
+            <li class="layui-nav-item"><a href="../manager/login.action">登录</a></li>
+            <li class="layui-nav-item"><a href="">退出</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">举报处理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" id="chapter_report_to_deal">待处理章节举报</a></dd>
+                        <dd><a href="<%=basePath%>manager/getToDealReportComment.action" id="comment_report_to_deal">待处理评论举报</a></dd>
+                        <dd><a href="<%=basePath%>manager/getAllReportComment.action">全部评论举报</a></dd>
+                        <dd><a href="<%=basePath%>manager/getAllReportChapter.action">全部章节举报</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">解决方案</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">列表一</a></dd>
+                        <dd><a href="javascript:;">列表二</a></dd>
+                        <dd><a href="">超链接</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">云市场</a></li>
+                <li class="layui-nav-item"><a href="">发布商品</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body" id="layui-body">
+        <!-- 内容主体区域 -->
+        <div class="jumbotron">
+            <div class="container" style="text-align: center">
+                <h1 >Hello ${manager.managerName}!</h1>
+                <p></p>
+            </div>
+        </div>
+        <c:if test="${commentReports != null}">
+            <c:forEach items="commentReports" var="report">
+                <div class="reportInfo" style="width: 450px;">
+                    <table class="table table-hover">
+                        <tr>
+                            <td rowspan="2">${report.reportedComment.commentContent}</td>
+                            <td><strong>评论人</strong></td>
+                            <td>${report.reportedComment.reader.name}</td>
+                            <td>${report.reportedComment.reader.id}</td>
+                            <td><a href="<%=basePath%>blockReader.action?readerId="${report.reportedComment.reader.id}>封号</a></td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+            </c:forEach>
+        </c:if>
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © layui.com - 底部固定区域
+        <i class="layui-icon layui-icon-login-wechat"></i>
+    </div>
+</div>
+<script>
+    $("#chapter_report_to_deal").click(function() {
+        $.ajax({
+            url: "<%=basePath%>manager/getAllReportedChapter.action", async: true,
+            success: function (info) {
+                $("#layui-body").html("")
+                for(var i in info){
+                    var div = " <div class = 'reportedChapter' style='width: 450px;float: left; margin-left: 30px;margin-top: 10px;' > " +
+                        "<form action='' method='post'>           <div class='reportedWriterInfo'>" +
+                        "                 <div class='layui-row  btn btn-default' style='width: 100%'> " +
+                        "                       <div class='layui-col-md2'>"+
+                                                    +"作者："+info[i]["reportedWriter"]["writerNeckName"]+
+                                                    "</div>" +
+                        " <div class='layui-col-md4' style='overflow: hidden'>"+
+                        "章节："+info[i]["reportedChapter"]["chapterName"]+
+                        "(id:"+info[i]["reportedChapter"]["chapterId"]+")" +
+                        "                 </div>" +
+                        "                 <div class='layui-col-md4'>" +
+                        "                   <span style='color: #0a789b'>"+info[i]["reportStatuName"]+"</span>" +
+                        "                 </div> " +
+                        "                 </div>" +
+                            "       <div class='layui-row btn btn-default' style='width: 100%'>" +
+                                        "<div class='layui-col-md12'>" +
+                                            info[i]["reportedChapter"]["chapterName"]+
+                                        "</div>" +
+                                     "</div>"+
+                        "             <div class='layui-row'>" +
+                        "                    <div class='layui-col-md12 reportedChapterContent' style=' height :300px;overflow: scroll;'>"+
+                        info[i]["reportedChapter"]["chapterContent"]+"" +
+                        "                    </div>" +
+                        "             </div>" +
+                                       "<div class='layui-row'>" +
+                                        "     <div class='layui-col-md12 btn btn-default'>"+
+                                                    "举报理由："+info[i]["reportReason"]
+                                        +" </div>"+
+                    "                   </div>"+
+                                        "<div class='layui-row'>" +
+                                        "     <div class='layui-col-md12 btn btn-default'>"+
+                                        "<input type='text' name='solution' style='width: 100%; border: none'/>"
+                                        +" </div>"+
+                    "                   </div>"+
+                        "           </div> " +
+                        "       </div>";
+                    $("#layui-body").append(div)
+                }
+            }
+        });
+    });
+
+    $(document).ready(function(){
+        $(".reportedChapterContent").toggle(function(){
+            $(this).animate({height: 'toggle', opacity: 'toggle'}, "slow");
+        },function(){
+            $(this).animate({height: 'toggle', opacity: 'toggle'});
+        });
+    });
+</script>
+<script src="file:///G|/src/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
+</script>
+
+</body>
+</html>

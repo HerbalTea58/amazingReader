@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.QuestionMapper">
+    <!--public boolean add(Question question);-->
+    <insert  id="add" parameterType="Question">
+        insert into question(writer_id, reader_id, solution, manager_id, content, question_deal_status_id)
+            value(#{senderId}, #{replyId},#{solution}, #{managerId}, #{content}, #{questionDealStatusId})
+    </insert >
+    <!--public boolean alter(Question question);-->
+    <update id="alter" parameterType="Question">
+        update question set writer_id =#{senderId}, reader_id = #{replyId}, solution =#{solution},
+              manager_id =  #{managerId}, content = #{content},question_deal_status_id =#{questionDealStatusId}
+              where  id = #{id}
+    </update>
+    <!--public boolean remove(int questionID);-->
+    <delete id="remove" parameterType="int">
+        delete from question where id = #{_parameter}
+    </delete>
+    <!--public List<Question> getByManagerId(int managerID);-->
+    <select id="getByManagerId" parameterType="int" resultType="Question">
+        select * from Question where manager_id = #{_parameter}
+    </select>
+</mapper>

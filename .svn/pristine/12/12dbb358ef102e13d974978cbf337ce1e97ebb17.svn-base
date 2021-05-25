@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.CommentMapper">
+
+
+    <!--public int getMaxIndex();
+    public boolean add(Comment comment);
+    public boolean alter(Comment comment);
+    public boolean removeByCommentTid(int commentTid);
+    public boolean removeByCommentId(int commentId);
+    public Comment getCommentBy(int commentId);
+    /**
+    * 获得章节下评论
+    * @param chapterId
+    * @return
+    */
+    public List<Comment> getTieZiByChapterId(int chapterId);
+    /**
+    * 获得评论下回复
+    * @param TieZiId
+    * @return
+    */
+    public List<Comment> getCommentsByTieZiId(int TieZiId);
+    	public Comment getCommentByCommentId(int commemtTid);-->
+
+    <select id="getMaxTID" resultType="int">
+        SELECT max(comment_tId) FROM comment
+
+
+    </select>
+    <insert id="add" parameterType="Comment">
+        INSERT into comment(comment_tid,
+        comment_commented_id,
+        comment_reader_id,
+        comment_book_id,
+        comment_chapter_id,
+        comment_push_date,
+        comment_content,
+        comment_like_num,
+        comment_statu,
+        comment_graded,
+        comment_is_read)
+        VALUES(#{commentTid},
+        #{commentCommentedId},
+        #{commentReaderId},
+        0,
+        #{commentChapterId},
+        #{commentPushDate},
+        #{commentContent},
+        0,
+        1,
+        #{commentGraded},
+        #{commentIsRead})
+    </insert>
+    <update id="alter" parameterType="Comment">
+        UPDATE comment SET comment_commented_id="#{commentCommentedId}",comment_reader_id=#{commentReaderId},comment_book_id=#{commentBookId},comment_chapter_id=#{commentChapterId},comment_push_datecomment_push_date="#{commentPushDate}",comment_content="#{commentContent}",comment_like_num=#{commentLikeNum},comment_statu=#{commentStatu},comment_graded=#{commentGraded},comment_is_read=#{commentIsRead}
+        WHERE comment_id=#{commentId} and comment_tid=#{commentTid}
+    </update>
+    <delete id="removeByCommentTid" parameterType="int">
+        DELETE FROM comment WHERE comment_tid=#{_parameter}
+    </delete>
+    <delete id="removeByCommentId" parameterType="int">
+        DELETE from comment WHERE comment_id=#{_parameter}
+    </delete>
+    <select id="getCommentBy" parameterType="int" resultType="Comment">
+        SELECT * FROM comment WHERE comment_tid=#{_parameter}
+    </select>
+    <select id="getTieZiByChapterId" parameterType="int" resultType="Comment">
+        SELECT * FROM comment WHERE comment_chapter_id=#{_parameter} and comment_commented_id = -1
+
+    </select>
+    <select id="getCommentsByTieZiId" parameterType="int" resultType="Comment">
+        SELECT * FROM comment WHERE comment_tid=#{_parameter} and comment_commented_id > 0
+    </select>
+    <!-- public List<Comment> getCommentsByReaderId(int readerId); -->
+   	<select id="getCommentsByReaderId" resultType="Comment">
+   		select * from comment where comment_reader_id = #{_parameter} AND comment_commented_id <![CDATA[ <> ]]> -1
+   	</select>
+	<!-- public List<Comment> getCommentsToReaderId(int readerId); -->
+	<select id="getCommentsToReaderId" resultType="Comment">
+	select * from comment where comment_commented_id = #{_parameter}
+    </select>
+  <!--  int getCommentsNumToReaderId(int readerId);-->
+    <select id="getCommentsNumToReaderId" parameterType="int" resultType="int">
+        SELECT COUNT(*)  FROM  comment WHERE comment_commented_id = #{_parameter}
+    </select>
+
+    <!--public boolean alterStatu(int commentId, boolean statu);-->
+    <select id="alterStatu" resultType="boolean">
+        update comment set comment_statu = #{_param2} where comment_id = #{_param1}
+    </select>
+    <!--List<Comment> getAllPostSendBy(int readerId);-->
+    <select id="getAllPostSendBy" resultType="Comment">
+        SELECT * FROM comment WHERE comment_reader_id = #{param} AND comment_commented_id = -1
+    </select>
+</mapper>

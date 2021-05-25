@@ -1,0 +1,385 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 18-6-1
+  Time: 13:00
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>layui/css/layui.css"/>
+    <script src="<%=basePath%>layui/layui.js"></script>
+    <link type="text/css" rel="stylesheet" href="<%=basePath%>bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="<%=basePath%>jquery-1.11.2.js"></script>
+   <%-- <script type="text/javascript" src="<%=basePath%>bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>--%>
+    <title>惊鸿书院后台</title>
+    <link rel="shortcut icon" href="<%=basePath%>Picture/惊鸿图标.jpg"/>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo" style="color: white;"><strong>惊鸿书院后台管理</strong></div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="<%=basePath%>manager/bookManage.action">书籍管理</a></li>
+            <li class="layui-nav-item"><a href="<%=basePath%>writerManage/countWriterIncome.action">作者管理</a></li>
+            <li class="layui-nav-item"><a href="">读者管理</a></li>
+            <%--<li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">邮件管理</a></dd>
+                    <dd><a href="">消息管理</a></dd>
+                    <dd><a href="">授权管理</a></dd>
+                </dl>
+            </li>--%>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="<%=basePath%>${sessionScope.manager.managerPortrait}" class="layui-nav-img">
+                    ${ sessionScope.manager.managerNeckname}
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+
+            </li>
+            <c:if test="${ empty sessionScope.manager}">
+                <li class="layui-nav-item"><a href="<%=basePath%>JSP/managerLogin.jsp">登录</a></li>
+            </c:if>
+            <li class="layui-nav-item"><a href="<%=basePath%>managerExit.action">退出</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">举报处理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="<%=basePath%>manager/getToDealReportChapter.action" id="chapter_report_to_deal">待处理章节举报</a></dd>
+                        <dd><a href="<%=basePath%>manager/getToDealReportComment.action" id="comment_report_to_deal">待处理评论举报</a></dd>
+                        <%--<dd><a href="<%=basePath%>manager/getAllReportComment.action">全部评论举报</a></dd>
+                        <dd><a href="<%=basePath%>manager/getAllReportChapter.action">全部章节举报</a></dd>--%>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="#">书籍管理(女频)</a>
+
+                    <dl class="layui-nav-child">
+                        <c:forEach items="${womanStyles}" var="woman">
+                            <dd><a  href="<%=basePath%>manager/bookManage.action?keyWord=${woman.bookStyleName}">${woman.bookStyleName}</a></dd>
+                        </c:forEach>
+
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="#">书籍管理(男频)</a>
+
+                    <dl class="layui-nav-child">
+                        <c:forEach items="${manStyles}" var="man">
+                            <dd><a  href="<%=basePath%>manager/bookManage.action?keyWord=${man.bookStyleName}">${man.bookStyleName}</a></dd>
+                        </c:forEach>
+
+                    </dl>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body" id="layui-body">
+        <!-- 内容主体区域 -->
+
+        <div class="row" style="margin: 10px auto;">
+                <!--内容 开始-->
+                <div class="content">
+
+                    <!--选择搜索 开始-->
+                    <div class="find">
+                        <div class="fi_t" style="width:100%;">
+                            <div style="width:480px;height:50px;text-align: center;margin:0 auto;">
+                                <span><s></s></span>
+                                <form action="<%=basePath%>reader/searchBooksByManager.action" method="post">
+                                    <input type="text" id="keyWord" onkeyup="helper()" class="keyWord" name="keyWord" style="float:left;display:inline-block;border:1px solid #000;background-color: #fff;border-radius: 5px;width: 400px;height: 30px;" placeholder="我要搜.. " maxlength="100" autocomplete="off"/>
+                                    <input type="submit" value="搜索" style="float:left;display: inline-block;width: 60px;height: 30px;font-size: 14px;border-radius: 5px;background-color: #aa1317;color: #fff"/>
+                                </form>
+                            </div>
+                            <div id="helperDiv" style="display:none;width:480px;overflow-y: scroll;position: relative;float: inherit;top: 0; height: 100px; border: 1px solid #ddd;margin:0 auto;">
+                                <a href="<%=basePath%>reader/searchBooksByManager.action?labelId="></a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!--选择搜索 结束-->
+                    <!--搜索结果 开始-->
+                    <div class="result" mod="search_data_list">
+                        <ul>
+                            <c:if test="${ not empty bookList}">
+                                <c:if test="${fn:length(requestScope.bookList.list)==0}">
+                                    <div class="alert alert-warning" role="alert" style="text-align: center; height: 50px; background-color: #fff7e7; line-height: 50px "><span style="">哎呀，没有你要找的东西！</span></div>
+                                </c:if>
+                                <c:forEach items="${bookList.list}" var="book" varStatus="s">
+                                    <div class="media" style="margin: 20px 20px;border-bottom: 1px solid #ddd">
+
+                                        <div class="media-left media-top">
+                                            <a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book.bookId}">
+                                                <img class="media-object" src="<%=basePath%>${book.bookCover}" width="100" height="140" alt="${book.bookName}">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">${book.bookName}
+                                                <span class="badge" style="background-color: greenyellow;color: black   ">浏览量： ${book.clickTimes}</span>
+
+                                                <c:if test="${book.bookDownShelf}">
+                                                    <span class="badge" style="background-color: #ddd;color: red">状态:下架</span>
+                                                </c:if>
+
+                                                <c:if test="${!book.bookDownShelf}">
+                                                    <span class="badge" style="background-color: #3498db;color: white">状态:在架</span>
+                                                </c:if>
+                                            </h4>
+                                            <p style="word-wrap:break-word; word-break:break-all; overflow: hidden">
+                                                <span style="color: white;font-size: 12px">简介：</span>
+                                                    ${book.bookShortDescribe}
+                                            </p>
+                                            <p>
+                                                <c:if test="${book.bookDownShelf}">
+                                                    <a href="javascript:;" class="btn btn-primary" onclick="reUpToShelfBook(${book.bookId})" role="button">
+                                                        上架
+                                                    </a>
+                                                </c:if>
+                                                <c:if test="${!book.bookDownShelf}">
+                                                    <a href="javascript:;" onclick="downShelfBook(${book.bookId})" class="btn btn-default" role="button">
+                                                        下架
+                                                    </a>
+                                                </c:if>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </c:forEach>
+                            </c:if>
+
+                        </ul>
+                        <ul>
+                            <c:if test="${not empty books}">
+                                <c:forEach items="${books}" var="book1" varStatus="s">
+                                    <div class="media" style="margin: 20px 20px;border-bottom: 1px solid #ddd">
+                                        <div class="media-left media-top">
+                                            <a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book1.bookId}">
+                                                <img class="media-object" src="<%=basePath%>${book1.bookCover}" width="100" height="140" alt="${book1.bookName}">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">${book1.bookName}
+                                                <span class="badge" style="background-color: greenyellow;color: black   ">浏览量： ${book1.clickTimes}</span>
+
+                                                <c:if test="${book1.bookDownShelf}">
+                                                    <span class="badge" style="background-color: #ddd;color: red">状态:下架</span>
+                                                </c:if>
+
+                                                <c:if test="${!book1.bookDownShelf}">
+                                                    <span class="badge" style="background-color: #3498db;color: white">状态:在架</span>
+                                                </c:if>
+                                            </h4>
+                                            <p style="word-wrap:break-word; word-break:break-all; overflow: hidden">
+                                                <span style="color: white;font-size: 12px">简介：</span>
+                                                    ${book1.bookShortDescribe}
+                                            </p>
+                                            <p>
+                                                <c:if test="${book1.bookDownShelf}">
+                                                    <a href="javascript:;" class="btn btn-primary" onclick="reUpToShelfBook(${book1.bookId})" role="button">
+                                                        上架
+                                                    </a>
+                                                </c:if>
+                                                <c:if test="${!book1.bookDownShelf}">
+                                                    <a href="javascript:;" onclick="downShelfBook(${book1.bookId})" class="btn btn-default" role="button">
+                                                        下架
+                                                    </a>
+                                                </c:if>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </c:forEach>
+                            </c:if>
+
+                        </ul>
+                        <ul>
+                            <c:if test="${empty downShelfBooks}">
+                                <div class="alert alert-warning" role="alert" style="text-align: center; height: 50px; background-color: #fff7e7; line-height: 50px "><span style="">全部书籍已上架，没有可下架的书籍！</span></div>
+                            </c:if>
+                            <c:if test="${not empty downShelfBooks}">
+
+                                <c:forEach items="${downShelfBooks}" var="book1" varStatus="s">
+                                    <div class="media" style="margin: 20px 20px;border-bottom: 1px solid #ddd">
+                                        <div class="media-left media-top">
+                                            <a href="<%=basePath%>bookDetail/getBookDetail.action?bookId=${book1.bookId}">
+                                                <img class="media-object" src="<%=basePath%>${book1.bookCover}" width="100" height="140" alt="${book1.bookName}">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">${book1.bookName}
+                                                <span class="badge" style="background-color: greenyellow;color: black   ">浏览量： ${book1.clickTimes}</span>
+                                                <c:if test="${book1.bookDownShelf}">
+                                                    <span class="badge" style="background-color: #ddd;color: red">状态:下架</span>
+                                                </c:if>
+
+                                                <c:if test="${!book1.bookDownShelf}">
+                                                    <span class="badge" style="background-color: #3498db;color: white">状态:在架</span>
+                                                </c:if>
+                                            </h4>
+                                            <p style="word-wrap:break-word; word-break:break-all; overflow: hidden">
+                                                <span style="color: white;font-size: 12px">简介：</span>
+                                                    ${book1.bookShortDescribe}
+                                            </p>
+                                            <p>
+                                                <c:if test="${book1.bookDownShelf}">
+                                                    <a href="javascript:;" class="btn btn-primary" onclick="reUpToShelfBook(${book1.bookId})" role="button">
+                                                        上架
+                                                    </a>
+                                                </c:if>
+                                                <c:if test="${!book1.bookDownShelf}">
+                                                    <a href="javascript:;" onclick="downShelfBook(${book1.bookId})" class="btn btn-default" role="button">
+                                                        下架
+                                                    </a>
+                                                </c:if>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </c:forEach>
+                            </c:if>
+
+                        </ul>
+                        <script>
+                            function checkLogin() {
+                                if(${not empty sessionScope.reader}){
+                                    return true;
+                                }else{
+                                    layui.use('layer', function() {
+                                        var layer = layui.layer;
+                                        layer.open({
+                                            title: '请登录',
+                                            content: '请先登录，点击跳转',
+                                            yes: function () {
+                                                window.open('<%=basePath%>JSP/login_reader.jsp');
+                                            }
+                                        })
+                                    })
+                                    return false;
+                                }
+                            }
+
+                        </script>
+                        <script>
+                            function addToShelf(bookId){
+                                if(checkLogin()){
+                                    $.ajax({
+                                        url:"<%=basePath%>reader/addToShelf.action?bookId="+bookId
+                                        ,async:true
+                                        ,success:function(info){
+                                            if(info){
+                                                layui.use('layer',function () {
+                                                    var layer = layui.layer;
+                                                    var index = layer.msg(1,{content:'加入成功',offset:['45%','45%']});
+                                                    layer.style(index, {
+                                                        width: '200px',
+                                                        height:'25px'
+                                                    });
+                                                })
+                                            }else{
+                                                layui.use('layer',function () {
+                                                    var layer = layui.layer;
+                                                    var index = layer.msg(1,{content:'<strong>已在书架</strong>',offset:['40%','40%']});
+                                                    layer.style(index, {
+                                                        width: '200px',
+                                                        height:'30px'
+                                                    });
+                                                })
+                                            }
+                                        }
+                                    })
+                                }
+
+                            }
+
+                        </script>
+
+                    </div>
+
+                </div>
+        </div><%--end of row--%>
+
+    </div>
+    <script>
+        function downShelfBook(bookId){
+            layui.use('layer',function(){
+                var layer = layui.layer;
+                var index = layer.open({
+                    offset:("40%","30%"),
+                    title:'是否下架',
+                    content:'<p style="text-align: center"><strong>要将该书籍下架么！</strong></p>',
+                    yes : function(){
+                        $.ajax({
+                            url:'<%=basePath%>manager/downShelfBook.action?bookId='+bookId,
+                            async:true,
+                            success:function(info) {
+                                location.reload();
+                                //window.refresh();
+                            }
+                        })
+                        layer.close(index);
+                    },anim: 6
+                })
+            })
+
+        }
+    </script>
+    <script>
+        function reUpToShelfBook(bookId){
+            layui.use('layer',function(){
+                var layer = layui.layer;
+                var index = layer.open({
+                    offset:("40%","30%"),
+                    title:'是否满足上架条件',
+                    content:'<p style="text-align: center"><strong>满足上架条件么？</strong></p>',
+                    btn:['可以上架','不满足'],
+                    yes : function(){
+                        $.ajax({
+                            url:'<%=basePath%>manager/reUpToShelfBook.action?bookId='+bookId,
+                            async:true,
+                            success:function(info) {
+                                location.reload();
+                            }
+                        })
+                        layer.close(index);
+                    },anim:1
+                })
+            })
+        }
+    </script>
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © layui.com - 底部固定区域
+        <i class="layui-icon layui-icon-login-wechat"></i>
+    </div>
+</div>
+
+</body>
+</html>
+

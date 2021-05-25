@@ -1,0 +1,152 @@
+a{
+    text-decoration: none;
+    color: #0f0f0f;
+}
+.context_summary{
+    width: 1029px;
+    height: 60px;
+    border-bottom: #dddddd 1px solid;
+}
+.choosed{
+    width: 100px;
+    height: 40px;
+    float: left;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-family: 新宋体;
+    /*border: #0f0f0f 1px solid;*/
+    /*border-bottom: #2aabd2 3px solid;*/
+}
+a .choosed:hover{
+    color: #2aabd2;
+    border-bottom: #2aabd2 3px solid;
+}
+
+.allincome{
+    width: 1029px;
+    height: 700px;
+    position: relative;
+    /*border: #0f0f0f 1px solid;*/
+}
+.readincome{
+
+    display: none;
+}
+.rewardincome{
+
+    display: none;
+}
+.find_span{
+    position: absolute;
+    font-family: 新宋体;
+    font-size: 15px;
+    left: 50px;
+    top: 53px;
+}
+.findtype{
+    position: absolute;
+    font-family: 新宋体;
+    font-size: 13px;
+    width: 150px;
+    height: 30px;
+    left: 150px;
+    top: 45px;
+    border: #c9c9c9 1px solid;
+}
+.div_findtype1{
+    position: absolute;
+    width: 350px;
+    height: 30px;
+    top: 45px;
+    left: 330px;
+    /*border: #0f0f0f 1px solid;*/
+}
+.findyear{
+    position: absolute;
+    font-family: 新宋体;
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    border: #c9c9c9 1px solid;
+}
+.findmonth{
+    position: absolute;
+    font-family: 新宋体;
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    left: 130px;
+    border: #c9c9c9 1px solid;
+}
+.find1{
+    position: absolute;
+    left: 260px;
+    border-radius: 5px;
+    background-color: #2aabd2;
+    border: none;
+    width: 70px;
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+}
+.div_findtype2{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    top: 45px;
+    left: 330px;
+    /*border: #0f0f0f 1px solid;*/
+    display: none;
+}
+.findnovels{
+    position: absolute;
+    font-family: 新宋体;
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    border: #c9c9c9 1px solid;
+}
+.find2{
+    position: absolute;
+    left: 130px;
+    border-radius: 5px;
+    background-color: #2aabd2;
+    border: none;
+    width: 70px;
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+}
+.detail_span{
+    position: absolute;
+    left: 50px;
+    top: 130px;
+}
+.detail_span2{
+    position: absolute;
+    left: 650px;
+    top: 130px;
+}
+.table1{
+    position: absolute;
+    left: 50px;
+    top:170px;
+    border: #dddddd 1px solid;
+}
+.th1{
+    width: 150px;
+    height: 30px;
+    border: #dddddd 1px solid;
+}
+.tr1{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.td1{
+
+}

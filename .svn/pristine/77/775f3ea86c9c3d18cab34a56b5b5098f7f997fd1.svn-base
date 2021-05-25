@@ -1,0 +1,146 @@
+.cover{
+    position: absolute;
+    top: 150px;
+    left: 170px;
+    width: 100px;
+    height: 20px;
+}
+.cover1{
+    position: absolute;
+    top: 110px;
+    left: 270px;
+    width: 100px;
+    height: 100px;
+    border: #0f0f0f 1px solid;
+    border-radius: 50%;
+}
+.writerName{
+    position: absolute;
+    top: 250px;
+    left: 170px;
+    width: 100px;
+    height: 20px;
+}
+.writerName1{
+    position: absolute;
+    top: 245px;
+    left: 270px;
+    width: 200px;
+    height: 30px;
+}
+.writerId{
+    position: absolute;
+    top: 300px;
+    left: 170px;
+    width: 100px;
+    height: 20px;
+}
+.writerId1{
+    position: absolute;
+    top: 295px;
+    left: 270px;
+    width: 200px;
+    height: 30px
+}
+.sex{
+    position: absolute;
+    top: 350px;
+    left: 170px;
+    width: 100px;
+    height: 20px;
+}
+.sex1{
+    position: absolute;
+    top: 345px;
+    left: 270px;
+    width: 200px;
+    height: 30px;
+}
+.sex11{
+    position: absolute;
+    top: 350px;
+    left: 270px;
+    /*width: 200px;*/
+    /*height: 30px;*/
+}
+.sex111{
+    position: absolute;
+    top: 350px;
+    left: 290px;
+}
+.sex12{
+    position: absolute;
+    top: 350px;
+    left: 330px;
+    /*width: 200px;*/
+    /*height: 30px;*/
+}
+.sex121{
+    position: absolute;
+    top: 350px;
+    left: 350px;
+}
+.trueName{
+    position: absolute;
+    top: 400px;
+    left: 170px;
+    width: 100px;
+    height: 20px;
+}
+.trueName1{
+    position: absolute;
+    top: 395px;
+    left: 270px;
+    width: 200px;
+    height: 30px;
+}
+.phones{
+    position: absolute;
+    top: 450px;
+    left: 170px;
+    width: 100px;
+    height: 20px;
+}
+.phones1{
+    position: absolute;
+    top: 445px;
+    left: 270px;
+    width: 200px;
+    height: 30px;
+}
+.shortRe{
+    position: absolute;
+    top: 550px;
+    left: 170px;
+    width: 300px;
+    height: 100px;
+}
+.shortRe1{
+    position: absolute;
+    top: 545px;
+    left: 270px;
+    width: 300px;
+    height: 100px;
+}
+.address1{
+    position: absolute;
+    top: 500px;
+    left: 170px;
+    width: 100px;
+    height: 20px;
+}
+.address11{
+    position: absolute;
+    top: 495px;
+    left: 270px;
+    width: 200px;
+    height: 30px;
+}
+
+.change{
+    position: absolute;
+    top: 660px;
+    left: 280px;
+    width: 100px;
+    height: 30px;
+}

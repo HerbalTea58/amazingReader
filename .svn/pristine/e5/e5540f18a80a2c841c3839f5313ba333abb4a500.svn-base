@@ -1,0 +1,129 @@
+package com.amazingReader.control;
+
+import com.amazingReader.entity.*;
+import com.amazingReader.entity.utilEntity.ReadingPageInfo;
+import com.amazingReader.service.Interface.BookService;
+import com.amazingReader.service.Interface.ChapterService;
+import com.amazingReader.service.Interface.ReaderService;
+import com.amazingReader.service.Interface.WriterService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
+@RequestMapping("/reader")
+@RestController
+public class ReadingPageControl {
+    @Autowired
+    private ReaderService readerService;
+    @Autowired
+    private BookService bookService;
+    @Autowired
+    private WriterService writerService;
+    @Autowired
+    private ChapterService chapterService;
+
+    /**
+     *
+     * @param request
+     * @param response
+     */
+    @RequestMapping("/readChapter.action")
+    public void readChapter(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //获取传入的章节号
+        Integer chapterId = Integer.parseInt(request.getParameter("chapterId"));
+        //获取当前读者
+        Integer readerId = 1;
+        //Integer readerId = ((Reader)request.getSession().getAttribute("reader")).getReaderId();
+        // 获取章节内容
+        Chapter chapter = readerService.read(chapterId,readerId);
+        //获取书籍信息
+        Book book = bookService.getBookInfoByChapterId(chapterId);
+        //获取书籍目录
+        List<Chapter> menu = bookService.getMenuOfBook(book.getBookId());
+        //获取作者信息
+        Writer writer = writerService.getWriterInfo(book.getBookWriterId());
+        //如果不是最后一章，获取下一章
+        System.out.println("当前请求章节："+chapter.getChapterNum()+",最后一章？"+bookService.isFinalChapter(chapter.getChapterId()));
+        if(!bookService.isFinalChapter(chapter.getChapterId())){
+            Chapter nextChapter = chapterService.getChapterByChapterNumAndBookId(chapter.getChapterNum()+1,chapter.getChapterBookId());
+            boolean flag = readerService.isReaderCanRead(chapterService.getNextChapterId(chapterId),readerId);
+            if (!flag){
+                nextChapter.setChapterContent(null);
+            }
+            System.out.println(nextChapter);
+            request.setAttribute("nextChapter",nextChapter);
+
+            System.out.println("拿到了下一章:"+nextChapter);
+
+        }
+        //如果不是第一章，获取前一章
+        if(chapter.getChapterNum() != 1) {
+            Chapter preChapter = chapterService.getChapterByChapterNumAndBookId(chapter.getChapterNum()-1,chapter.getChapterBookId());
+            boolean flag = readerService.isReaderCanRead(chapterService.getPreChapterId(chapterId),readerId);
+            if (!flag){
+                preChapter.setChapterContent(null);
+            }
+            request.setAttribute("preChapter", preChapter);
+
+            System.out.println("拿到了上一章:"+preChapter);
+        }
+
+        boolean flag = readerService.isReaderCanRead(chapter.getChapterId(),readerId);
+        if (!flag){
+            chapter.setChapterContent(null);
+        }
+        ReadingPageInfo readingPageInfo = new ReadingPageInfo();
+        readingPageInfo.setBook(book);
+        readingPageInfo.setChapter(chapter);
+        readingPageInfo.setMenu(menu);
+        readingPageInfo.setWriter(writer);
+
+        request.setAttribute("info",readingPageInfo);
+
+
+
+        request.getRequestDispatcher("/JSP/readingPage.jsp").forward(request,response);
+    }
+    @RequestMapping("/recharge.action")
+    public void recharge(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        Integer rechargePrice = request.getParameter("price")==null?0:Integer.parseInt(request.getParameter("price"));
+        Reader reader = (Reader)request.getSession().getAttribute("reader");
+        Integer balance = readerService.recharge(rechargePrice,reader.getReaderId());
+        request.setAttribute("balance",balance);
+        request.getRequestDispatcher("/JSP/rechargeDone.jsp").forward(request,response);
+    }
+
+    @RequestMapping("/addToShelf.action")
+    public boolean addToShelf(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        Integer bookId = Integer.parseInt(request.getParameter("bookId"));
+        //Integer readerId = ((Reader)request.getSession().getAttribute("reader")).getReaderId();
+        Integer readerId = 1;
+        return readerService.addBookToBookShelf(bookId,readerId);
+    }
+    @RequestMapping("/setReaderDeflaultReadingColor.action")
+    public boolean setReaderDeflaultReadingColor(HttpServletRequest request){
+        String defaultColor = request.getParameter("color");
+        //Reader reader= (Reader)request.getSession().getAttribute("reader");
+
+            //测试
+            int readerId = 1;
+            Reader reader = readerService.getReaderInfo(readerId);
+            // 测试代码终
+
+        reader.setReaderColor(defaultColor);
+
+        System.out.println(defaultColor+"       " + reader);
+        return readerService.alterInfo(reader);
+
+    }
+
+
+
+}

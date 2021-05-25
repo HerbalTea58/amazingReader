@@ -1,0 +1,50 @@
+package com.amazingReader.control;
+
+import com.amazingReader.entity.BookStyle;
+import com.amazingReader.service.Interface.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+@RequestMapping("/reader")
+@Controller
+public class SearchControl {//搜索书籍页面
+    @Autowired
+    private BookService bookService;
+
+
+    @RequestMapping("/searchBooks.action")
+    public void searchBooksByCondition(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //女频书籍的一级类型 以及对应的二级类型
+        List<BookStyle> womanStyles=bookService.getFemaleFirstLabel();
+        List<List<BookStyle>> styles = new ArrayList<>();
+        for(int i=0;i<womanStyles.size();i++){
+            styles.add(bookService.getStyle(womanStyles.get(i).getBookStyleId()));
+        }
+        request.setAttribute("womanStyles",womanStyles);//女频一级类
+        request.setAttribute("styles",styles);//女频二级类
+
+
+        //男频
+        List<BookStyle> manStyles=bookService.getMaleFirstLabel();
+        List<List<BookStyle>> manlist=new ArrayList<>();
+        for(int i=0;i<manlist.size();i++){
+            manlist.add(bookService.getStyle(manStyles.get(i).getBookStyleId()));
+        }
+        request.setAttribute("manStyles",manStyles);//男频一级类
+        request.setAttribute("manlist",manlist);//男频二级类
+
+
+
+        request.getRequestDispatcher("/JSP/searchPage.jsp").forward(request,response);
+
+
+    }
+}

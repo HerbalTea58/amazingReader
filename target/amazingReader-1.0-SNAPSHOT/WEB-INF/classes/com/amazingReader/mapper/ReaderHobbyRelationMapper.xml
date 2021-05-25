@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.ReaderHobbyRelationMapper">
+
+    <!--public boolean add(ReaderHobbyRelation readerHobbyRelation)-->
+    <insert id="add" parameterType="ReaderHobbyRelation">
+        insert into reader_hobby_relation values(#{hobbyReaderId},#{hobbyLabelId})
+    </insert>
+    <!--public boolean alter(int readerId, int before_labelId, int alter_labelId);-->
+    <update id="alter" parameterType="ReaderHobbyRelation">
+        update reader_hobby_relation SET hobby_label_id=#{param3} where hobby_reader_id=#{param1} and hobby_label_id=#{param2}
+    </update>
+    <!--public boolean remove(int readerId, int labelId);-->
+    <delete id="remove">
+        delete from reader_hobby_relation where hobby_reader_id=#{param1} and hobby_label_id = #{param2}
+    </delete>
+    <!--public List<ReaderHobbyRelation> getHobbyBy(int readerId)-->
+    <select id="getHobbyBy" parameterType="int" resultType="ReaderHobbyRelation">
+        select * from reader_hobby_relation where hobby_reader_id=#{_parameter}
+    </select>
+</mapper>

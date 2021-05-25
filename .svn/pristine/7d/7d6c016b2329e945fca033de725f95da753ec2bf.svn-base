@@ -1,0 +1,11 @@
+package com.amazingReader.mapper;
+
+import com.amazingReader.entity.BookStyle;
+import com.amazingReader.entity.ChapterCheck;
+
+import java.util.List;
+
+public interface ChapterCheckMapper {
+	boolean add(ChapterCheck chapterCheck);
+
+}

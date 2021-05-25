@@ -1,0 +1,64 @@
+package com.amazingReader.control;
+
+import com.amazingReader.entity.Book;
+import com.amazingReader.entity.Chapter;
+import com.amazingReader.entity.Comment;
+import com.amazingReader.service.Interface.BookService;
+import com.amazingReader.service.Interface.ChapterService;
+import com.amazingReader.service.Interface.CommentService;
+import com.amazingReader.service.Interface.ReaderService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
+@RequestMapping("/comment")
+@RestController
+public class CommentControl {
+    @Autowired
+    private CommentService commentService;
+    @Autowired
+    private BookService bookService;
+    @Autowired
+    private ChapterService chapterService;
+    @Autowired
+    private ReaderService readerService;
+
+    @RequestMapping("/chapterComment.action")
+    public void getChapterComment(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int chapterId = Integer.parseInt(request.getParameter("chapterId"));
+        Book book = bookService.getBookInfoByChapterId(chapterId);
+        Chapter chapter = chapterService.getChapter(chapterId);
+        request.setAttribute("book",book);
+        request.setAttribute("posts",commentService.getAllPostOf(chapterId));
+        request.setAttribute("chapter",chapter);
+        request.getRequestDispatcher("/JSP/chapterComments.jsp").forward(request,response);
+    }
+
+    @RequestMapping("/comments.action")
+    public void getComments(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int tId= Integer.parseInt(request.getParameter("tId"));
+        request.setAttribute("posts",commentService.getAllCommentsOfPost(tId));
+        request.getRequestDispatcher("/JSP/chapterComments.jsp").forward(request,response);
+    }
+
+    @RequestMapping("/myPost.action")
+    public List<Comment> getMyPosts(HttpServletRequest request, HttpServletResponse response){
+        //int readerId = ((Reader)request.getSession().getAttribute("reader")).getReaderId();
+        int readerId = 5;
+        return readerService.getPostsSendBy(readerId);
+    }
+
+    @RequestMapping("/myComments.action")
+    public List<Comment> getMyComments(HttpServletRequest request, HttpServletResponse response){
+        //int readerId = ((Reader)Readercomments.actionrequest.getSession().getAttribute("reader")).getReaderId();
+        int readerId = 3;
+        return readerService.getCommentsSendBy(readerId);
+    }
+
+}

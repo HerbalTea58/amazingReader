@@ -1,0 +1,114 @@
+package com.amazingReader.service.Interface;
+
+import com.amazingReader.entity.Book;
+import com.amazingReader.entity.Chapter;
+import com.amazingReader.entity.ChapterAdditionRemarks;
+import com.amazingReader.entity.Writer;
+import com.amazingReader.mapper.WriterMapper;
+
+import java.security.PrivateKey;
+
+public interface WriterService {
+	/**
+	 * 作者登录
+	 * @param writer
+	 * @return
+	 */
+	public int writerLogin(Writer writer);
+
+	/**
+	 * 注册
+	 * @param writer
+	 * @return
+	 */
+	public boolean writerRegister(Writer writer);
+
+	/**
+	 * 创作新书
+	 * @param book
+	 */
+	public void createBook(Book book);
+
+	/**
+	 * 修改书籍的基本信息
+	 * @param book
+	 * @return
+	 */
+	public boolean updateBook(Book book);
+
+	/**
+	 * 更新章节
+	 */
+	public void addChapter(Chapter chapter);
+	/**
+	 * 修改章节内容
+	 */
+	public boolean updateChapter(Chapter chapter);
+
+	/**
+	 * 添加每一章的作者有话说
+	 * @param chapterAdditionRemarks
+	 */
+	public void addChapterAdditionRemarks(ChapterAdditionRemarks chapterAdditionRemarks);
+
+	/**
+	 * 修改作者有话说
+	 * @param chapterAdditionRemarks
+	 * @return
+	 */
+	public boolean updateChapterAdditionRemarks(ChapterAdditionRemarks chapterAdditionRemarks);
+
+	/**
+	 * 作者预览更新的章节内容
+	 * @param chapterId
+	 */
+	public void preReadChapterupdated(int chapterId);
+
+
+	 // 作者收入管理功能
+
+	/**
+	 * 查看订阅收入
+	 * @param typeId
+	 * @param writerId
+	 * @return
+	 */
+	public double getSubscribeIncomeOfType(int typeId,int writerId);
+
+	/**
+	 * 包月收入
+	 * @param year
+	 * @param month
+	 * @param writerId
+	 * @return
+	 */
+	public double getMonthIncomeOf(int year,int month, int writerId);
+
+	/**
+	 * 打赏收入
+	 * @param writerId
+	 * @return
+	 */
+	public double getRewardTypeIncome(int writerId);
+
+	/**
+	 * 此方法给作者使用，不判断会员等信息
+	 * 读者禁用
+	 * @param chapterId
+	 * @return
+	 */
+	Chapter getChapterForWriter(int chapterId);
+
+	boolean removeChapter(int chapterId);
+	
+	boolean alterChapter(Chapter chapter);
+
+	Writer getWriterInfo(int writerId);
+
+	boolean isWriterNameExist(String name);
+	boolean isWriterTelExist(String tel);
+	Writer queryWriterByTel(String tel);
+	boolean alterWriterInfo(Writer writer);
+	Writer getWriterByName(String writerName);
+	
+}

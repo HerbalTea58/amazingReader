@@ -1,0 +1,33 @@
+package com.amazingReader.control;
+
+import com.amazingReader.entity.Reader;
+import com.amazingReader.entity.Statu;
+import com.amazingReader.entity.Writer;
+import com.amazingReader.service.Interface.ReaderService;
+import com.amazingReader.service.Interface.WriterService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@RequestMapping("/write")
+@Controller
+public class WriteIntroduceControl {
+    @Autowired
+    private WriterService writerService;
+    @Autowired
+    private ReaderService readerService;
+    @RequestMapping("/writeInformation.action")
+    public void getWriteIntroduce(Writer writer,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Reader reader= (Reader) request.getSession().getAttribute("reader");
+        request.setAttribute("writer",writer);
+        Statu statu=readerService.get(writer.getWriterStatuId());
+        request.setAttribute("statu",statu);
+        request.setAttribute("reader",reader);
+        request.getRequestDispatcher("/JSP/writerIntroduce.jsp").forward(request,response);
+    }
+}

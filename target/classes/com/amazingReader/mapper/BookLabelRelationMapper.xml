@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amazingReader.mapper.BookLabelRelationMapper">
+   <!-- public int getMaxIndex();
+    public boolean add(BookLabelRelation bookLabelRelation);
+    public boolean alter(int book_id, int label_id, int newlabel_id);
+    public boolean remove(BookLabelRelation bookLabelRelation);
+    public boolean removeByLabelId(int bookLabelId);
+    public boolean removeByBookId(int bookId);-->
+    <select id="getMaxIndex" resultType="int">
+        SELECT MAX(label_id) from book_label_relation
+    </select>
+
+    <insert id="add" parameterType="BookLabelRelation">
+        INSERT  into book_label_relation(book_id,label_id) VALUES (#{bookId},#{labelId})
+    </insert>
+
+    <update id="alter" parameterType="int">
+        UPDATE book_label_relation SET label_id=#{_parameter3}
+        WHERE book_id=#{_parameter1} and label_id=#{_parameter2}
+    </update>
+
+    <delete id="remove" parameterType="BookLabelRelation">
+        DELETE from book_label_relation WHERE book_id=#{book_id} and label_id=#{label_id}
+    </delete>
+
+    <delete id="removeByLabelId" parameterType="int">
+
+        DELETE FROM book_label_relation  WHERE label_id=#{_parameter}
+    </delete>
+
+    <delete id="removeByBookId" parameterType="int">
+
+        DELETE FROM book_label_relation  WHERE book_id=#{_parameter}
+    </delete>
+
+    <!--List<BookLabel> getLabelsOfBook(int bookId);-->
+    <select id="getLabelsOfBook" resultType="BookLabel">
+        select b.* from book_label b,book_label_relation r where b.book_label_id = r.label_id AND book_id = #{param}
+
+    </select>
+
+</mapper>

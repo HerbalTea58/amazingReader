@@ -1,0 +1,1115 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="最好看的原创小说网">
+    <meta name="description" content="小说网女生频道是精品原创女生小说网,提供好看的原创言情小说,玄幻小说,武侠小说,穿越小说,都市小说,历史军事小说,校园言情小说,总裁豪门小说,科幻小说,恐怖小说等在线阅读,热门原创小说无广告弹窗在线阅读最新章节就在掌阅小说网。">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="http://img.yc.ireader.com.cn/img/favico64.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="http://img.yc.ireader.com.cn/img/favico64.ico"/>
+    <link rel="apple-touch-icon" href="http://img.yc.ireader.com.cn/img/apple-touch-icon.png"/>
+    <meta name="copyright" content="本页版权 yc.ireader.com.cn 惊鸿小说阅读网所有 All right reserved "/>
+
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>Css/common1.css"/>
+	<link type="text/css" rel="stylesheet" href="../Css/mwpd.css">
+    <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.lazyload1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/layer.js"></script>
+    <script type="text/javascript" src="../Scripts/common1.js"></script>
+    <script type="text/javascript">var user_id = '0';</script>
+</head>
+<body class="woman pd">
+
+
+
+<div class="content pdcon">
+    <div class="f1 area">
+        <div class="f1_L">
+            <div class="tjw">
+                <ul id="mod_index_lb_nv_pic">
+                                    <li>
+                        <a href="http://yc.ireader.com.cn/book/77047/" title="嗜宠而骄：狂妃要在上" target="_blank" class="book_cov">
+                            <img src="Picture/grey.gif" data-src="http://img.yc.ireader.com.cn/ad/20180524/175306_3.jpg" class="lazyload_lb_nv" alt="嗜宠而骄：狂妃要在上">
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="http://yc.ireader.com.cn/book/77050/" title="甜妻抱抱：霸道老公超给力" target="_blank" class="book_cov">
+                            <img src="Picture/grey.gif" data-src="http://img.yc.ireader.com.cn/ad/20180524/175345_21.jpg" class="lazyload_lb_nv" alt="甜妻抱抱：霸道老公超给力">
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="http://yc.ireader.com.cn/book/77043/" title="农门傻妻：拐个夫君生宝宝" target="_blank" class="book_cov">
+                            <img src="Picture/grey.gif" data-src="http://img.yc.ireader.com.cn/ad/20180524/175437_45.jpg" class="lazyload_lb_nv" alt="农门傻妻：拐个夫君生宝宝">
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="http://yc.ireader.com.cn/book/77798/" title="系统在上：这个农女有点强" target="_blank" class="book_cov">
+                            <img src="Picture/grey.gif" data-src="http://img.yc.ireader.com.cn/ad/20180524/175519_24.jpg" class="lazyload_lb_nv" alt="系统在上：这个农女有点强">
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="http://yc.ireader.com.cn/book/78038/" title="重生娇宠：腹黑萌宝神助攻" target="_blank" class="book_cov">
+                            <img src="Picture/grey.gif" data-src="http://img.yc.ireader.com.cn/ad/20180524/175600_44.jpg" class="lazyload_lb_nv" alt="重生娇宠：腹黑萌宝神助攻">
+                        </a>
+                    </li>
+                                </ul>
+            </div>
+            <ol id="btn_index_lb_nv">
+                            <li data-desc="无论她是废柴还是天才，人生得意须尽欢。丑？她就顶着这张丑脸也能狂妄道：来，老娘睡服你！" class="on"><s class="arr"></s><s class="xh">1</s><i>嗜宠而骄：狂妃要在上</i></li>
+                            <li data-desc="五年前，她没想到会遇上他，惊喜交集，她没用的逃走了；五年后，她再度狼狈的遇到他，这次他是回来报复的！"><s class="arr"></s><s class="xh">2</s><i>甜妻抱抱：霸道老公超给力</i></li>
+                            <li data-desc="天才厨神甄善美意外穿越成了被饿死的孤女身上。家徒四壁，食不果腹，还要被卖去当童养媳？"><s class="arr"></s><s class="xh">3</s><i>农门傻妻：拐个夫君生宝宝</i></li>
+                            <li data-desc="穿越到古代，剧情却有些出人预料。说好的腰缠万贯呢！说好的锦衣玉食呢！"><s class="arr"></s><s class="xh">4</s><i>系统在上：这个农女有点强</i></li>
+                            <li data-desc="严欢脑子一抽救了只小包子，各种卖萌撒娇治愈她前世被伤透的心。"><s class="arr"></s><s class="xh">5</s><i>重生娇宠：腹黑萌宝神助攻</i></li>
+                        </ol>
+            <div class="book_inf" id="mod_index_lb_nv_txt">
+                            <h3><a href="http://yc.ireader.com.cn/book/77047/" title="嗜宠而骄：狂妃要在上" target="_blank" class="zdz">嗜宠而骄：狂妃要在上</a></h3>
+                <p class="int">无论她是废柴还是天才，人生得意须尽欢。丑？她就顶着这张丑脸也能狂妄道：来，老娘睡服你！
+</p>
+                        </div>
+        </div>
+        <div class="f1_C">
+                        <ul class="sts">
+                                <li   class="first">
+                <a href="/book/77950/" title="星光璀璨：总裁老公强势宠" target="_blank"  class="zdz">星光璀璨：总裁老公强势宠</a>
+              </li>
+
+                                <li  >
+                <a href="/book/77811/" title="娇妻在上：霍爷，请轻撩！" target="_blank" >娇妻在上：霍爷，请轻撩！</a>
+                <p style="width: 158px; height:20px; ">无论她是废柴还是道：脸也能狂妄道：来，老娘睡服你</p></li>
+                            <li  >
+                                <a href="/book/77811/" title="娇妻在上：霍爷，请轻撩！" target="_blank" >哈哈哈哈哈还好！</a>
+                                <p style="width: 158px; height:20px; ">无论她是废柴还是天才，人生得意须尽欢。丑？她就顶着这张丑脸也能狂妄道：无论她是废柴还是道：脸也能狂妄道：来，老娘睡服你脸也能狂妄道：来，老娘睡服你</p>
+                            </ul>
+                        <ul class="sts">
+                                <li   class="first">
+                <a href="/book/77785/" title="暖婚厚爱，老公大人你有毒" target="_blank"  class="zdz">暖婚厚爱，老公大人你有毒</a>
+                </li>
+                                <li  >
+                <a href="/book/77809/" title="专宠甜妻：霸道总裁别玩火" target="_blank" >专宠甜妻：霸道总裁别玩火</a>
+                </li>
+                                <li  >
+                <a href="/book/77739/" title="闪婚甜妻：腹黑男神，早上好" target="_blank" >闪婚甜妻：腹黑男神，早上好</a>
+                </li>
+                                <li  >
+                <a href="/book/78577/" title="医女倾天：王爷，无限宠" target="_blank" >医女倾天：王爷，无限宠</a>
+                </li>
+                                <li  >
+                <a href="/book/78570/" title="医女风华：世子，给爷笑一个" target="_blank" >医女风华：世子，给爷笑一个</a>
+                </li>
+                                <li  >
+                <a href="/book/78580/" title="追妻路漫：少帅先生很傲娇" target="_blank" >追妻路漫：少帅先生很傲娇</a>
+                </li>
+                                <li  >
+                <a href="/book/78552/" title="绝世宠妻：废柴孤女要逆袭" target="_blank" >绝世宠妻：废柴孤女要逆袭</a>
+                </li>
+                            </ul>
+                        <ul class="sts nobor">
+                                <li   class="first">
+                <a href="/book/78557/" title="爆宠狂妻：家有军妃夫人" target="_blank"  class="zdz">爆宠狂妻：家有军妃夫人</a>
+                </li>
+                                <li  >
+                <a href="/book/78554/" title="闪婚188天：男神上司，请过招" target="_blank" >闪婚188天：男神上司，请过招</a>
+                </li>
+                                <li  >
+                <a href="/book/78529/" title="误入豪门：总裁老公求放过" target="_blank" >误入豪门：总裁老公求放过</a>
+                </li>
+                                <li  >
+                <a href="/book/78547/" title="惊尘劫：风华太子妃" target="_blank" >惊尘劫：风华太子妃</a>
+                </li>
+                                <li  >
+                <a href="/book/78449/" title="总裁有病，宠妻有药" target="_blank" >总裁有病，宠妻有药</a>
+                </li>
+                                <li  >
+                <a href="/book/78440/" title="妃是女配：王爷你的桃花来了" target="_blank" >妃是女配：王爷你的桃花来了</a>
+                </li>
+                                <li  >
+                <a href="/book/78439/" title="鬼夫凶猛：娇妻今夜不设防" target="_blank" >鬼夫凶猛：娇妻今夜不设防</a>
+                </li>
+                            </ul>
+                    </div>
+        <div class="com_R">
+            <h2><s></s>推荐榜</h2>
+            <div class="list_wrap">
+                <ol class="list" id="tj_list">
+                                        <li class="lis_sh  cur">
+                        <em  class="red_bg">1</em>
+                        <h3 class="name"><a href="/book/66025/"  title="神秘老公晚上好" target="_blank">神秘老公晚上好</a></h3>
+                        <div class="open">
+                            <a href="/book/66025/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/60/66025_small.jpg" class="lazyload_book_cover" alt="神秘老公晚上好">
+                            </a>
+                            <div class="book_inf">
+                                <h3><a href="/book/66025/"  title="神秘老公晚上好" target="_blank">神秘老公晚上好</a></h3>
+                                <span class="aut">作者：沐歌</span>
+                            </div>
+                        </div>
+                    </li>
+                                        <li class="lis_sh ">
+                        <em  class="red_bg">2</em>
+                        <h3 class="name"><a href="/book/65012/"  title="天价婚宠：权少赖上瘾" target="_blank">天价婚宠：权少赖上瘾</a></h3>
+                        <div class="open">
+                            <a href="/book/65012/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/50/65012_small.jpg" class="lazyload_book_cover" alt="天价婚宠：权少赖上瘾">
+                            </a>
+                            <div class="book_inf">
+                                <h3><a href="/book/65012/"  title="天价婚宠：权少赖上瘾" target="_blank">天价婚宠：权少赖上瘾</a></h3>
+                                <span class="aut">作者：绿萝</span>
+                            </div>
+                        </div>
+                    </li>
+                                        <li class="lis_sh ">
+                        <em  class="red_bg">3</em>
+                        <h3 class="name"><a href="/book/66271/"  title="燃情总裁宠上瘾" target="_blank">燃情总裁宠上瘾</a></h3>
+                        <div class="open">
+                            <a href="/book/66271/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/62/66271_small.jpg" class="lazyload_book_cover" alt="燃情总裁宠上瘾">
+                            </a>
+                            <div class="book_inf">
+                                <h3><a href="/book/66271/"  title="燃情总裁宠上瘾" target="_blank">燃情总裁宠上瘾</a></h3>
+                                <span class="aut">作者：柒夜</span>
+                            </div>
+                        </div>
+                    </li>
+                                        <li class="lis_sh ">
+                        <em >4</em>
+                        <h3 class="name"><a href="/book/66299/"  title="唐少的宠妻日常" target="_blank">唐少的宠妻日常</a></h3>
+                        <div class="open">
+                            <a href="/book/66299/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/62/66299_small.jpg" class="lazyload_book_cover" alt="唐少的宠妻日常">
+                            </a>
+                            <div class="book_inf">
+                                <h3><a href="/book/66299/"  title="唐少的宠妻日常" target="_blank">唐少的宠妻日常</a></h3>
+                                <span class="aut">作者：叁月惊蛰</span>
+                            </div>
+                        </div>
+                    </li>
+                                        <li class="lis_sh ">
+                        <em >5</em>
+                        <h3 class="name"><a href="/book/65010/"  title="强宠：总裁如狼似虎" target="_blank">强宠：总裁如狼似虎</a></h3>
+                        <div class="open">
+                            <a href="/book/65010/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/50/65010_small.jpg" class="lazyload_book_cover" alt="强宠：总裁如狼似虎">
+                            </a>
+                            <div class="book_inf">
+                                <h3><a href="/book/65010/"  title="强宠：总裁如狼似虎" target="_blank">强宠：总裁如狼似虎</a></h3>
+                                <span class="aut">作者：夏雨倾城</span>
+                            </div>
+                        </div>
+                    </li>
+                                        <li class="lis_sh ">
+                        <em >6</em>
+                        <h3 class="name"><a href="/book/64849/"  title="医妃独步天下" target="_blank">医妃独步天下</a></h3>
+                        <div class="open">
+                            <a href="/book/64849/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/48/64849_small.jpg" class="lazyload_book_cover" alt="医妃独步天下">
+                            </a>
+                            <div class="book_inf">
+                                <h3><a href="/book/64849/"  title="医妃独步天下" target="_blank">医妃独步天下</a></h3>
+                                <span class="aut">作者：承九</span>
+                            </div>
+                        </div>
+                    </li>
+                                        <li class="lis_sh ">
+                        <em >7</em>
+                        <h3 class="name"><a href="/book/65070/"  title="爹地给钱，妈咪借你生娃" target="_blank">爹地给钱，妈咪借你生娃</a></h3>
+                        <div class="open">
+                            <a href="/book/65070/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/50/65070_small.jpg" class="lazyload_book_cover" alt="爹地给钱，妈咪借你生娃">
+                            </a>
+                            <div class="book_inf">
+                                <h3><a href="/book/65070/"  title="爹地给钱，妈咪借你生娃" target="_blank">爹地给钱，妈咪借你生娃</a></h3>
+                                <span class="aut">作者：阿铃</span>
+                            </div>
+                        </div>
+                    </li>
+                                        <li class="lis_sh ">
+                        <em >8</em>
+                        <h3 class="name"><a href="/book/64735/"  title="缠情私宠：尤物小妻潜上瘾" target="_blank">缠情私宠：尤物小妻潜上瘾</a></h3>
+                        <div class="open">
+                            <a href="/book/64735/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/47/64735_small.jpg" class="lazyload_book_cover" alt="缠情私宠：尤物小妻潜上瘾">
+                            </a>
+                            <div class="book_inf">
+                                <h3><a href="/book/64735/"  title="缠情私宠：尤物小妻潜上瘾" target="_blank">缠情私宠：尤物小妻潜上瘾</a></h3>
+                                <span class="aut">作者：洛心辰</span>
+                            </div>
+                        </div>
+                    </li>
+                                        <li class="lis_sh ">
+                        <em >9</em>
+                        <h3 class="name"><a href="/book/64769/"  title="诱妃入帐：王的第五王妃" target="_blank">诱妃入帐：王的第五王妃</a></h3>
+                        <div class="open">
+                            <a href="/book/64769/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/47/64769_small.jpg" class="lazyload_book_cover" alt="诱妃入帐：王的第五王妃">
+                            </a>
+                            <div class="book_inf">
+                                <h3><a href="/book/64769/"  title="诱妃入帐：王的第五王妃" target="_blank">诱妃入帐：王的第五王妃</a></h3>
+                                <span class="aut">作者：云墨微染</span>
+                            </div>
+                        </div>
+                    </li>
+                                        <li class="lis_sh ">
+                        <em >10</em>
+                        <h3 class="name"><a href="/book/66936/"  title="帝少蜜爱小甜妻" target="_blank">帝少蜜爱小甜妻</a></h3>
+                        <div class="open">
+                            <a href="/book/66936/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/69/66936_small.jpg" class="lazyload_book_cover" alt="帝少蜜爱小甜妻">
+                            </a>
+                            <div class="book_inf">
+                                <h3><a href="/book/66936/"  title="帝少蜜爱小甜妻" target="_blank">帝少蜜爱小甜妻</a></h3>
+                                <span class="aut">作者：沧澜一粟</span>
+                            </div>
+                        </div>
+                    </li>
+                                    </ol>
+            </div>
+        </div>
+    </div>
+    <div class="srb area">
+        <div class="tit titp">
+            <s class="qyb"></s>
+            <p>掌<br>阅<br>收<br>入<br>榜</p>
+        </div>
+        <ul>
+                        <li>
+					<span>
+						<a href="/book/74081/" title="总裁爹地超给力" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/40/74081_small.jpg" class="lazyload_book_cover" alt="总裁爹地超给力">
+                            <s  class="rb">1</s>
+                        </a>
+					</span>
+                <h3><a href="/book/74081/" title="总裁爹地超给力" target="_blank">总裁爹地超给力</a></h3>
+            </li>
+                        <li>
+					<span>
+						<a href="/book/65012/" title="天价婚宠：权少赖上瘾" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/50/65012_small.jpg" class="lazyload_book_cover" alt="天价婚宠：权少赖上瘾">
+                            <s  class="rb">2</s>
+                        </a>
+					</span>
+                <h3><a href="/book/65012/" title="天价婚宠：权少赖上瘾" target="_blank">天价婚宠：权少赖上瘾</a></h3>
+            </li>
+                        <li>
+					<span>
+						<a href="/book/66184/" title="错嫁替婚总裁" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/61/66184_small.jpg" class="lazyload_book_cover" alt="错嫁替婚总裁">
+                            <s  class="rb">3</s>
+                        </a>
+					</span>
+                <h3><a href="/book/66184/" title="错嫁替婚总裁" target="_blank">错嫁替婚总裁</a></h3>
+            </li>
+                        <li>
+					<span>
+						<a href="/book/75905/" title="总裁爹地惹不起" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/59/75905_small.jpg" class="lazyload_book_cover" alt="总裁爹地惹不起">
+                            <s  class="gb">4</s>
+                        </a>
+					</span>
+                <h3><a href="/book/75905/" title="总裁爹地惹不起" target="_blank">总裁爹地惹不起</a></h3>
+            </li>
+                        <li>
+					<span>
+						<a href="/book/74611/" title="总裁爹地宠上天" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/46/74611_small.jpg" class="lazyload_book_cover" alt="总裁爹地宠上天">
+                            <s  class="gb">5</s>
+                        </a>
+					</span>
+                <h3><a href="/book/74611/" title="总裁爹地宠上天" target="_blank">总裁爹地宠上天</a></h3>
+            </li>
+                        <li>
+					<span>
+						<a href="/book/66800/" title="一品嫡女" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/68/66800_small.jpg" class="lazyload_book_cover" alt="一品嫡女">
+                            <s  class="gb">6</s>
+                        </a>
+					</span>
+                <h3><a href="/book/66800/" title="一品嫡女" target="_blank">一品嫡女</a></h3>
+            </li>
+                        <li>
+					<span>
+						<a href="/book/65477/" title="诱妻入室：冷血总裁深深爱" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/54/65477_small.jpg" class="lazyload_book_cover" alt="诱妻入室：冷血总裁深深爱">
+                            <s  class="gb">7</s>
+                        </a>
+					</span>
+                <h3><a href="/book/65477/" title="诱妻入室：冷血总裁深深爱" target="_blank">诱妻入室：冷血总裁深深爱</a></h3>
+            </li>
+                        <li>
+					<span>
+						<a href="/book/65070/" title="爹地给钱，妈咪借你生娃" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/50/65070_small.jpg" class="lazyload_book_cover" alt="爹地给钱，妈咪借你生娃">
+                            <s  class="gb">8</s>
+                        </a>
+					</span>
+                <h3><a href="/book/65070/" title="爹地给钱，妈咪借你生娃" target="_blank">爹地给钱，妈咪借你生娃</a></h3>
+            </li>
+                        <li>
+					<span>
+						<a href="/book/69713/" title="天上掉下个靖王妃" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/97/69713_small.jpg" class="lazyload_book_cover" alt="天上掉下个靖王妃">
+                            <s  class="gb">9</s>
+                        </a>
+					</span>
+                <h3><a href="/book/69713/" title="天上掉下个靖王妃" target="_blank">天上掉下个靖王妃</a></h3>
+            </li>
+                        <li>
+					<span>
+						<a href="/book/72925/" title="妈咪小心，亿万爹地有点坏" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/29/72925_small.jpg" class="lazyload_book_cover" alt="妈咪小心，亿万爹地有点坏">
+                            <s  class="gb">10</s>
+                        </a>
+					</span>
+                <h3><a href="/book/72925/" title="妈咪小心，亿万爹地有点坏" target="_blank">妈咪小心，亿万爹地有点坏</a></h3>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="adv">
+        <a href="/book/66749/" title="天命逆凰" target="_blank">
+            <img src="Picture/grey.gif" data-src="http://img.yc.ireader.com.cn/ad/20170705/165123_1.jpg" class="lazyload" alt="天命逆凰">
+        </a>
+    </div>
+    <div class="f2 area">
+        <div class="f2_L">
+            <h2 class="tit titp comtit"><s class="qyb"></s>火热新书</h2>
+            <div class="f2_L_con">
+                                <div class="sw">
+                    <div class="sw_t">
+                        <a href="/book/78436/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/84/78436_small.jpg" class="lazyload_book_cover" alt="遵命，老婆大人！">
+                        </a>
+                        <div class="book_inf">
+                            <h3><a href="/book/78436/" title="遵命，老婆大人！"  target="_blank">遵命，老婆大人！</a></h3>
+                            <p class="aut">作者:闯闯</p>
+                            <p class="int">白欣欣以为这辈子都完了，她代替妹妹嫁给了沈家的傻子少爷，所有人都觉得沈家二少不能人道。可半夜的时候，压在她身上的男人是谁？
+没想到，这男人居然是个扮猪吃老虎的人，将她吃的干干净净。
+感情他不傻啊！还是个特别腹黑霸道的男人。
+白欣欣才知道，阴差阳错的，她惹上了一个不该惹的人。
+某天，白欣欣被逼到了墙角，结巴地问道：“你想干什么？”
+“老婆大人，证明给你看，我是不是傻子啊？是不是不能人道啊？”
+“滚！”
+天天都证明，这丫的是憋了几年憋疯了吗？
+某男露出一抹勾人的笑意，“遵命，老婆大人，我们一起滚！”
+</p>
+                        </div>
+                    </div>
+                    <ul class="sts">
+                                                <li><span><a href="/books/nv/c2/mc8/" title="穿越时空" target="_blank">[ 穿越时空 ]</a></span><a href="/book/78429/" title="辣鸡系统：站住，那个绝色王爷！" target="_blank">辣鸡系统：站住，那个绝色王爷！</a></li>
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/78421/" title="超级萌宝：总裁爹地拽上天" target="_blank">超级萌宝：总裁爹地拽上天</a></li>
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/78413/" title="总裁，你老婆要出家了" target="_blank">总裁，你老婆要出家了</a></li>
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/78411/" title="厨门女霸：二少别闹等我宠" target="_blank">厨门女霸：二少别闹等我宠</a></li>
+                                            </ul>
+                </div>
+                                <div class="sw sw02">
+                    <div class="sw_t">
+                        <a href="/book/78387/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/83/78387_small.jpg" class="lazyload_book_cover" alt="阴缘难挡：鬼夫大人宠上瘾">
+                        </a>
+                        <div class="book_inf">
+                            <h3><a href="/book/78387/" title="阴缘难挡：鬼夫大人宠上瘾"  target="_blank">阴缘难挡：鬼夫大人宠上瘾</a></h3>
+                            <p class="aut">作者:摸摸呆</p>
+                            <p class="int">秋晏汝做鬼也有一百年了，为了能重新回到家人身边，当了鬼差，现在临门一脚，这突然出现的那么多意外是什么鬼？
+还有那个乖乖听话的徒弟是想干嘛！
+许利看着她的眼睛说了一句：“你真的要去投胎吗？”
+秋晏汝点点头：“恩”
+许利拉着脸，不情愿的说：“好吧，那我可以每天守在你身旁等你回来吗？”
+秋晏汝歪着头不解的看着他：“你很闲吗？”
+“对！我很闲……”
+</p>
+                        </div>
+                    </div>
+                    <ul class="sts">
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/78371/" title="天降萌宝：爹地快来，妈咪太抢手" target="_blank">天降萌宝：爹地快来，妈咪太抢手</a></li>
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/78496/" title="娇妻撩人：傅先生请自重" target="_blank">娇妻撩人：傅先生请自重</a></li>
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/77813/" title="一胎二宝：总裁的天价宝贝" target="_blank">一胎二宝：总裁的天价宝贝</a></li>
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/77578/" title="重生天后：霸道总裁入我怀" target="_blank">重生天后：霸道总裁入我怀</a></li>
+                                            </ul>
+                </div>
+                            </div>
+            <h2 class="tit titp comtit end"><s class="qyb"></s>完本完结</h2>
+            <div class="f2_L_con">
+                                <div class="sw">
+                    <div class="sw_t">
+                        <a href="/book/75846/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/58/75846_small.jpg" class="lazyload_book_cover" alt="庶女归来：冷王宠妻如命">
+                        </a>
+                        <div class="book_inf">
+                            <h3><a href="/book/75846/" title="庶女归来：冷王宠妻如命"  target="_blank">庶女归来：冷王宠妻如命</a></h3>
+                            <p class="aut">作者:小寒问剑</p>
+                            <p class="int">前世她单纯天真，看不穿嫡母笑里藏刀、姐妹的步步算计，名声被毁，无奈顶包嫁渣男，还被渣男和妹妹联手害死。
+重活一世，她步步为营。
+嫡母恶毒？设计陷害送你上西天！
+姐妹毁你清白？断你大好前途！
+渣男费尽心思求上位？设计破坏让你死！前世之辱，今世千倍还之！
+他高冷帅气，冷酷无情，却对她热情如火，“给你想要的，你给我。”
+两个前世不搭边的两个人今生无数次的纠缠，她说：“你好冷。”
+“我对你的心不冷。”</p>
+                        </div>
+                    </div>
+                    <ul class="sts">
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/73806/" title="厉少独宠小娇妻" target="_blank">厉少独宠小娇妻</a></li>
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/75969/" title="坏坏帝少,放肆宠" target="_blank">坏坏帝少,放肆宠</a></li>
+                                                <li><span><a href="/books/nv/c2/mc12/" title="古代言情" target="_blank">[ 古代言情 ]</a></span><a href="/book/74663/" title="废材逆天：妖王宠上瘾" target="_blank">废材逆天：妖王宠上瘾</a></li>
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/64514/" title="惹火燃情：总裁，慢点追 " target="_blank">惹火燃情：总裁，慢点追 </a></li>
+                                            </ul>
+                </div>
+                                <div class="sw sw02">
+                    <div class="sw_t">
+                        <a href="/book/75778/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/57/75778_small.jpg" class="lazyload_book_cover" alt="邪魅总裁宠上瘾">
+                        </a>
+                        <div class="book_inf">
+                            <h3><a href="/book/75778/" title="邪魅总裁宠上瘾"  target="_blank">邪魅总裁宠上瘾</a></h3>
+                            <p class="aut">作者:浅月微澜</p>
+                            <p class="int">
+
+　　苏朵儿与权少宇假结婚，本以为很快就可以解除这段关系，谁料权少宇却万分依赖她，无时无刻都在她身边。
+　　连出个门的机会都没有，几乎都在家里度日，苏朵儿实在受不了了，向权少宇抗议。
+　　“你让我休息几天吧。”
+　　“不行。”权少宇摇头，像个孩子一样的窝在她怀里，“你不许离开我。”
+　　苏朵儿失笑道。
+　　“好，好，我不离开你，只是我怕你肾不好。”
+　　他邪魅一笑。
+　　“我肾好的很，不信，可以检查。”</p>
+                        </div>
+                    </div>
+                    <ul class="sts">
+                                                <li><span><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">[ 总裁豪门 ]</a></span><a href="/book/73314/" title="撒旦总裁囚爱成瘾" target="_blank">撒旦总裁囚爱成瘾</a></li>
+                                                <li><span><a href="/books/nv/c2/mc7/" title="青春校园" target="_blank">[ 青春校园 ]</a></span><a href="/book/75756/" title="国民男神是女生" target="_blank">国民男神是女生</a></li>
+                                                <li><span><a href="/books/nv/c2/mc8/" title="穿越时空" target="_blank">[ 穿越时空 ]</a></span><a href="/book/75827/" title="凶残皇叔，别乱来！" target="_blank">凶残皇叔，别乱来！</a></li>
+                                                <li><span><a href="/books/nv/c2/mc12/" title="古代言情" target="_blank">[ 古代言情 ]</a></span><a href="/book/76058/" title="妖孽父王：毒嘴母妃又跑了" target="_blank">妖孽父王：毒嘴母妃又跑了</a></li>
+                                            </ul>
+                </div>
+                            </div>
+        </div>
+        <div class="com_R">
+            <h2><s></s>点击榜</h2>
+            <div class="list_wrap">
+                <ol class="list">
+                                        <li   class="lis_sh">
+                    <em  class="red_bg">1</em>
+                        <h3 class="name"><a href="/book/76181/"  title="致命亲爱的" target="_blank">致命亲爱的</a></h3>
+                        <div class="open">
+                            <a href="/book/76181/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/61/76181_small.jpg" class="lazyload_book_cover" alt="致命亲爱的">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：殷寻</span>
+                                <span>类别：<a href="/books/nv/c2/mc11/" title="都市言情" target="_blank">都市言情</a></span>
+                                <p class="int">这世上有种东西。
+听不见其声，视不见其形，却无所不在，充满天地。
+气味。
+它能愈人于无声，也能杀人于无形。
+它又藏于肌理之间，成了你的气息，让你的秘密无所遁形。
+她是气味构建师，因天生嗅觉敏锐，被称为难得一见的天芳师，却在名声大噪时意外销声匿迹；
+他是陆门商者，因杀伐决断运筹帷幄，被视作商界战神，却在即将坐上权力交椅时身陷囹圄命悬一线；
+她驰骋大漠深入高原，他纵横商场深涉人性。
+相遇，一切都不是偶然。
+遗失的千年天芳秘方重现、藏了煞气的江山图、匿在水底深处的千年古城、浮游洞穴的神秘棺木、痴男怨女相思木、真真假假戏子情……离奇重重的事件看似毫无关联，却又跟气味息息相关。
+你无法逃避气味，所以，我可以控制你于无声无息。
+首部深剖“气味”的悬疑爱情小说，感受不一样的闻术学境界。
+陆门系列第2部，更专业的悬疑，更悬疑的爱情，殷氏出品，品质保证。</p>
+                            </div>
+                        </div>
+                    </li>
+                                        <li  >
+                    <em  class="red_bg">2</em>
+                        <h3 class="name"><a href="/book/65477/"  title="诱妻入室：冷血总裁深深爱" target="_blank">诱妻入室：冷血总裁深深爱</a></h3>
+                        <div class="open">
+                            <a href="/book/65477/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/54/65477_small.jpg" class="lazyload_book_cover" alt="诱妻入室：冷血总裁深深爱">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：三三三爷</span>
+                                <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                                <p class="int">简芷颜是京城权势滔天的简将军的孙女，她仗势欺人，纵横跋扈，娇蛮狠毒的小三名声远扬京城内外。
+
+她爷爷气得吐血，为守住简家的声誉，随便就找了个人将她嫁了。
+
+她气急败坏，而在见到那个俊美如神祗，浑身贵气的充斥着上位者气息，据说‘出身贫寒’的男人时，她懵了。
+
+男人深不可测的眼眸瞥了她一眼，“嫁我，委屈你了？”
+
+她想哭：“不，不委屈……”
+
+很快的她也发现这个男人不仅仅有一张祸国殃民的脸，手腕过人的他还以迅雷不及掩耳之势成为了在商场上叱咤风云的新贵，惹得无数大人物和名门淑女趋之若鹜。
+
+于是，不断有女人跑来戳着她鼻子骂她，”你这种恶毒的女人，凭什么嫁给他？！你配得上他吗？!”
+
+“……”她哭笑不得，很想说这个男人是她爷爷随便给她找的。
+
+可现在看来，这随便还真的是够不随便的啊！！</p>
+                            </div>
+                        </div>
+                    </li>
+                                        <li  >
+                    <em  class="red_bg">3</em>
+                        <h3 class="name"><a href="/book/65012/"  title="天价婚宠：权少赖上瘾" target="_blank">天价婚宠：权少赖上瘾</a></h3>
+                        <div class="open">
+                            <a href="/book/65012/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/50/65012_small.jpg" class="lazyload_book_cover" alt="天价婚宠：权少赖上瘾">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：绿萝</span>
+                                <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                                <p class="int">俊美优雅的京城权少容墨，权势滔天却年近三十还没碰过女人。
+世人皆传他是gay！
+一场阴谋，她闯进他的心门，最后却嚣张的丢下一百块钱拍拍屁股走人。
+“破了爷的身，还想逃，门都没有！”
+他宠她入骨，疼她上天，但所有人都觉得她配不上他。
+只是，当一个又一个阴谋揭穿，当她真正的身份揭晓，又到底是谁配不上谁！</p>
+                            </div>
+                        </div>
+                    </li>
+                                        <li  >
+                    <em >4</em>
+                        <h3 class="name"><a href="/book/64735/"  title="缠情私宠：尤物小妻潜上瘾" target="_blank">缠情私宠：尤物小妻潜上瘾</a></h3>
+                        <div class="open">
+                            <a href="/book/64735/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/47/64735_small.jpg" class="lazyload_book_cover" alt="缠情私宠：尤物小妻潜上瘾">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：洛心辰</span>
+                                <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                                <p class="int">他是权势滔天、富可敌国的凌家第四子，也是从小又哑又瘫且被家族流放在外的弃子！
+她不介意全世界对他的嘲笑，与他合作了一场有名无实的婚姻，婚后才发现，她的残废丈夫是一头披着羊皮的狼！
+一把轮椅，一支笔，他却抵达了权贵的顶端。
+她亲眼见证了他以雷霆的手段吞下了抛弃过他的家族，也吞下了她！
+瞧着小妻子留下的离婚协议书，坐在轮椅上的男人终于冷笑着站了起来：“全世界都知道我是个残废，脾气古怪，不能人道，你跑了，还有谁愿意嫁我？”
+她隔着一个太平洋接到他的电话，泪眼婆娑地数吻痕：“敢说你不能人道？骗子！”
+通话还未结束，他的声音却透过门板传了过来，吓得她瑟瑟发抖：“离婚可以，除非你愿意帮我向全世界作证，证明我行过！”
+她：“你说过你会放我离开的！”
+他：“我没说过！”
+她：“你说过！”
+他：“没说过！”
+她：“狗说的！”
+他：“......”
+瞧吧，他腹黑狠辣，可是他的小妻子也不是好惹的，敢骂他是狗，就必须付出代价！
+他：“你知道狗的特性是什么吗？”
+她：“什么？”
+他：“勇敢、忠诚，还有......吃不饱！”
+她：“......”</p>
+                            </div>
+                        </div>
+                    </li>
+                                        <li  >
+                    <em >5</em>
+                        <h3 class="name"><a href="/book/65637/"  title="盛世帝王妃" target="_blank">盛世帝王妃</a></h3>
+                        <div class="open">
+                            <a href="/book/65637/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/56/65637_small.jpg" class="lazyload_book_cover" alt="盛世帝王妃">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：解语</span>
+                                <span>类别：<a href="/books/nv/c2/mc12/" title="古代言情" target="_blank">古代言情</a></span>
+                                <p class="int">她是南昭璇玑公主，以倾城之貌，惊世之才，名满天下；引来无数强国贵族公子争相追逐。
+她最终嫁给了不起眼的西楚皇室庶子萧若傲，四年间，她费尽心机，助其斗太子，收朝臣，建天机卫，最终成为西楚之帝，换来的却是南昭被灭，全城被屠，利刃加身的结局。
+而她，也终于知道萧若傲娶她的原因——得璇玑公主者，可得天下！
+他是一人之下，万人之上的北周王爷，一次惊鸿一瞥，换来此生一往情深，却因寡言少语，喜怒不形于色的性子，而被拒亲。
+四年后，他知其有难，不顾生死，闯入西楚皇宫救她于危难之中，从此陪她踏上一条倾覆天下的复仇之路……</p>
+                            </div>
+                        </div>
+                    </li>
+                                        <li  >
+                    <em >6</em>
+                        <h3 class="name"><a href="/book/74081/"  title="总裁爹地超给力" target="_blank">总裁爹地超给力</a></h3>
+                        <div class="open">
+                            <a href="/book/74081/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/40/74081_small.jpg" class="lazyload_book_cover" alt="总裁爹地超给力">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：席宝儿</span>
+                                <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                                <p class="int">为了夺走她父亲的股权，她被老公和闺蜜联手设局出轨。
+一纸离婚扔在脸上，她被迫净身出户。
+四年后，她携萌宝归来，宝贝儿子双手插腰，“妈咪，听说现在流行认干爹，你等着，我去认一个给你撑腰！”
+没几天，儿子领回了一个跟他长得一模一样的超级大帅哥。
+“妈咪你放心，我查过了，爹地全球富豪榜上排名第一，专治各种不服！”儿子自信的说。
+程漓月：“……”
+看着惊呆了的女人，宫夜霄冷冷地扔出一份亲子鉴定，“女人，什么时候偷了我的种？”
+程漓月怒，是哪个混蛋四年前睡了自已却不负责任的？！</p>
+                            </div>
+                        </div>
+                    </li>
+                                        <li  >
+                    <em >7</em>
+                        <h3 class="name"><a href="/book/64878/"  title="独家蜜婚" target="_blank">独家蜜婚</a></h3>
+                        <div class="open">
+                            <a href="/book/64878/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/48/64878_small.jpg" class="lazyload_book_cover" alt="独家蜜婚">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：黑白灰</span>
+                                <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                                <p class="int">第一次相亲，就被他拐进民政局连夜扯了证，婚后才发现他竟然是纵贯军政商三界的陆家长孙，全国数一数二的陆氏集团的首席总裁。
+她只想找个平凡男人过平凡日子，没想要嫁个身世骇人的红三代啊！
+“夫人，既然已经上了贼船，那就没法再下去了，还是老老实实跟我一起努力造人吧。”面对她的懊丧，他笑着将她搂入怀中，深深吻住。
+她情不自禁地沦陷在他的柔情中。
+原以为婚姻不过是一场豪赌，却不料这场豪赌如此暖人心脾，让她甘之如饴。</p>
+                            </div>
+                        </div>
+                    </li>
+                                        <li  >
+                    <em >8</em>
+                        <h3 class="name"><a href="/book/74640/"  title="霍少的闪婚暖妻" target="_blank">霍少的闪婚暖妻</a></h3>
+                        <div class="open">
+                            <a href="/book/74640/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/46/74640_small.jpg" class="lazyload_book_cover" alt="霍少的闪婚暖妻">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：也非</span>
+                                <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                                <p class="int">陆家有两个女儿，小女儿是天上的月亮，大女儿是阴沟里的死狗。
+陆妈：你长得不如你妹妹，脑子不如你妹妹，身材不如你妹妹，运气不如你妹妹，你有什么资格过得好，有什么资格幸福？
+陆微言：姐姐，你的钱是我的、房子是我的，你男朋友也是我的。你就安心地当又穷又没人要的老处女吧。
+陆一语：凭什么？我也肤白貌美大长腿好么？分分钟能找个男人嫁了。
+陆一语的男友被她亲妹妹抢了，她的建筑设计图被她妈妈转手卖了。就在她因偷卖设计图面临坐牢时，一个她从未敢肖想且权势涛天男人出现了。
+霍予沉看了看手表，“还有半个小时民政局关门，你知道该怎么做。”</p>
+                            </div>
+                        </div>
+                    </li>
+                                        <li  >
+                    <em >9</em>
+                        <h3 class="name"><a href="/book/74549/"  title="豪门盗情：她来自古代" target="_blank">豪门盗情：她来自古代</a></h3>
+                        <div class="open">
+                            <a href="/book/74549/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/45/74549_small.jpg" class="lazyload_book_cover" alt="豪门盗情：她来自古代">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：洛心辰</span>
+                                <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                                <p class="int">他是权倾天下的豪门第一少，容颜冠绝、腹黑狠辣，却令人大跌眼镜地抱了个小娃娃回家养着。
+给小弟弟放好洗澡水，却发现小弟弟的小弟弟不见了。
+他惊醒般：“你是女娃娃？”
+宝宝一脸无辜地看着他，珍珠一样的大眼睛眨巴眨巴。
+她才不要告诉他，她其实是古代意外穿越而来的小公主，年仅五岁已经是江湖上赫赫有名的盗仙。
+她就要傍着他，让他在这陌生的花花世界里带着她吃香的喝辣的。
+法老权杖不见了，唐代紫檀琵琶不见了，南宋的茶碗不见了，路易十四的手表消失了、、各种奇珍宝物源源不断地被盗，这小贼眼睛长在头顶上，不偷最贵，只偷升值空间最大的传世孤品。
+众人忙的焦头烂额去捉贼，却意外发现她的房间被宝物堆砌犹如小型的博物馆。
+所有人都等着看这个女娃娃惨死的下场。
+他却抱着她宠溺地笑了：“宝宝，原来小贼就是你呀。”
+她望着他，依旧一脸无辜，依旧眨巴眨巴大眼睛不说话。
+嗯，就是不说话！
+他说过的，每当她这般楚楚可怜地望着他，他就恨不能将全世界都给她。
+【本文男尊+女尊，强强联手，没有勉强可以、凑合看看，只有超级精彩、欲罢不能】</p>
+                            </div>
+                        </div>
+                    </li>
+                                        <li  >
+                    <em >10</em>
+                        <h3 class="name"><a href="/book/78411/"  title="厨门女霸：二少别闹等我宠" target="_blank">厨门女霸：二少别闹等我宠</a></h3>
+                        <div class="open">
+                            <a href="/book/78411/" target="_blank" class="book_cov">
+                                <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/84/78411_small.jpg" class="lazyload_book_cover" alt="厨门女霸：二少别闹等我宠">
+                            </a>
+                            <div class="book_inf">
+                                <span class="aut">作者：二十二夜</span>
+                                <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                                <p class="int">她只想有尊严的回到冯家，结果却被唐家二少爷吃干抹尽。
+　　
+她可是冯妙妙啊，美食八家都想据为己有的冯妙妙，她怎么能受此大辱？
+　　
+唐二少，你就等着受虐吧。看我不把你剥皮抽筋，敲骨吸髓。
+　　
+什么，求饶？那你就乖乖呆在那里，等着我宠幸吧。</p>
+                            </div>
+                        </div>
+                    </li>
+                                    </ol>
+                <span class="more"><a href="/rank/nv/click/totalhit/" target="_blank"><s></s><i>查看更多</i><s></s></a></span>
+            </div>
+        </div>
+    </div>
+    <div class="adv">
+        <a href="/book/65637/" title="盛世帝王妃" target="_blank">
+            <img src="Picture/grey.gif" data-src="http://img.yc.ireader.com.cn/ad/20170705/165222_52.jpg" class="lazyload" alt="盛世帝王妃">
+        </a>
+    </div>
+    <div class="f3 area">
+        <div class="f3_L">
+            <h2 class="tit titp comtit"><s class="qyb"></s>最新作品更新</h2>
+            <div class="new_list">
+                <ol class="cur">
+                    <li>
+                        <ul  class="list_h">
+                            <li class="lb">类别</li>
+                            <li class="sm">书名</li>
+                            <li class="gx">最新更新章节</li>
+                            <li class="zz">作者</li>
+                            <li class="sj">更新时间</li>
+                        </ul>
+                    </li>
+                                        <li>
+                        <ul>
+                            <li class="lb"><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></li>
+                            <li class="sm"><h3><a  href="/book/69017/" target="_blank">引妻入怀：霸道总裁求抱抱</a></h3></li>
+                            <li class="gx"><a href="/book/69017/12445152/" title="第1087章，被野猪盯上了" target="_blank">第1087章，被野猪盯上了</a><s class="vzj"></s></li>
+                            <li class="zz">北栀</li>
+                            <li class="sj">2分钟前</li>
+                        </ul>
+                    </li>
+                                        <li>
+                        <ul>
+                            <li class="lb"><a href="/books/nv/c2/mc8/" title="穿越时空" target="_blank">穿越时空</a></li>
+                            <li class="sm"><h3><a  href="/book/76008/" target="_blank">邪王枭宠：废材溟妃倾天下</a></h3></li>
+                            <li class="gx"><a href="/book/76008/12445149/" title="196章：祸起秦家" target="_blank">196章：祸起秦家</a><s class="vzj"></s></li>
+                            <li class="zz">凤九九</li>
+                            <li class="sj">2分钟前</li>
+                        </ul>
+                    </li>
+                                        <li>
+                        <ul>
+                            <li class="lb"><a href="/books/nv/c2/mc8/" title="穿越时空" target="_blank">穿越时空</a></li>
+                            <li class="sm"><h3><a  href="/book/76442/" target="_blank">战王枭宠：医妃药逆天</a></h3></li>
+                            <li class="gx"><a href="/book/76442/12445139/" title="第318章 怎么能这样对她！" target="_blank">第318章 怎么能这样对她！</a><s class="vzj"></s></li>
+                            <li class="zz">醉月弦歌</li>
+                            <li class="sj">11分钟前</li>
+                        </ul>
+                    </li>
+                                        <li>
+                        <ul>
+                            <li class="lb"><a href="/books/nv/c2/mc8/" title="穿越时空" target="_blank">穿越时空</a></li>
+                            <li class="sm"><h3><a  href="/book/78346/" target="_blank">鬼帝宠妻，废材大小姐</a></h3></li>
+                            <li class="gx"><a href="/book/78346/12445122/" title="第33章 魔兽山脉" target="_blank">第33章 魔兽山脉</a></li>
+                            <li class="zz">妖言</li>
+                            <li class="sj">26分钟前</li>
+                        </ul>
+                    </li>
+                                        <li>
+                        <ul>
+                            <li class="lb"><a href="/books/nv/c2/mc8/" title="穿越时空" target="_blank">穿越时空</a></li>
+                            <li class="sm"><h3><a  href="/book/77039/" target="_blank">皇上，你家皇后又逃跑了</a></h3></li>
+                            <li class="gx"><a href="/book/77039/12445119/" title="第九十章是个好妖精" target="_blank">第九十章是个好妖精</a></li>
+                            <li class="zz">或以疯魔</li>
+                            <li class="sj">31分钟前</li>
+                        </ul>
+                    </li>
+                                        <li>
+                        <ul>
+                            <li class="lb"><a href="/books/nv/c2/mc8/" title="穿越时空" target="_blank">穿越时空</a></li>
+                            <li class="sm"><h3><a  href="/book/77047/" target="_blank">嗜宠而骄：狂妃要在上</a></h3></li>
+                            <li class="gx"><a href="/book/77047/12445114/" title="第57章 招惹桃花" target="_blank">第57章 招惹桃花</a></li>
+                            <li class="zz">伊涴水</li>
+                            <li class="sj">41分钟前</li>
+                        </ul>
+                    </li>
+                                        <li>
+                        <ul>
+                            <li class="lb"><a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></li>
+                            <li class="sm"><h3><a  href="/book/74611/" target="_blank">总裁爹地宠上天</a></h3></li>
+                            <li class="gx"><a href="/book/74611/12445103/" title="第869章   她相信他" target="_blank">第869章   她相信他</a><s class="vzj"></s></li>
+                            <li class="zz">贝小爱</li>
+                            <li class="sj">49分钟前</li>
+                        </ul>
+                    </li>
+                                        <li>
+                        <ul>
+                            <li class="lb"><a href="/books/nv/c2/mc7/" title="青春校园" target="_blank">青春校园</a></li>
+                            <li class="sm"><h3><a  href="/book/77789/" target="_blank">重生豆蔻年华：国民男神狂宠妻</a></h3></li>
+                            <li class="gx"><a href="/book/77789/12445094/" title="第八十三页 心疼" target="_blank">第八十三页 心疼</a></li>
+                            <li class="zz">桃苏</li>
+                            <li class="sj">56分钟前</li>
+                        </ul>
+                    </li>
+                                        <li>
+                        <ul>
+                            <li class="lb"><a href="/books/nv/c2/mc8/" title="穿越时空" target="_blank">穿越时空</a></li>
+                            <li class="sm"><h3><a  href="/book/77547/" target="_blank">兼职王妃：废柴公主要逆袭</a></h3></li>
+                            <li class="gx"><a href="/book/77547/12445092/" title="第五十三章 刺杀" target="_blank">第五十三章 刺杀</a></li>
+                            <li class="zz">吃不饱</li>
+                            <li class="sj">56分钟前</li>
+                        </ul>
+                    </li>
+                                        <li>
+                        <ul>
+                            <li class="lb"><a href="/books/nv/c2/mc10/" title="综合其他" target="_blank">综合其他</a></li>
+                            <li class="sm"><h3><a  href="/book/76288/" target="_blank">司令大人，请滚开！</a></h3></li>
+                            <li class="gx"><a href="/book/76288/12445093/" title="第256章 爷叫朱八，知道什么意思吗？" target="_blank">第256章 爷叫朱八，知道什么意思吗？</a></li>
+                            <li class="zz">软娘子</li>
+                            <li class="sj">56分钟前</li>
+                        </ul>
+                    </li>
+                                    </ol>
+            </div>
+        </div>
+        <div class="com_R">
+            <h2><s></s>收藏榜</h2>
+            <div class="list_wrap">
+                <ol class="list">
+                                        <li   class="lis_sh">
+                    <em  class="red_bg">1</em>
+                    <h3 class="name"><a href="/book/76181/"  title="致命亲爱的" target="_blank">致命亲爱的</a></h3>
+                    <div class="open">
+                        <a href="/book/76181/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/61/76181_small.jpg" class="lazyload_book_cover" alt="致命亲爱的">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：殷寻</span>
+                            <span>类别：<a href="/books/nv/c2/mc11/" title="都市言情" target="_blank">都市言情</a></span>
+                            <p class="int">这世上有种东西。
+听不见其声，视不见其形，却无所不在，充满天地。
+气味。
+它能愈人于无声，也能杀人于无形。
+它又藏于肌理之间，成了你的气息，让你的秘密无所遁形。
+她是气味构建师，因天生嗅觉敏锐，被称为难得一见的天芳师，却在名声大噪时意外销声匿迹；
+他是陆门商者，因杀伐决断运筹帷幄，被视作商界战神，却在即将坐上权力交椅时身陷囹圄命悬一线；
+她驰骋大漠深入高原，他纵横商场深涉人性。
+相遇，一切都不是偶然。
+遗失的千年天芳秘方重现、藏了煞气的江山图、匿在水底深处的千年古城、浮游洞穴的神秘棺木、痴男怨女相思木、真真假假戏子情……离奇重重的事件看似毫无关联，却又跟气味息息相关。
+你无法逃避气味，所以，我可以控制你于无声无息。
+首部深剖“气味”的悬疑爱情小说，感受不一样的闻术学境界。
+陆门系列第2部，更专业的悬疑，更悬疑的爱情，殷氏出品，品质保证。</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li  >
+                    <em  class="red_bg">2</em>
+                    <h3 class="name"><a href="/book/65477/"  title="诱妻入室：冷血总裁深深爱" target="_blank">诱妻入室：冷血总裁深深爱</a></h3>
+                    <div class="open">
+                        <a href="/book/65477/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/6/54/65477_small.jpg" class="lazyload_book_cover" alt="诱妻入室：冷血总裁深深爱">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：三三三爷</span>
+                            <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                            <p class="int">简芷颜是京城权势滔天的简将军的孙女，她仗势欺人，纵横跋扈，娇蛮狠毒的小三名声远扬京城内外。
+
+她爷爷气得吐血，为守住简家的声誉，随便就找了个人将她嫁了。
+
+她气急败坏，而在见到那个俊美如神祗，浑身贵气的充斥着上位者气息，据说‘出身贫寒’的男人时，她懵了。
+
+男人深不可测的眼眸瞥了她一眼，“嫁我，委屈你了？”
+
+她想哭：“不，不委屈……”
+
+很快的她也发现这个男人不仅仅有一张祸国殃民的脸，手腕过人的他还以迅雷不及掩耳之势成为了在商场上叱咤风云的新贵，惹得无数大人物和名门淑女趋之若鹜。
+
+于是，不断有女人跑来戳着她鼻子骂她，”你这种恶毒的女人，凭什么嫁给他？！你配得上他吗？!”
+
+“……”她哭笑不得，很想说这个男人是她爷爷随便给她找的。
+
+可现在看来，这随便还真的是够不随便的啊！！</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li  >
+                    <em  class="red_bg">3</em>
+                    <h3 class="name"><a href="/book/78062/"  title="昏婚为乐，雷少盛宠吃不消" target="_blank">昏婚为乐，雷少盛宠吃不消</a></h3>
+                    <div class="open">
+                        <a href="/book/78062/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/80/78062_small.jpg" class="lazyload_book_cover" alt="昏婚为乐，雷少盛宠吃不消">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：这这</span>
+                            <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                            <p class="int">雷楚铭是帝都神话，温滢不过是个被上司觊觎的实习生。
+一个不小心，温滢把这个“神话”给上了？
+三年后再遇，她手里牵着他的儿子还要跟自己的亲弟弟约会。
+温滢像是个“偷腥”的猫儿被抓了现行一样紧张兮兮。
+慌乱之中，只听见雷楚铭霸道的说：“怀了我的孩子，还想跑？”。
+温滢步步后退，“不、不是你的……”</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li  >
+                    <em >4</em>
+                    <h3 class="name"><a href="/book/78434/"  title="豪门蜜恋：总裁老公狠会宠" target="_blank">豪门蜜恋：总裁老公狠会宠</a></h3>
+                    <div class="open">
+                        <a href="/book/78434/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/84/78434_small.jpg" class="lazyload_book_cover" alt="豪门蜜恋：总裁老公狠会宠">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：猫藜</span>
+                            <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                            <p class="int">他是宋氏集团的总裁，一纸契约将她箍在身边，替她惩治白莲花，手撕渣男，打脸啪啪啪，却一直不得她的喜欢。
+听说每天晚上趁着一个人睡觉时，在他耳边不停说要让对方做的事情，他就会情不自禁去做。
+于是在某天晚上唐安安从睡梦中醒来，就听到宋青屿一本正经在她耳边斯磨。
+——唐安安只喜欢宋青屿
+——唐安安永远不会离开宋青屿
+——唐安安很爱宋青屿。
+唐安安表示:嘴上妈卖批，心里笑嘻嘻</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li  >
+                    <em >5</em>
+                    <h3 class="name"><a href="/book/71278/"  title="坏坏老公矜持点" target="_blank">坏坏老公矜持点</a></h3>
+                    <div class="open">
+                        <a href="/book/71278/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/12/71278_small.jpg" class="lazyload_book_cover" alt="坏坏老公矜持点">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：火炎儿</span>
+                            <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                            <p class="int">明知未婚夫和妹妹勾搭在一起，还嫁，那是贱！她不就是想找个男公关捣乱会场破坏婚礼吗，哪知道阴差阳错，找到那个邪性撩人，拥有商业帝国的霸道总裁。
+某男将她逼到墙角：“包下我还想逃，马上去领证！”
+某女欲哭无泪：“我包你捣乱婚礼，谁要跟你结婚！”
+某男不由分说扛起人就跑。
+某女气的大叫：“放我下来，你要干嘛！”
+某男特别霸气：“我们未来的宝宝给我托梦了，说爸爸太不给力。”
+某女：……</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li  >
+                    <em >6</em>
+                    <h3 class="name"><a href="/book/77739/"  title="闪婚甜妻：腹黑男神，早上好" target="_blank">闪婚甜妻：腹黑男神，早上好</a></h3>
+                    <div class="open">
+                        <a href="/book/77739/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/77/77739_small.jpg" class="lazyload_book_cover" alt="闪婚甜妻：腹黑男神，早上好">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：叶果果</span>
+                            <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                            <p class="int">传闻唐墨谦果决狠辣，不近女色，是个gay，顾南心死活不信，直到她亲眼看见，悲愤欲死。
+然而一纸婚约，她成为他的协议妻子，本着得不到他的心也要得到他身体的想法，趁着夜黑风高，摸上他的床，却反被压！
+眼前俊美的男人笑得诡谲莫测，“听说你暗恋我八年了。真巧，我也是。”</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li  >
+                    <em >7</em>
+                    <h3 class="name"><a href="/book/78032/"  title="一宠成婚：顾少宠妻无下限" target="_blank">一宠成婚：顾少宠妻无下限</a></h3>
+                    <div class="open">
+                        <a href="/book/78032/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/80/78032_small.jpg" class="lazyload_book_cover" alt="一宠成婚：顾少宠妻无下限">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：糖豆不是糖</span>
+                            <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                            <p class="int">传闻，顾家二少生性残暴，狠戾绝情！
+传闻，顾家二少有隐疾，不受待见！
+传闻，顾家二少身患残疾，不能自理！
+看着眼前传闻中的男人，余念要哭了，传闻跟童话一样，都特么是骗人的。</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li  >
+                    <em >8</em>
+                    <h3 class="name"><a href="/book/76456/"  title="逆天毒妃：倾世大小姐" target="_blank">逆天毒妃：倾世大小姐</a></h3>
+                    <div class="open">
+                        <a href="/book/76456/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/64/76456_small.jpg" class="lazyload_book_cover" alt="逆天毒妃：倾世大小姐">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：沐凝萱</span>
+                            <span>类别：<a href="/books/nv/c2/mc12/" title="古代言情" target="_blank">古代言情</a></span>
+                            <p class="int">毒医世家出身的她，遭受了最好的朋友和最爱的人背叛，重生异世，于浅笑绽放光彩。喜怒无常，性情难以琢磨，一手毒术，运用地炉火纯青。害她性命者，杀，阻她道路者，斩。
+　　且看毒妃如何嚣张跋扈，大放异彩，赢得万世瞩目？
+　　皇室出身的他，从未于任何女子有过亲密接触，久经沙场，威震朝堂，手段狠辣，杀人无数。却唯独对她爱护有加，龙之逆鳞，触者即死。
+　　且看狠王如何坑妻，护妻，为她拱手山河？</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li  >
+                    <em >9</em>
+                    <h3 class="name"><a href="/book/77054/"  title="腹黑总裁甜宠妻" target="_blank">腹黑总裁甜宠妻</a></h3>
+                    <div class="open">
+                        <a href="/book/77054/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/70/77054_small.jpg" class="lazyload_book_cover" alt="腹黑总裁甜宠妻">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：小黄鱼</span>
+                            <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                            <p class="int">一纸合约，她与顶级权贵方胜辉闪婚成爱，成了人人艳羡的方少夫人。
+婚前，约法三章，各取所需，互不干涉。
+婚后，白天与他斗智力，晚上与他拼体力。
+苏秋桐忍无可忍，“方胜辉，说好的互不干涉呢？”
+“我们也说好了，各取所需！”
+直到他的前女友出现，她方惊觉弥足深陷，唯有落荒而逃……
+五年后，她被人堵在墙角，强装冷静道：“这位先生，我们似乎不熟吧。”
+方大少将某只翻版小包子拎到她面前：“哪里不熟，我们今晚熟悉熟悉？”</p>
+                        </div>
+                    </div>
+                    </li>
+                                        <li  >
+                    <em >10</em>
+                    <h3 class="name"><a href="/book/77578/"  title="重生天后：霸道总裁入我怀" target="_blank">重生天后：霸道总裁入我怀</a></h3>
+                    <div class="open">
+                        <a href="/book/77578/" target="_blank" class="book_cov">
+                            <img src="Picture/default.jpg" data-src="http://img.yc.ireader.com.cn/bookface/7/75/77578_small.jpg" class="lazyload_book_cover" alt="重生天后：霸道总裁入我怀">
+                        </a>
+                        <div class="book_inf">
+                            <span class="aut">作者：三月安安</span>
+                            <span>类别：<a href="/books/nv/c2/mc9/" title="总裁豪门" target="_blank">总裁豪门</a></span>
+                            <p class="int">前世，被未婚夫和妹妹迫害，她含恨惨死，死不瞑目！
+  一朝重生，她誓要报仇雪恨，和渣男白莲花好好算一算前账！
+可原本和她毫无交集的男人，这一世，怎么就对她各种痴缠烂打？
+“御爷，你惹太太生气了，肿么破？”
+“宠她。”
+“太太惹你生气了，肿么破？”
+“宠她。”
+受不了他的热情似火，龙晚晚丢下离婚协议，爬窗闪人！
+“宝贝，你爬错地方了。”
+下一秒，她被迫爬到床上。
+龙晚晚欲哭无泪，上帝让她重活一世，难道就是被这只腹黑大boss天天欺压，时时撩拨的？
+重生爽文，虐渣渣，打贱女，甜翻爽爆！</p>
+                        </div>
+                    </div>
+                    </li>
+                                    </ol>
+                <span class="more"><a href="/rank/nv/flower/monthflower/" target="_blank"><s></s><i>查看更多</i><s></s></a></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../Scripts/index1.js"></script>
+
+<!--内容 结束-->
+<!--公共底部 开始-->
+<div class="foot">
+    <div class="foot_T">
+        
+    <div class="foot_B">
+        <p style="width: auto;">
+            <a href="/static/about/gyzy.html" target="_blank">关于掌阅</a>|
+            <a href="/static/about/lxwm.html" target="_blank">联系我们</a>|
+            <a href="/static/about/yhxy.html" target="_blank">用户协议</a>|
+            <a href="/static/authornews/tgsm.html" target="_blank">投稿说明</a>|
+            <a href="/static/about/bqsm.html" target="_blank">版权声明</a>|
+            <a href="/static/about/kfzx.html" target="_blank">客服中心</a>|
+            <a href="/static/message/" target="_blank">反馈留言</a>|
+            <a href="/index.php?ca=user.register_author" target="_blank">作者申请</a>
+        </p>
+		<p class="Co">
+			Copyright (C) 2008-2017 yc.ireader.com.cn All rights reserved
+			<br>
+			<a href="http://www.ireader.com/static/images/papers/publishing_license.jpg" target="_blank" style="margin: 0 10px;">出版物经营许可证</a>
+			<a href="http://www.ireader.com/static/images/papers/icp.jpg" target="_blank" style="margin: 0 10px;">京ICP证090653号</a>
+			<a href="javascript:void(0)" style="margin: 0 10px;">新出网证(京)字117号</a>
+			<a href="http://www.ireader.com/static/images/papers/document.jpg" target="_blank" style="margin: 0 10px;">网文证</a>
+			<a href="javascript:void(0)" style="margin: 0 10px;">京ICP备11008516号-8</a>
+		</p>
+        <p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！本站所收录作品、社区话题、书库评论及本站所做之广告均属其个人行为，与本站立场无关</p>
+		<p>不良信息举报：jubao@zhangyue.com</p>
+    </div>
+    </div>
+</div>
+<!--公共底部 结束-->
+
+<span class="gotop" id="btn_back_top" title="返回顶部"><img src="Picture/gotop.png" data-src="/static/images/common/gotop_hov.png" alt="返回顶部"></span>
+
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?10e53c6d39dab05a49df82fec406c083";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    (function() {
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+</body>
+
+</html>

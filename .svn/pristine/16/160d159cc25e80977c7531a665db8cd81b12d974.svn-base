@@ -1,0 +1,15 @@
+package com.amazingReader.service.Impl;
+
+import com.amazingReader.service.Interface.ReportService;
+
+public class ReportServiceImpl implements ReportService {
+    @Override
+    public boolean updateChapterReport(int reportId) {
+        return false;
+    }
+
+    @Override
+    public boolean updateCommentReport(int reportId) {
+        return false;
+    }
+}
