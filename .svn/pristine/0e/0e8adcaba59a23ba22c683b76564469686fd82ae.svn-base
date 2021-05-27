@@ -1,7 +1,0 @@
-package com.amazingReader.service.Interface;
-
-import nl.siegmann.epublib.domain.Book;
-
-public interface OfflineReadService {
-    Book getFreeAndBoughtChaptersOfBook(String contextPath, Integer bookId, Integer readerId);
-}

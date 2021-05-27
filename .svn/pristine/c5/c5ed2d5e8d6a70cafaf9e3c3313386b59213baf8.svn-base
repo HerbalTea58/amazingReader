@@ -1,8 +1,0 @@
-package com.amazingReader.service.Interface;
-
-public interface ReportService {
-    //修改 章节举报的信息
-   public boolean updateChapterReport(int reportId);
-   //修改 评论举报的信息
-    public boolean updateCommentReport(int reportId);
-}

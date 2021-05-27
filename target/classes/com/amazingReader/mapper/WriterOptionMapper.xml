@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.amazingReader.mapper.WriterOptionMapper">
-	<!-- WriterOption get(int optionId); -->
-	
-	<select  id = "get" resultType="WriterOption" parameterType="int">
-		select * from writer_option where writer_option_id = #{_parameter}
-	</select>
-</mapper>
